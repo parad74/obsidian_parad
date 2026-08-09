@@ -1,6 +1,9 @@
 # Репозитории приложений хранятся отдельно от репозитория Obsidian vault.
 /Sources/
 
+# Локальные credentials и секреты не должны попадать в Git.
+/Credentials/
+
 # Локальное состояние интерфейса Obsidian не должно создавать постоянные изменения.
 /.obsidian/workspace.json
 /.obsidian/workspace-mobile.json
