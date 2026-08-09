@@ -1,0 +1,599 @@
+/* ==========================================================================
+   Task Statuses — Obsidian + Tasks
+   Strict, calm custom checkbox system.
+   Put this file in: .obsidian/snippets/task-statuses.css
+   ========================================================================== */
+
+/* @settings
+
+name: Task Statuses
+id: task-statuses
+settings:
+  -
+    id: task-status-size
+    title: Checkbox size
+    title.ru: Размер чекбокса
+    type: variable-number-slider
+    default: 17
+    min: 14
+    max: 22
+    step: 1
+    format: px
+  -
+    id: task-status-radius
+    title: Corner radius
+    title.ru: Скругление
+    type: variable-number-slider
+    default: 4
+    min: 0
+    max: 8
+    step: 1
+    format: px
+  -
+    id: task-status-stroke
+    title: Border width
+    title.ru: Толщина рамки
+    type: variable-number-slider
+    default: 1.5
+    min: 1
+    max: 2.5
+    step: 0.25
+    format: px
+  -
+    id: task-status-fade-done
+    title: Fade completed tasks
+    title.ru: Приглушать завершённые
+    type: class-toggle
+    default: true
+  -
+    id: task-status-strike-cancelled
+    title: Strike cancelled tasks
+    title.ru: Зачёркивать отменённые
+    type: class-toggle
+    default: true
+
+*/
+
+/* --------------------------------------------------------------------------
+   Theme-adaptive palette
+   Uses Obsidian variables, so it works with the Default theme in light/dark.
+   -------------------------------------------------------------------------- */
+
+body {
+  --task-status-size: 17px;
+  --task-status-radius: 4px;
+  --task-status-stroke: 1.5px;
+
+  --ts-neutral: var(--text-muted);
+  --ts-active: var(--color-blue);
+  --ts-waiting: var(--color-yellow);
+  --ts-danger: var(--color-red);
+  --ts-important: var(--color-orange);
+  --ts-success: var(--color-green);
+  --ts-review: var(--color-purple);
+  --ts-question: var(--color-cyan);
+}
+
+/* --------------------------------------------------------------------------
+   Status vocabulary
+
+   [ ] Todo
+   [/] Doing
+   [w] Waiting
+   [b] Blocked
+   [!] Important
+   [-] Cancelled
+   [x] Done
+   [<] Scheduling
+   [?] Question
+   [v] Checked
+   [~] InProgress
+   [r] Review
+   -------------------------------------------------------------------------- */
+
+/* TODO */
+li.task-list-item[data-task=""],
+li.task-list-item[data-task=" "],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=""],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=" "] {
+  --ts-color: var(--ts-neutral);
+  --ts-symbol: "";
+  --ts-bg-strength: 0%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* DOING — actively being worked on now */
+li.task-list-item[data-task="/"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] {
+  --ts-color: var(--ts-active);
+  --ts-symbol: "▶";
+  --ts-bg-strength: 10%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* WAITING — waiting for an external event/person */
+li.task-list-item[data-task="w"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="w"] {
+  --ts-color: var(--ts-waiting);
+  --ts-symbol: "Ⅱ";
+  --ts-bg-strength: 10%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* BLOCKED — cannot proceed */
+li.task-list-item[data-task="b"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"] {
+  --ts-color: var(--ts-danger);
+  --ts-symbol: "×";
+  --ts-bg-strength: 12%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* IMPORTANT — attention, but not a workflow state */
+li.task-list-item[data-task="!"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"] {
+  --ts-color: var(--ts-important);
+  --ts-symbol: "!";
+  --ts-bg-strength: 10%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* CANCELLED */
+li.task-list-item[data-task="-"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  --ts-color: var(--text-faint);
+  --ts-symbol: "−";
+  --ts-bg-strength: 5%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* DONE — completed */
+li.task-list-item[data-task="x"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  --ts-color: var(--ts-success);
+  --ts-symbol: "✓";
+  --ts-bg-strength: 100%;
+  --ts-icon-color: var(--background-primary);
+}
+
+/* SCHEDULING — needs/plans a date, not active yet */
+li.task-list-item[data-task="<"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"] {
+  --ts-color: var(--ts-review);
+  --ts-symbol: "◷";
+  --ts-bg-strength: 9%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* QUESTION — clarification needed */
+li.task-list-item[data-task="?"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"] {
+  --ts-color: var(--ts-question);
+  --ts-symbol: "?";
+  --ts-bg-strength: 9%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* CHECKED — verified/validated, visually distinct from Done */
+li.task-list-item[data-task="v"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] {
+  --ts-color: var(--ts-success);
+  --ts-symbol: "✓";
+  --ts-bg-strength: 8%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* IN PROGRESS — started, but not necessarily the active focus */
+li.task-list-item[data-task="~"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] {
+  --ts-color: var(--ts-active);
+  --ts-symbol: "…";
+  --ts-bg-strength: 8%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* REVIEW — ready for / currently under review */
+li.task-list-item[data-task="r"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"] {
+  --ts-color: var(--ts-review);
+  --ts-symbol: "◇";
+  --ts-bg-strength: 9%;
+  --ts-icon-color: var(--ts-color);
+}
+
+/* --------------------------------------------------------------------------
+   Checkbox base
+   Reading View + Tasks query results + Live Preview.
+   -------------------------------------------------------------------------- */
+
+li.task-list-item:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > input.task-list-item-checkbox,
+
+li.task-list-item:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > p > input.task-list-item-checkbox,
+
+.markdown-source-view.mod-cm6
+.HyperMD-task-line:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+
+  width: var(--task-status-size);
+  height: var(--task-status-size);
+  min-width: var(--task-status-size);
+
+  margin-inline-end: 0.42em;
+  vertical-align: -0.15em;
+
+  border: var(--task-status-stroke) solid var(--ts-color, var(--text-muted));
+  border-radius: var(--task-status-radius);
+
+  background-color: transparent;
+  background-color: color-mix(
+    in srgb,
+    var(--ts-color, var(--text-muted)) var(--ts-bg-strength, 0%),
+    transparent
+  );
+
+  box-shadow: none !important;
+  outline: none;
+
+  color: var(--ts-icon-color, var(--ts-color, var(--text-muted)));
+  cursor: pointer;
+}
+
+/* Custom glyph inside the checkbox */
+li.task-list-item:is(
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > input.task-list-item-checkbox::after,
+
+li.task-list-item:is(
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > p > input.task-list-item-checkbox::after,
+
+.markdown-source-view.mod-cm6
+.HyperMD-task-line:is(
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) input[type="checkbox"]::after {
+  content: var(--ts-symbol);
+  display: block;
+
+  font-family: var(--font-interface);
+  font-size: calc(var(--task-status-size) * 0.68);
+  font-weight: 700;
+  line-height: 1;
+
+  color: currentColor;
+  transform: translateY(-0.02em);
+}
+
+/* Small status-specific optical corrections */
+li.task-list-item[data-task="/"] > input.task-list-item-checkbox::after,
+li.task-list-item[data-task="/"] > p > input.task-list-item-checkbox::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] input[type="checkbox"]::after {
+  font-size: calc(var(--task-status-size) * 0.48);
+  transform: translateX(0.04em);
+}
+
+li.task-list-item[data-task="w"] > input.task-list-item-checkbox::after,
+li.task-list-item[data-task="w"] > p > input.task-list-item-checkbox::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="w"] input[type="checkbox"]::after {
+  font-size: calc(var(--task-status-size) * 0.48);
+  letter-spacing: -0.08em;
+}
+
+li.task-list-item[data-task="~"] > input.task-list-item-checkbox::after,
+li.task-list-item[data-task="~"] > p > input.task-list-item-checkbox::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] input[type="checkbox"]::after {
+  font-size: calc(var(--task-status-size) * 0.78);
+  transform: translateY(-0.20em);
+}
+
+li.task-list-item[data-task="<"] > input.task-list-item-checkbox::after,
+li.task-list-item[data-task="<"] > p > input.task-list-item-checkbox::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"] input[type="checkbox"]::after {
+  font-size: calc(var(--task-status-size) * 0.72);
+}
+
+/* --------------------------------------------------------------------------
+   Text treatment
+   Keep the list calm: only terminal states affect task text.
+   -------------------------------------------------------------------------- */
+
+/* Cancelled: muted. Optional strike-through via Style Settings. */
+li.task-list-item[data-task="-"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  color: var(--text-faint);
+}
+
+body.task-status-strike-cancelled li.task-list-item[data-task="-"] .task-description,
+body.task-status-strike-cancelled .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+/* Done: do not let the Default theme over-emphasize completion. */
+li.task-list-item[data-task="x"] .task-description,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  text-decoration: none;
+}
+
+body.task-status-fade-done li.task-list-item[data-task="x"] .task-description,
+body.task-status-fade-done .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  color: var(--text-muted);
+}
+
+/* Checked means verified: completed-looking, but not crossed out. */
+li.task-list-item[data-task="v"] .task-description,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Interaction
+   -------------------------------------------------------------------------- */
+
+li.task-list-item > input.task-list-item-checkbox:hover,
+li.task-list-item > p > input.task-list-item-checkbox:hover,
+.markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]:hover {
+  border-color: var(--ts-color, var(--interactive-accent));
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--ts-color, var(--interactive-accent)) 12%, transparent)
+    !important;
+}
+
+li.task-list-item > input.task-list-item-checkbox:focus-visible,
+li.task-list-item > p > input.task-list-item-checkbox:focus-visible,
+.markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   LIGHT THEME CONTRAST OVERRIDES
+   Stronger ink + restrained pastel fills for white backgrounds.
+   ========================================================================== */
+
+.theme-light {
+  --ts-neutral: #5f6b7a;
+  --ts-active: #315f93;
+  --ts-waiting: #8a6512;
+  --ts-danger: #a23b3b;
+  --ts-important: #9a5718;
+  --ts-success: #2f7047;
+  --ts-review: #674b93;
+  --ts-question: #28717d;
+}
+
+/* Explicit light-theme surfaces.
+   These avoid very pale color-mix results on a white background. */
+
+.theme-light li.task-list-item[data-task=""],
+.theme-light li.task-list-item[data-task=" "],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=""],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=" "] {
+  --ts-bg: #f5f7f9;
+}
+
+.theme-light li.task-list-item[data-task="/"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] {
+  --ts-bg: #e7f0f8;
+}
+
+.theme-light li.task-list-item[data-task="w"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="w"] {
+  --ts-bg: #f7efd8;
+}
+
+.theme-light li.task-list-item[data-task="b"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"] {
+  --ts-bg: #f8e6e6;
+}
+
+.theme-light li.task-list-item[data-task="!"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"] {
+  --ts-bg: #faeadc;
+}
+
+.theme-light li.task-list-item[data-task="-"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  --ts-bg: #eef0f2;
+}
+
+.theme-light li.task-list-item[data-task="x"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  --ts-bg: #2f7047;
+}
+
+.theme-light li.task-list-item[data-task="<"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"] {
+  --ts-bg: #eee8f6;
+}
+
+.theme-light li.task-list-item[data-task="?"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"] {
+  --ts-bg: #e3f0f2;
+}
+
+.theme-light li.task-list-item[data-task="v"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] {
+  --ts-bg: #e4f1e8;
+}
+
+.theme-light li.task-list-item[data-task="~"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] {
+  --ts-bg: #e8eff7;
+}
+
+.theme-light li.task-list-item[data-task="r"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"] {
+  --ts-bg: #eee8f6;
+}
+
+/* Force readable light-theme checkbox ink and fill. */
+.theme-light li.task-list-item:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > input.task-list-item-checkbox,
+
+.theme-light li.task-list-item:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) > p > input.task-list-item-checkbox,
+
+.theme-light .markdown-source-view.mod-cm6
+.HyperMD-task-line:is(
+  [data-task=""],
+  [data-task=" "],
+  [data-task="/"],
+  [data-task="w"],
+  [data-task="b"],
+  [data-task="!"],
+  [data-task="-"],
+  [data-task="x"],
+  [data-task="<"],
+  [data-task="?"],
+  [data-task="v"],
+  [data-task="~"],
+  [data-task="r"]
+) input[type="checkbox"] {
+  border-color: var(--ts-color) !important;
+  background: var(--ts-bg) !important;
+  color: var(--ts-icon-color, var(--ts-color)) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Todo gets a cleaner neutral outline. */
+.theme-light li.task-list-item:is([data-task=""], [data-task=" "])
+  > input.task-list-item-checkbox,
+.theme-light li.task-list-item:is([data-task=""], [data-task=" "])
+  > p > input.task-list-item-checkbox,
+.theme-light .markdown-source-view.mod-cm6
+.HyperMD-task-line:is([data-task=""], [data-task=" "]) input[type="checkbox"] {
+  border-color: #7a8696 !important;
+  background: #ffffff !important;
+}
+
+/* Done: solid green, white check. */
+.theme-light li.task-list-item[data-task="x"] > input.task-list-item-checkbox,
+.theme-light li.task-list-item[data-task="x"] > p > input.task-list-item-checkbox,
+.theme-light .markdown-source-view.mod-cm6
+.HyperMD-task-line[data-task="x"] input[type="checkbox"] {
+  border-color: #2f7047 !important;
+  background: #2f7047 !important;
+  color: #ffffff !important;
+}
+
+/* Checked: keep it visually different from Done. */
+.theme-light li.task-list-item[data-task="v"] > input.task-list-item-checkbox,
+.theme-light li.task-list-item[data-task="v"] > p > input.task-list-item-checkbox,
+.theme-light .markdown-source-view.mod-cm6
+.HyperMD-task-line[data-task="v"] input[type="checkbox"] {
+  border-color: #3f7d57 !important;
+  background: #e4f1e8 !important;
+  color: #2f7047 !important;
+}
+
+/* Slightly stronger hover ring on light backgrounds. */
+.theme-light li.task-list-item > input.task-list-item-checkbox:hover,
+.theme-light li.task-list-item > p > input.task-list-item-checkbox:hover,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ts-color) 24%, transparent) !important;
+}

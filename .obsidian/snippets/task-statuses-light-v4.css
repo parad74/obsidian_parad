@@ -1,0 +1,313 @@
+/* ==========================================================================
+   Task Statuses — Light
+   Obsidian + Tasks
+   Robust SVG icon edition
+   ========================================================================== */
+
+/* @settings
+
+name: Task Statuses — Light
+id: task-statuses-light-v2
+settings:
+  -
+    id: task-status-size
+    title: Checkbox size
+    title.ru: Размер чекбокса
+    type: variable-number-slider
+    default: 18
+    min: 15
+    max: 22
+    step: 1
+    format: px
+  -
+    id: task-status-radius
+    title: Corner radius
+    title.ru: Скругление
+    type: variable-number-slider
+    default: 4
+    min: 2
+    max: 8
+    step: 1
+    format: px
+  -
+    id: task-status-stroke
+    title: Border width
+    title.ru: Толщина рамки
+    type: variable-number-slider
+    default: 1.25
+    min: 1
+    max: 2
+    step: 0.25
+    format: px
+
+*/
+
+body {
+  --task-status-size: 18px;
+  --task-status-radius: 4px;
+  --task-status-stroke: 1.25px;
+}
+
+/* --------------------------------------------------------------------------
+   Vocabulary
+
+   [ ] Todo
+   [/] Doing
+   [~] InProgress
+   [r] Review
+   [v] Checked
+   [x] Done
+   [w] Waiting
+   [b] Blocked
+   [<] Scheduling
+   [?] Question
+   [!] Important
+   [-] Cancelled
+   -------------------------------------------------------------------------- */
+
+/* Base: neutralize Obsidian's own check artwork for our statuses. */
+.theme-light li.task-list-item:is(
+  [data-task=""], [data-task=" "], [data-task="/"], [data-task="~"],
+  [data-task="r"], [data-task="v"], [data-task="x"], [data-task="w"],
+  [data-task="b"], [data-task="<"], [data-task="?"], [data-task="!"],
+  [data-task="-"]
+) input[type="checkbox"],
+
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line:is(
+  [data-task=""], [data-task=" "], [data-task="/"], [data-task="~"],
+  [data-task="r"], [data-task="v"], [data-task="x"], [data-task="w"],
+  [data-task="b"], [data-task="<"], [data-task="?"], [data-task="!"],
+  [data-task="-"]
+) input[type="checkbox"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+
+  width: var(--task-status-size) !important;
+  height: var(--task-status-size) !important;
+  min-width: var(--task-status-size) !important;
+
+  border-radius: var(--task-status-radius) !important;
+  border-width: var(--task-status-stroke) !important;
+  border-style: solid !important;
+
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 68% 68% !important;
+
+  box-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Disable theme-generated pseudo checkmarks where supported. */
+.theme-light li.task-list-item input[type="checkbox"]::before,
+.theme-light li.task-list-item input[type="checkbox"]::after,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]::before,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* TODO */
+.theme-light li.task-list-item:is([data-task=""], [data-task=" "]) input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line:is([data-task=""], [data-task=" "]) input[type="checkbox"] {
+  border-color: #7a8696 !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* DOING */
+.theme-light li.task-list-item[data-task="/"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] input[type="checkbox"] {
+  border-color: #315f93 !important;
+  background-color: #e7f0f8 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23315f93%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%203.7%2012%208%205%2012.3Z%22%20fill%3D%22%23315f93%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* IN PROGRESS */
+.theme-light li.task-list-item[data-task="~"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] input[type="checkbox"] {
+  border-color: #315f93 !important;
+  background-color: #e8eff7 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23315f93%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%224%22%20cy%3D%228%22%20r%3D%221.1%22%20fill%3D%22%23315f93%22%20stroke%3D%22none%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%221.1%22%20fill%3D%22%23315f93%22%20stroke%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%228%22%20r%3D%221.1%22%20fill%3D%22%23315f93%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* REVIEW */
+.theme-light li.task-list-item[data-task="r"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"] input[type="checkbox"] {
+  border-color: #674b93 !important;
+  background-color: #eee8f6 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23674b93%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M8%202.8%2013.2%208%208%2013.2%202.8%208Z%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* CHECKED */
+.theme-light li.task-list-item[data-task="v"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] input[type="checkbox"] {
+  border-color: #3f7d57 !important;
+  background-color: #e4f1e8 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%232f7047%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3.6%208.2%202.7%202.7%206.1-6.1%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* DONE — keep the solid green treatment you liked. */
+.theme-light li.task-list-item[data-task="x"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] input[type="checkbox"] {
+  border-color: #2f7047 !important;
+  background-color: #2f7047 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3.6%208.2%202.7%202.7%206.1-6.1%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* WAITING */
+.theme-light li.task-list-item[data-task="w"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="w"] input[type="checkbox"] {
+  border-color: #9a741c !important;
+  background-color: #f7efd8 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%238a6512%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.5%204v8M10.5%204v8%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* BLOCKED */
+.theme-light li.task-list-item[data-task="b"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"] input[type="checkbox"] {
+  border-color: #a23b3b !important;
+  background-color: #f8e6e6 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23a23b3b%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m4%204%208%208M12%204%204%2012%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* SCHEDULING */
+.theme-light li.task-list-item[data-task="<"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"] input[type="checkbox"] {
+  border-color: #674b93 !important;
+  background-color: #eee8f6 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23674b93%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%225.1%22%2F%3E%3Cpath%20d%3D%22M8%205v3.3l2.2%201.3%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* QUESTION */
+.theme-light li.task-list-item[data-task="?"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"] input[type="checkbox"] {
+  border-color: #28717d !important;
+  background-color: #e3f0f2 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%2328717d%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.7%206.1a2.4%202.4%200%201%201%203.1%202.3C8%208.7%207.7%209.2%207.7%2010%22%2F%3E%3Ccircle%20cx%3D%227.7%22%20cy%3D%2212.2%22%20r%3D%22.7%22%20fill%3D%22%2328717d%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* IMPORTANT */
+.theme-light li.task-list-item[data-task="!"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"] input[type="checkbox"] {
+  border-color: #9a5718 !important;
+  background-color: #faeadc !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%239a5718%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M8%203.2v6.1%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2212.2%22%20r%3D%22.8%22%20fill%3D%22%239a5718%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* CANCELLED */
+.theme-light li.task-list-item[data-task="-"] input[type="checkbox"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] input[type="checkbox"] {
+  border-color: #8b9199 !important;
+  background-color: #eef0f2 !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%23747b85%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%208h8%22%2F%3E%3C%2Fsvg%3E"); !important;
+}
+
+/* Terminal-state text */
+.theme-light li.task-list-item[data-task="x"] .task-description {
+  color: var(--text-muted);
+  text-decoration: none !important;
+}
+
+.theme-light li.task-list-item[data-task="v"] .task-description {
+  color: var(--text-muted);
+  text-decoration: none !important;
+}
+
+.theme-light li.task-list-item[data-task="-"] .task-description,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  color: var(--text-faint);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+/* Calm interaction */
+.theme-light li.task-list-item input[type="checkbox"]:hover,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line input[type="checkbox"]:hover {
+  filter: brightness(0.98) !important;
+  box-shadow: 0 0 0 2px rgba(49, 95, 147, 0.10) !important;
+}
+
+/* ==========================================================================
+   TERMINAL STATE TEXT OVERRIDES
+   Done = completed but readable.
+   Cancelled = intentionally crossed out.
+   ========================================================================== */
+
+/* Obsidian's Default theme may strike through every checked/non-space task.
+   Remove that inherited decoration for Done and Checked. */
+.theme-light .markdown-rendered li.task-list-item[data-task="x"],
+.theme-light .markdown-rendered li.task-list-item[data-task="v"],
+.theme-light .markdown-preview-view li.task-list-item[data-task="x"],
+.theme-light .markdown-preview-view li.task-list-item[data-task="v"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] {
+  text-decoration: none !important;
+}
+
+/* Also neutralize decoration on common child wrappers. */
+.theme-light li.task-list-item[data-task="x"] :is(p, span, a, .task-description),
+.theme-light li.task-list-item[data-task="v"] :is(p, span, a, .task-description) {
+  text-decoration: none !important;
+}
+
+/* Done: readable, slightly quieter than active work. */
+.theme-light .markdown-rendered li.task-list-item[data-task="x"],
+.theme-light .markdown-preview-view li.task-list-item[data-task="x"] {
+  color: var(--text-muted) !important;
+  opacity: 0.88;
+}
+
+/* Checked: verified, but still visually present. */
+.theme-light .markdown-rendered li.task-list-item[data-task="v"],
+.theme-light .markdown-preview-view li.task-list-item[data-task="v"] {
+  color: var(--text-normal) !important;
+  opacity: 0.92;
+}
+
+/* Cancelled alone gets the strike-through treatment. */
+.theme-light .markdown-rendered li.task-list-item[data-task="-"],
+.theme-light .markdown-preview-view li.task-list-item[data-task="-"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] {
+  color: var(--text-faint) !important;
+  text-decoration-line: line-through !important;
+  text-decoration-thickness: 1px !important;
+  text-decoration-color: var(--text-faint) !important;
+}
+
+/* ==========================================================================
+   FINAL COMPLETION POLICY
+   Obsidian Default Theme uses --checklist-done-decoration for completed tasks.
+   We disable global strike-through and explicitly restore it only for Cancelled.
+   ========================================================================== */
+
+body {
+  --checklist-done-decoration: none;
+}
+
+/* Done: completed, readable, never crossed out. */
+.theme-light li.task-list-item[data-task="x"],
+.theme-light li.task-list-item[data-task="x"] *,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] * {
+  text-decoration: none !important;
+}
+
+/* Checked: verified, readable, never crossed out. */
+.theme-light li.task-list-item[data-task="v"],
+.theme-light li.task-list-item[data-task="v"] *,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="v"] * {
+  text-decoration: none !important;
+}
+
+/* Cancelled: this is the only status intentionally crossed out. */
+.theme-light li.task-list-item[data-task="-"],
+.theme-light li.task-list-item[data-task="-"] *,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] * {
+  text-decoration-line: line-through !important;
+  text-decoration-thickness: 1px !important;
+  text-decoration-color: var(--text-faint) !important;
+}
