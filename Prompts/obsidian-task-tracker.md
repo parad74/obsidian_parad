@@ -1,0 +1,2 @@
+https://github.com/ignatpenshin/obsidian-task-tracker/tree/main/.claude/commands
+**Команды** — 8 слэш-команд, каждая описана в markdown-файле. Хочешь изменить логику `/review` или добавить свою `/standup` — редактируешь файл, не код.
