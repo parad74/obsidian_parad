@@ -178,7 +178,9 @@ Codex должен:
 - Debug и Release собираются без ошибок;
 - исходные legacy-проекты не изменены.
 
-## Эталон
+## Проверенные эталоны
+
+### DataService.dotnet.App1
 
 - Согласованное имя: `DataService.dotnet.App1`.
 - Режим: отдельный solution с Console-host.
@@ -191,3 +193,12 @@ Codex должен:
 - Lifetime: singleton.
 - SDK: 8.0.404, закреплённый в `global.json`.
 - Проверены locked restore, Debug- и Release-сборки без предупреждений, разрешение одного singleton-экземпляра через DI, два последовательных `Save`, `Save(null)`, `Clear` и успешное завершение Console-host с кодом `0`.
+
+### WinForms.dotnet.App2
+
+- Режим: самостоятельный WinForms solution по архитектуре `WinForms - View - Presenter - DI` с интегрированным кубиком сервиса.
+- Путь: `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App2/`.
+- Проекты: `Main`, `Common.View`, `Common.Presenter`, `Common.MessageOperation`, `Common.Service`.
+- Сервис: `IMainService`/`MainService`, singleton.
+- `MainPresenter` получает сервис через конструктор и делегирует ему `Save` и `Clear`; View не зависит от сервиса.
+- Проверены locked restore, Debug- и Release-сборки без предупреждений, DI-граф, события View, singleton, два последовательных `Save`, `Save(null)`, `Clear`, очистка View, логирование и запуск WinForms.

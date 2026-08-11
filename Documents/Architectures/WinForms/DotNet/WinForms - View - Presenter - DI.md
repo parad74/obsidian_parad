@@ -89,11 +89,12 @@ di_container: ask-before-generation
 
 - Концептуальный источник для выделения решения: `Sources/old/PreTestWCF/`.
 - Пример исходного логирования: `Sources/old/PreTestWCF/Model/Log/`.
-- Эталонная реализация: `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App1/`.
+- Базовая эталонная реализация: `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App1/`.
+- Эталон с кубиком `Service - DI`: `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App2/`.
 
 Современная эталонная реализация создана отдельно и не изменяет проект-источник или решения из `WinForms/DotNetFramework/`.
 
-## Проверенная конфигурация эталона
+## Проверенная конфигурация App1
 
 - Solution: `WinForms.dotnet.App1.sln`.
 - Visual Studio 2022 17.14.
@@ -105,3 +106,13 @@ di_container: ask-before-generation
 - DPI-режим `PerMonitorV2`.
 - NuGet-зависимости подключаются через `PackageReference` и фиксируются в `packages.lock.json`; папка `Lib` не используется.
 - Проверены Debug- и Release-сборки без предупреждений, запуск приложения, события View, обработка Presenter, общий экземпляр View в DI и запись операций в `ILog`.
+
+## Проверенная конфигурация App2 с Service - DI
+
+- Solution: `WinForms.dotnet.App2.sln`; полностью независим от App1.
+- .NET 8, `net8.0-windows`; SDK 8.0.404 закреплён в `global.json`.
+- Проекты: `Main`, `Common.View`, `Common.Presenter`, `Common.MessageOperation`, `Common.Service`.
+- Сервис: `IMainService`/`MainService`, контракт `SavedText`, `Save(string? text)`, `Clear`, lifetime singleton.
+- `MainPresenter` получает `IMainView`, `IMainService` и `ILog` через конструктор, не хранит обслуживаемое состояние и делегирует сервису `Save` и `Clear`.
+- `Form1` сохраняет событийный контракт App1 и ничего не знает о Presenter или сервисе.
+- Проверены locked restore, Debug- и Release-сборки без предупреждений, запуск WinForms, общий экземпляр View, singleton-сервис, два последовательных `Save`, `Save(null)`, `Clear`, очистка View и логирование.
