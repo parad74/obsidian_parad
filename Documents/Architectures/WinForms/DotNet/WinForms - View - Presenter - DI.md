@@ -89,6 +89,19 @@ di_container: ask-before-generation
 
 - Концептуальный источник для выделения решения: `Sources/old/PreTestWCF/`.
 - Пример исходного логирования: `Sources/old/PreTestWCF/Model/Log/`.
-- Будущая эталонная реализация: `Sources/Architectures/WinForms/DotNet/WinForms - View - Presenter - DI/`.
+- Эталонная реализация: `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App1/`.
 
-Современная эталонная реализация создаётся отдельно и не изменяет проект-источник.
+Современная эталонная реализация создана отдельно и не изменяет проект-источник или решения из `WinForms/DotNetFramework/`.
+
+## Проверенная конфигурация эталона
+
+- Solution: `WinForms.dotnet.App1.sln`.
+- Visual Studio 2022 17.14.
+- .NET 8, `net8.0-windows`; SDK 8.0.404 закреплён в `global.json`.
+- Стандартный DI: `Microsoft.Extensions.DependencyInjection` 8.0.0 и простой `ServiceCollection` без Generic Host.
+- Проекты: `Main`, `Common.View`, `Common.Presenter`, `Common.MessageOperation`.
+- Одна пара `Form1 : Form, IMainView` и `MainPresenter`, без вкладок.
+- Одно поле, кнопки `Save` и `Clear`, события `SaveRequested` и `ClearRequested`.
+- DPI-режим `PerMonitorV2`.
+- NuGet-зависимости подключаются через `PackageReference` и фиксируются в `packages.lock.json`; папка `Lib` не используется.
+- Проверены Debug- и Release-сборки без предупреждений, запуск приложения, события View, обработка Presenter, общий экземпляр View в DI и запись операций в `ILog`.
