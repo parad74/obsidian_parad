@@ -30,7 +30,7 @@ codex_deep_link: "codex://threads/019fe223-5f49-77d0-a079-e26cef97d828"
 Отправить Codex сообщение:
 
 ```text
-Прочитай AGENTS.md и Chats/2026-08-09 Obsidian_Codex_Tasks.md.
+Прочитай AGENTS.md и Chats/Codex/2026-08-09 Obsidian_Codex_Tasks.md.
 Восстанови контекст нашей работы с Obsidian и продолжи с раздела
 «Следующий шаг». Не изменяй структуру без моего подтверждения.
 ```
@@ -81,7 +81,7 @@ W:\obsidian\_parad
 - Текущий чат зарегистрирован в этой заметке вместе с ID задачи Codex.
 - В `Commands/` созданы команды `Save Chat.md` и `Restore Chat.md`.
 - В `Commands/` создана команда `Archive Chat Transcript.md` для версионного сохранения полной видимой стенограммы.
-- Полная видимая стенограмма чата сохранена в `Archive/2026-08-09-Obsidian_Codex_Tasks_1Ver.md`.
+- Полная видимая стенограмма чата сохранена в `Chats/Codex/2026-08-09-Obsidian_Codex_Tasks_1Ver.md`.
 
 ## Принятые решения
 
@@ -96,11 +96,11 @@ W:\obsidian\_parad
 
 - `AGENTS.md` — действующие инструкции Codex для всего vault.
 - `Archive/2026-08-09 AGENTS.md — Obsidian Vault Instructions.md` — исходный вариант инструкций.
-- `Chats/2026-08-09 Obsidian_Codex_Tasks.md` — текущая точка восстановления.
+- `Chats/Codex/2026-08-09 Obsidian_Codex_Tasks.md` — текущая точка восстановления.
 - `Commands/Save Chat.md` — сохранение точки восстановления текущего чата.
 - `Commands/Restore Chat.md` — восстановление контекста или открытие исходной задачи.
 - `Commands/Archive Chat Transcript.md` — сохранение полной видимой стенограммы в новую версию архива.
-- `Archive/2026-08-09-Obsidian_Codex_Tasks_1Ver.md` — полная стенограмма видимых сообщений, версия 1.
+- `Chats/Codex/2026-08-09-Obsidian_Codex_Tasks_1Ver.md` — полная стенограмма видимых сообщений, версия 1.
 
 ## Следующий шаг
 
