@@ -7,7 +7,9 @@ project: General
 
 # TASK-20260809-001 — Связать Codex, Obsidian и GitHub
 
-- [~] Связать Codex, Obsidian и GitHub 📅 2026-08-10 🆔 TASK-20260809-001
+## Проект: General
+
+- [x] Связать Codex, Obsidian и GitHub 🆔 TASK-20260809-001 📅 2026-08-10 ✅ 2026-08-12
 
 ## Цель
 
