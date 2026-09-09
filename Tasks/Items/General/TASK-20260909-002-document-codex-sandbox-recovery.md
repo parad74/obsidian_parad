@@ -40,7 +40,7 @@ project: General
 ## Код и GitHub
 
 - Репозиторий vault: `W:\obsidian\_parad`.
-- Commit не создавался.
+- Commit основной инструкции: [`f2e6ca0`](https://github.com/parad74/obsidian_parad/commit/f2e6ca0e2bf17e9a44a901acb775a888c7caebe3).
 
 ## Результат
 
@@ -52,3 +52,4 @@ project: General
 
 - 2026-09-09 — Работа начата, статус `Doing`.
 - 2026-09-09 — Инструкция и правило добавлены, выполнена локальная проверка, статус `Review`.
+- 2026-09-09 — Commit `f2e6ca0` создан, ссылка записана в карточку.
