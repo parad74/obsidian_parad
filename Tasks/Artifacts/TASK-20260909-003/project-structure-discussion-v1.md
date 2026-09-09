@@ -21,7 +21,7 @@
 13. Namespace для `Entity` строится как `<Service>.<Provider>.<Approach>`.
 14. Первый вариант использует `<Service> = Monitor`, `<Provider> = Sqlite`, `<Approach> = CodeFirst`; итоговый namespace `Entity` — `Monitor.Sqlite.CodeFirst`.
 15. Основной исторический пример проекта внутренних моделей: `Sources/old/WebAPI.Monitor/src/Monitor.Service.Shared`.
-16. Имя проекта, содержащего `Entity`, пока не определено и будет согласовано отдельно.
+16. Для первого профиля проект, содержащий `Entity` и реализацию доступа к БД, называется `Monitor.Model.Sqlite.CodeFirst.ExportImport`.
 17. Второй тип данных проекта `<Service>.Model` — часто используемые пары request/response: `<Имя>Model` и `<Имя>Result` в общей папке `<Имя>`.
 18. При создании проекта моделей пары request/response не добавляются автоматически.
 19. Перед добавлением предоставляется каталог доступных пар из исторического примера, и Parad выбирает нужные.
@@ -33,6 +33,35 @@
 25. Третий тип содержимого проекта — данные и компоненты для стандартной функциональности, сохранённые в историческом примере отдельными наборами.
 26. Такой набор предлагается только при точном упоминании согласованного имени или его псевдонима; вместе с предложением Codex показывает путь к исходной папке.
 27. Согласованные точные упоминания: `SignalR`; `Claim` или `Claims`; `JwtService` или `Jwt`; `ValidationStartupFilter` или `StartupFilter`; `Urls`.
+28. Все `DomainObject`, создаваемые из описания в чате или приложенного файла, предназначены для хранения в БД и размещаются в `<Service>.Model/Domain/<Имя>`; вопрос о сохранении каждого объекта в БД не задаётся.
+29. Папка `Domain` является явной границей: модели из неё служат источником для создания `Entity`; остальные типы `<Service>.Model` автоматически в `Entity` не преобразуются.
+30. Проект конкретной EF-реализации ссылается на проект Domain Model и на `SelectParam`; если нужного проекта ещё нет в solution, его можно создать или добавить на этом шаге.
+31. В начале создания EF-реализации уточняются проект Domain Model и имя базы данных.
+32. Для базы создаётся папка `<ИмяБД>`, а внутри неё для каждого типа — папка `<Имя>` с файлом `Entity` `<Имя>.cs`.
+33. Во всём проекте конкретной EF-реализации используется один namespace `<Service>.<Provider>.<Approach>`; папки базы и типов не добавляются к namespace. Для первого варианта это `Monitor.Sqlite.CodeFirst`.
+34. Нужно ли переносить в EF-проект парный класс `<Имя>s`, пока не определено и будет выясняться на следующих шагах.
+35. Для EF Core каждый тип имеет отдельный файл `<Имя>Configuration.cs` с реализацией `IEntityTypeConfiguration<<Имя>>`; EF6-класс `EntityTypeConfiguration<T>` не используется.
+36. `Entity` `<Имя>.cs` не содержит Data Annotations для схемы БД; таблица, ключ, генерация значения и свойства столбцов описываются Fluent API в одном файле конфигурации этого типа.
+37. В папке типа находятся `<Имя>.cs` и `<Имя>Configuration.cs`; оба используют единый namespace проекта `<Service>.<Provider>.<Approach>`.
+38. `DbContext` подключает все конфигурации проекта через `ApplyConfigurationsFromAssembly`.
+39. Эталон создаётся для рабочей БД, существующие данные которой должны сохраняться при изменении модели; схема развивается через EF migrations.
+40. `DomainObject` является источником состава модели для БД. Изменение `DomainObject` служит основанием для синхронного изменения соответствующих `Entity` и `<Имя>Configuration.cs`.
+41. Создание migration никогда не запускается автоматически. Команда выполняется только по отдельному явному запросу Parad в чате либо вручную самой Parad.
+42. Применение migration к уже существующей БД никогда не выполняется автоматически и требует отдельного явного запроса Parad либо ручного запуска.
+43. До первого запуска приложения должна существовать заранее созданная и проверенная migration `InitialCreate`.
+44. При запуске приложения `DbInitializer` проверяет наличие БД. Если БД отсутствует, он автоматически создаёт её, применяя уже подготовленные migrations; это первоначальная инициализация, а не автоматическое обновление существующей БД.
+45. Если БД уже существует, `DbInitializer` не применяет pending migrations автоматически.
+46. `public static class DbInitializer` хранится в файле `Context/DbInitializer.cs` и использует общий namespace проекта `<Service>.<Provider>.<Approach>`.
+47. `EnsureCreated()` не используется: первоначальная БД создаётся из подготовленной цепочки migrations, чтобы сразу иметь migration history.
+48. Имя БД строится как `<Service>Db`, например `MonitorDb` или `InventoryDb`; часть `<Service>` становится единым корневым префиксом связанных проектов и namespaces.
+49. Для `MonitorDb` используются префикс `Monitor`, Domain-проект и namespace `Monitor.Model`, а namespace EF-реализации начинается с `Monitor`; для `InventoryDb` соответственно используются `Inventory`, `Inventory.Model` и namespace EF-реализации с префиксом `Inventory`.
+50. Контекст получает имя от БД по шаблону `<Service>DbContext`, например `MonitorDbContext` или `InventoryDbContext`.
+51. Точное имя EF-проекта первого профиля — `Monitor.Model.Sqlite.CodeFirst.ExportImport`; его единый namespace — `Monitor.Sqlite.CodeFirst`.
+52. Контекст хранится в файле `Context/<Service>DbContext.cs` и объявляется как `public class <Service>DbContext : DbContext`.
+53. Контекст получает `DbContextOptions<<Service>DbContext>` через конструктор и не содержит собственного `OnConfiguring`.
+54. Для каждого `Entity` контекст содержит `DbSet` с именем `<ИмяEntity>Datas`; например, `DbSet<CommandResult> CommandResultDatas`. Имя `CommandResults` зарезервировано для парной коллекции `DomainObject` и для `DbSet` не используется.
+55. `OnModelCreating` не содержит конфигурацию отдельных таблиц и вызывает `ApplyConfigurationsFromAssembly(typeof(<Service>DbContext).Assembly)`.
+56. Контекст не создаёт migrations, не содержит connection string, не вызывает создание БД и не выполняет начальное заполнение; первоначальная инициализация находится в отдельном `Context/DbInitializer.cs`.
 
 ## Общий принцип зависимостей
 
@@ -121,14 +150,17 @@ Namespace `Entity` строится по технологическому про
 в согласованном проекте `<Service>.Model` создаются:
 
 ```text
-<Имя>/
-├─ <Имя>.cs
-└─ <Имя>s.cs
+Domain/
+└─ <Имя>/
+   ├─ <Имя>.cs
+   └─ <Имя>s.cs
 ```
 
 - `<Имя>.cs` содержит `public class <Имя>` по шаблону `DomainObject`;
 - `<Имя>s.cs` содержит полный согласованный парный класс `public class <Имя>s : ObservableCollection<<Имя>>`;
-- папка, оба файла и оба класса получают имена, производные от переданного `<Имя>`;
+- папка объекта, оба файла и оба класса получают имена, производные от переданного `<Имя>`;
+- все создаваемые по этому шаблону объекты размещаются внутри папки `Domain` и предназначены для хранения в БД;
+- отдельный вопрос о сохранении каждого создаваемого `DomainObject` в БД не задаётся;
 - оба класса используют ранее согласованный namespace `<Service>.Model`;
 - если имя сервиса отдельно не указано, используется `<Service> = Monitor` и namespace `Monitor.Model`;
 - вызов этого шаблона сам по себе не создаёт другие классы или проекты.
@@ -156,12 +188,13 @@ Namespace `Entity` строится по технологическому про
 Если в файле описан список объектов, для каждого объекта отдельно создаются:
 
 ```text
-<ИмяОбъекта>/
-├─ <ИмяОбъекта>.cs
-└─ <ИмяОбъекта>s.cs
+Domain/
+└─ <ИмяОбъекта>/
+   ├─ <ИмяОбъекта>.cs
+   └─ <ИмяОбъекта>s.cs
 ```
 
-К каждому объекту независимо применяются правила полей, обязательного `Code`, конструктора, сравнения по `Code`, парной коллекции и namespace `<Service>.Model`.
+К каждому объекту независимо применяются правила полей, обязательного `Code`, конструктора, сравнения по `Code`, парной коллекции и namespace `<Service>.Model`. Все описанные в таком файле `DomainObject` предназначены для БД; выбирать это отдельно для каждого объекта не требуется.
 
 Преобразование типов источника в типы C#, значения инициализации для типов кроме уже согласованных `string`, `int` и `long`, а также разрешение конфликта между именем в команде и именем в файле ещё не согласованы и не определяются автоматически.
 
@@ -465,4 +498,264 @@ DomainObject из <Service>.Model
 
 ## Следующий проект для обсуждения
 
-После уточнения состава `<Service>.Model` определить отдельный проект контрактов репозитория либо сразу проект реализации репозитория и его зависимости.
+Начато обсуждение проекта `Entity`, связанного с БД. Исторический пример первого профиля:
+
+```text
+Sources/old/WebAPI.Monitor/src/Monitor.Model.Sqlite.CodeFirst.ExportImport
+```
+
+### Первый шаг создания EF-проекта
+
+Проект создаётся в контексте solution и использует два уже существующих либо добавляемых на этом шаге проекта:
+
+```text
+Solution
+├─ SelectParam
+├─ <Service>.Model
+└─ проект <Service> + <Provider> + <Approach>
+      ├─ ProjectReference → SelectParam
+      └─ ProjectReference → <Service>.Model
+```
+
+В начале шага Машина должна:
+
+1. Определить или спросить, какой проект является Domain Model.
+2. Найти в solution `SelectParam`; если его нет, предложить добавить уже созданную библиотеку либо создать её в этом же solution.
+3. Определить или спросить имя базы данных по шаблону `<Service>Db`.
+4. В проекте EF-реализации создать папку с именем базы данных.
+5. Для каждого `DomainObject` из `<Service>.Model/Domain` создать внутри папки базы отдельную папку типа и файл `Entity`.
+
+Имя БД задаёт общий корневой префикс связанной группы. Суффикс `Db` отбрасывается для получения `<Service>`:
+
+```text
+MonitorDb
+└─ <Service> = Monitor
+   ├─ Domain project: Monitor.Model
+   ├─ Domain namespace: Monitor.Model
+   ├─ EF namespace: Monitor.<Provider>.<Approach>
+   └─ DbContext: MonitorDbContext
+
+InventoryDb
+└─ <Service> = Inventory
+   ├─ Domain project: Inventory.Model
+   ├─ Domain namespace: Inventory.Model
+   ├─ EF namespace: Inventory.<Provider>.<Approach>
+   └─ DbContext: InventoryDbContext
+```
+
+Связанные проекты начинаются с того же `<Service>`. Для текущего профиля полное имя EF-проекта:
+
+```text
+Monitor.Model.Sqlite.CodeFirst.ExportImport
+```
+
+Его namespace остаётся:
+
+```text
+Monitor.Sqlite.CodeFirst
+```
+
+Обязательность суффикса `ExportImport` для других будущих EF-проектов пока не определена.
+
+Пример для базы `monitordb` и модели `CommandResult`:
+
+```text
+<EF-проект>/
+└─ monitordb/
+   └─ CommandResult/
+      └─ CommandResult.cs
+```
+
+Во всём EF-проекте, независимо от расположения файла, используется один namespace:
+
+```text
+<Service>.<Provider>.<Approach>
+```
+
+Для текущего профиля:
+
+```csharp
+namespace Monitor.Sqlite.CodeFirst
+```
+
+Папки `monitordb` и `CommandResult` не становятся частями namespace.
+
+Состав создаваемого `Entity`, правила описания БД и вопрос о необходимости парного класса `CommandResults.cs` в EF-проекте пока не согласованы. Они будут разбираться на следующих шагах без предварительного решения.
+
+### Шаблон конфигурации Entity для EF Core
+
+Для каждого `Entity` создаётся один отдельный файл полной Fluent API-конфигурации:
+
+```text
+<ИмяБД>/
+└─ <Имя>/
+   ├─ <Имя>.cs
+   └─ <Имя>Configuration.cs
+```
+
+Основной класс `<Имя>.cs` не содержит `[Table]`, `[Key]`, `[DatabaseGenerated]` и другие Data Annotations, описывающие схему БД.
+
+Пример `CommandResultConfiguration.cs`:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Monitor.Sqlite.CodeFirst
+{
+    public sealed class CommandResultConfiguration
+        : IEntityTypeConfiguration<CommandResult>
+    {
+        public void Configure(EntityTypeBuilder<CommandResult> builder)
+        {
+            builder.ToTable("CommandResult");
+
+            builder.HasKey(p => p.ID);
+
+            builder.Property(p => p.ID)
+                .ValueGeneratedOnAdd();
+
+            builder.Property(p => p.CommandUID)
+                .HasMaxLength(100)
+                .IsRequired();
+
+            builder.Property(p => p.QueueCode)
+                .HasMaxLength(50);
+        }
+    }
+}
+```
+
+Все правила отображения одного `Entity` на БД находятся в его единственном файле `<Имя>Configuration.cs` и не распределяются между атрибутами класса, `DbContext` и несколькими конфигурациями.
+
+В `DbContext` конфигурации подключаются одной общей операцией:
+
+```csharp
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    base.OnModelCreating(modelBuilder);
+
+    modelBuilder.ApplyConfigurationsFromAssembly(
+        typeof(MonitorSqliteDBContext).Assembly);
+}
+```
+
+Это правило относится к EF Core. Исторический `CommandResultConfiguration : EntityTypeConfiguration<CommandResult>` использует API EF6 и в новый EF Core-шаблон не переносится.
+
+### Шаблон Context для EF Core
+
+Имя контекста формируется из уже согласованного имени БД:
+
+```text
+MonitorDb
+└─ Context/MonitorDbContext.cs
+```
+
+Для проекта `Monitor.Model.Sqlite.CodeFirst.ExportImport` согласован следующий код:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace Monitor.Sqlite.CodeFirst
+{
+    public class MonitorDbContext : DbContext
+    {
+        public MonitorDbContext(
+            DbContextOptions<MonitorDbContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<CommandResult> CommandResultDatas { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(MonitorDbContext).Assembly);
+        }
+    }
+}
+```
+
+Правила шаблона:
+
+- файл находится в папке `Context`;
+- имя `<Service>DbContext` получается из имени БД `<Service>Db` без повторного вопроса;
+- весь код использует единый namespace проекта `<Service>.<Provider>.<Approach>`;
+- `DbContextOptions` передаются через конструктор;
+- `OnConfiguring` внутри контекста отсутствует;
+- для каждого `Entity` добавляется `DbSet<<ИмяEntity>> <ИмяEntity>Datas`;
+- суффикс `Datas` отличает `DbSet<Entity>` от парной коллекции `DomainObject` `<Имя>s`;
+- конфигурация таблиц и столбцов находится в отдельных `<Имя>Configuration.cs`;
+- `OnModelCreating` только подключает конфигурации текущей assembly;
+- connection string, создание БД, migrations и seed data не помещаются в класс контекста;
+- первоначальным созданием отсутствующей БД занимается отдельный `Context/DbInitializer.cs` по ранее согласованному правилу.
+
+### Источник модели и migrations
+
+Шаблон предназначен для рабочей базы данных. При изменении модели существующие данные должны сохраняться, поэтому изменения схемы оформляются migrations, а база не удаляется и не создаётся заново через `EnsureCreated()`.
+
+Источником состава модели является `DomainObject` из `<Service>.Model/Domain`:
+
+```text
+DomainObject
+    → синхронизация Entity
+    → синхронизация <Имя>Configuration.cs
+    → проверка mapper
+    → сборка и проверка изменений модели
+```
+
+Изменение `DomainObject` само по себе не запускает migration. Машина должна показать необходимые изменения `Entity` и конфигурации и выполнить их в рамках согласованного шага, но остановиться до команд migrations.
+
+Создание migration допускается только:
+
+- по отдельному явному требованию Parad в чате;
+- либо вручную Parad вне действий Машины.
+
+Применение созданной migration к уже существующей БД также является отдельным действием и требует отдельного явного требования либо ручного запуска. Разрешение создать migration не означает разрешения применить её к существующей БД.
+
+До первого запуска приложения должна быть явно создана, проверена и включена в проект migration `InitialCreate`. Генерация migration не выполняется внутри приложения.
+
+При запуске вызывается:
+
+```text
+Context/DbInitializer.cs
+└─ public static class DbInitializer
+```
+
+`DbInitializer` проверяет наличие БД:
+
+```text
+БД отсутствует
+    → применить заранее подготовленные migrations
+    → создать БД актуальной версии
+
+БД существует
+    → не применять pending migrations автоматически
+```
+
+Автоматическое применение подготовленной цепочки migrations разрешено только для первоначального создания отсутствующей БД. Для уже существующей БД сохраняется правило отдельного явного требования.
+
+Автоматические варианты запрещены:
+
+- не создавать migration только потому, что изменились `DomainObject`, `Entity` или конфигурация;
+- не выполнять `dotnet ef database update` для существующей БД без отдельного требования;
+- не применять pending migrations к существующей БД при обычном старте приложения;
+- не использовать `EnsureCreated()` для рабочей БД, которая сопровождается migrations.
+
+После синхронизации модели Машина только сообщает, что есть изменения схемы и migration ещё не создана или не применена к существующей БД. Точный способ проверки отсутствия БД для каждого provider будет согласован отдельно.
+
+## Точка продолжения
+
+Проект `Monitor.Model.Sqlite.CodeFirst.ExportImport` не закончен.
+
+Последнее согласованное решение:
+
+- создан точный шаблон `Context/MonitorDbContext.cs`;
+- `DbSet` именуются `<ИмяEntity>Datas`;
+- конфигурации подключаются через `ApplyConfigurationsFromAssembly`;
+- обязанности `DbContext` отделены от `DbInitializer`.
+
+При продолжении вернуться к составу EF-проекта после согласованного класса `MonitorDbContext`. Следующий компонент и его правила пока не выбраны.
