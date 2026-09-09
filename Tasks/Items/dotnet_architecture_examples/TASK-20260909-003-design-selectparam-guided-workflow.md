@@ -87,6 +87,8 @@ project: dotnet_architecture_examples
 
 - Репозиторий будущей эталонной реализации: `Sources/Architectures` (`dotnet_architecture_examples`).
 - На этапе фиксации цели код не изменялся.
+- Согласованные решения по EF Entity workflow: [4dcd52a](https://github.com/parad74/obsidian_parad/commit/4dcd52a79781cb9ea6dd681109ea56608ac33824).
+- Пользовательская заметка `Wiki/HowToDo/ef migration.md`: [a289152](https://github.com/parad74/obsidian_parad/commit/a289152969652f33e3ad6b55efe0ea3f68bbc614).
 
 ## Результат
 
@@ -124,3 +126,4 @@ project: dotnet_architecture_examples
 - 2026-09-10 — Для первого профиля зафиксировано точное имя EF-проекта `Monitor.Model.Sqlite.CodeFirst.ExportImport`; единый namespace проекта остаётся `Monitor.Sqlite.CodeFirst`. Обязательность `ExportImport` для других профилей пока не установлена.
 - 2026-09-10 — Согласован шаблон `Context/MonitorDbContext.cs`: constructor injection `DbContextOptions<MonitorDbContext>`, `DbSet` по правилу `<ИмяEntity>Datas`, единый namespace `Monitor.Sqlite.CodeFirst` и автоматическое подключение конфигураций assembly. `OnConfiguring`, connection string, migrations, создание БД и seed data в контекст не входят.
 - 2026-09-10 — Работа остановлена на согласованном шаблоне `MonitorDbContext`. Проект `Monitor.Model.Sqlite.CodeFirst.ExportImport` не закончен; при продолжении нужно вернуться к следующему компоненту EF-проекта без предположения о его составе.
+- 2026-09-10 — По указанию Parad пользовательская заметка `Wiki/HowToDo/ef migration.md` включена в репозиторий без изменения содержимого.
