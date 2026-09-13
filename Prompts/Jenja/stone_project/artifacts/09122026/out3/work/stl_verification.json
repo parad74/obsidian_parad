@@ -1,0 +1,37 @@
+{
+  "source": "podoconnik_volume_3d_mm.dxf",
+  "source_sha256": "75808d07edb42bb186d85d221a1b1e3cfaf29324a8971fb1245a6eb2d7e7ea07",
+  "output": "podoconnik_volume_mm.stl",
+  "output_sha256": "cd4c3836643db21de00ae6ca41d0f5e0e280fbb46bc4bf946e4dd8dd05749041",
+  "format": "binary STL",
+  "coordinate_units": "mm (select mm on import; STL has no standard units field)",
+  "triangles": 1172,
+  "vertices": 588,
+  "connected_components": 1,
+  "closed_manifold": true,
+  "consistent_winding": true,
+  "normals_verified": true,
+  "degenerate_triangles": 0,
+  "bounds_mm": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1300.0,
+      270.0,
+      30.0
+    ]
+  ],
+  "size_mm": [
+    1300.0,
+    270.0,
+    30.0
+  ],
+  "volume_mm3": 10009624.9980962,
+  "source_volume_mm3": 10009624.999777205,
+  "max_conversion_vertex_error_mm": 5.8771402349506194e-05,
+  "remeshed": false,
+  "ArtCAM_import_tested": false
+}

@@ -1,0 +1,17 @@
+{
+  "sheet_mm": [
+    1645,
+    3200
+  ],
+  "rotation_ccw_degrees": 5,
+  "clearances_mm": {
+    "left_mm": 24.139337957529264,
+    "right_mm": 24.13933795752928,
+    "top_mm": 25.0,
+    "bottom_mm": 669.5770870420469
+  },
+  "offset_after_rotation_mm": [
+    150.886620901014,
+    645.5230021291181
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sheet_mm": [
+    1645,
+    3200
+  ],
+  "rotation_ccw_degrees": 5,
+  "height_mm": 20,
+  "edge_radius_mm": 10,
+  "edge_overhang_mm": 10,
+  "coordinate_origin": "Sheet lower left at lower face, x right y up",
+  "translation_after_rotation_mm": [
+    150.886620901014,
+    645.5230021291181
+  ],
+  "clearances_mm": {
+    "left_mm": 24.139337957529264,
+    "right_mm": 24.13933795752928,
+    "top_mm": 25.0,
+    "bottom_mm": 669.5770870420469
+  },
+  "no_scaling": true,
+  "input_files": {
+    "stol_volume_3d_mm.dxf": "d954da9aff2adfab4c3849f21c23cfd5be8ee6fa71a9ee82f7bda7f5e0af3df1",
+    "stol_volume_mm.stl": "ba147d4b886bde0b3fc2daf10859e997076b81097dab1682dedce98214f154e4"
+  },
+  "date": "2026-09-13",
+  "ArtCAM_import_tested": false
+}

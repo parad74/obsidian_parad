@@ -1,0 +1,12 @@
+{
+  "length_mm": 2100.0,
+  "depth_mm": 270.0,
+  "height_mm": 30,
+  "radius_mm": 13.5,
+  "upper_vertical_mm": 3,
+  "wing_width_mm": 50,
+  "wing_depth_mm": 50,
+  "task": "TASK-20260912-002",
+  "date": "2026-09-12",
+  "pdf_order": "Created after all other deliverables are present and verified."
+}

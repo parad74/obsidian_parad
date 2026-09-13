@@ -1,0 +1,59 @@
+{
+  "sill_contour_1600x270_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1,
+    "sha256": "294a8086345e1adb34af021483dd6bc7a52c3b8d04297c0689b9062d8373d05b"
+  },
+  "sill_drawing_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 32,
+    "sha256": "2b5322d23351ec281cced41697949433c86c5dde277127d2134cef27ae599153"
+  },
+  "sill_section_HV_R13p5_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1,
+    "sha256": "1b45ccbbaa494e51a8688a5cb3e027605f395f1b63dcd642b21f2b18d0f2a05e"
+  },
+  "sill_volume_3d_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1564,
+    "sha256": "72c33f32ea9f9ed4004aebfb6025f7e8ee0f4ca799f7509830c818e8e54da51b"
+  },
+  "geometry": {
+    "envelope_mm": [
+      1600,
+      270,
+      30
+    ],
+    "rear_width_mm": 1500,
+    "wings_mm": [
+      50,
+      50
+    ],
+    "wing_depth_mm": 50,
+    "contour_area_mm2": 410000.0,
+    "radius_mm": 13.5,
+    "arc_height_mm": 27,
+    "upper_vertical_mm": 3,
+    "mesh_vertices": 784,
+    "mesh_edges": 2346,
+    "mesh_triangles": 1564,
+    "euler_characteristic": 2,
+    "mesh_closed_manifold": true,
+    "winding_consistent": true,
+    "mesh_volume_mm3": 12100123.1226978,
+    "analytic_volume_mm3": 12100208.979899077,
+    "mesh_volume_relative_error": 7.095513922030059e-06,
+    "max_mesh_surface_error_bound_mm": 0.002555679381101714,
+    "ArtCAM_import_tested": false,
+    "physical_accuracy_verified": false
+  }
+}

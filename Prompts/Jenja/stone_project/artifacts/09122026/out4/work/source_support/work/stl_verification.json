@@ -1,0 +1,37 @@
+{
+  "source": "work\\out4_stage\\stol_volume_3d_mm.dxf",
+  "source_sha256": "d954da9aff2adfab4c3849f21c23cfd5be8ee6fa71a9ee82f7bda7f5e0af3df1",
+  "output": "stol_volume_mm.stl",
+  "output_sha256": "ba147d4b886bde0b3fc2daf10859e997076b81097dab1682dedce98214f154e4",
+  "format": "binary STL",
+  "coordinate_units": "mm (select mm on import; STL has no standard units field)",
+  "triangles": 135330,
+  "vertices": 67667,
+  "connected_components": 1,
+  "closed_manifold": true,
+  "consistent_winding": true,
+  "normals_verified": true,
+  "degenerate_triangles": 0,
+  "bounds_mm": [
+    [
+      0.001379366498440504,
+      -5.715953739127144e-05,
+      0.0
+    ],
+    [
+      1647.6094970703125,
+      2443.896728515625,
+      20.0
+    ]
+  ],
+  "size_mm": [
+    1647.608117703814,
+    2443.8967856751624,
+    20.0
+  ],
+  "volume_mm3": 56638950.2508153,
+  "source_volume_mm3": 56638950.21331712,
+  "max_conversion_vertex_error_mm": 0.000135943006836913,
+  "remeshed": false,
+  "ArtCAM_import_tested": false
+}

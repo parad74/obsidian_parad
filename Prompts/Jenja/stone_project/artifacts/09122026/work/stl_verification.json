@@ -1,0 +1,37 @@
+{
+  "source": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\out\\sill_volume_3d_mm.dxf",
+  "source_sha256": "72c33f32ea9f9ed4004aebfb6025f7e8ee0f4ca799f7509830c818e8e54da51b",
+  "output": "sill_volume_mm.stl",
+  "output_sha256": "e5f5cbf45c7ab240fdd067dbfa9e081314a7a05477152a48eec4eac98cc02f79",
+  "format": "binary STL",
+  "coordinate_units": "mm (select mm on import; STL has no standard units field)",
+  "triangles": 1564,
+  "vertices": 784,
+  "connected_components": 1,
+  "closed_manifold": true,
+  "consistent_winding": true,
+  "normals_verified": true,
+  "degenerate_triangles": 0,
+  "bounds_mm": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1600.0,
+      270.0,
+      30.0
+    ]
+  ],
+  "size_mm": [
+    1600.0,
+    270.0,
+    30.0
+  ],
+  "volume_mm3": 12100123.121017424,
+  "source_volume_mm3": 12100123.122699201,
+  "max_conversion_vertex_error_mm": 5.8771402349506194e-05,
+  "remeshed": false,
+  "ArtCAM_import_tested": false
+}

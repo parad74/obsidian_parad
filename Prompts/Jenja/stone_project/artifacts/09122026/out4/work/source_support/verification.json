@@ -1,0 +1,85 @@
+{
+  "stol_base_exact_mm.dxf": {
+    "sha256": "fb2754b4c4c13136df0d785f3322375ae02ff66c147ee98e0f10833968b2255a",
+    "entities": 6,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_contour_mm.dxf": {
+    "sha256": "bac1a6a38b0db48ecd4f3b243509855fd221c83caa2ea290d0121c9d8fc32590",
+    "entities": 1,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_drawing_mm.dxf": {
+    "sha256": "cd6919825ab6391df2aeec697e3a3f7b09e6a5b5d3fc9d7e846f311b3d6f75b2",
+    "entities": 18,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_sections_mm.dxf": {
+    "sha256": "980712d343ad15f3338705aa5277e6e9bc3404affca9aee5f11002596110be0c",
+    "entities": 1,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_source_extracted_mm.dxf": {
+    "sha256": "3b27f984b19d8416e32c3b70c60ea87626ebee8b9a249349631532ce5b021db6",
+    "entities": 6,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_volume_3d_mm.dxf": {
+    "sha256": "d954da9aff2adfab4c3849f21c23cfd5be8ee6fa71a9ee82f7bda7f5e0af3df1",
+    "entities": 135330,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "geometry": {
+    "base_exact_size_mm": [
+      1627.6116919786018,
+      2423.8973457664815
+    ],
+    "envelope_target_mm": [
+      1647.6116919786018,
+      2443.8973457664815,
+      20.0
+    ],
+    "envelope_mesh_mm": [
+      1647.6081536423947,
+      2443.8968895977137,
+      20.0
+    ],
+    "base_exact_area_mm2": 2780258.245095393,
+    "base_polygon_area_mm2": 2780243.327894958,
+    "base_perimeter_mm": 6559.175001891654,
+    "source_translation_mm": [
+      -12129.716588195788,
+      -10217.57789925273
+    ],
+    "perimeter_samples": 1041,
+    "profile_intervals": 64,
+    "vertices": 67667,
+    "triangles": 135330,
+    "mesh_volume_mm3": 56638950.21331712,
+    "independent_integrated_offset_volume_mm3": 56639366.45428927,
+    "volume_relative_error": 7.348969421996787e-06,
+    "base_curve_chord_bound_mm": 0.006,
+    "profile_chord_bound_mm": 0.0030140402173296937,
+    "join_miter_excess_bound_mm": 0.007394812839058851,
+    "ruled_patch_triangle_bound_mm": 0.004545368306765454,
+    "combined_model_bound_mm": 0.020954221363154,
+    "polygon_star_certificate": true,
+    "profile_radius_mm": 10.0,
+    "overhang_mm": 10.0,
+    "height_mm": 20.0,
+    "ArtCAM_import_tested": false,
+    "physical_accuracy_verified": false
+  }
+}

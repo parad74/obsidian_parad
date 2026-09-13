@@ -1,0 +1,44 @@
+{
+  "source": "stol_volume_3d_mm.dxf",
+  "source_sha256": "e025f3e589c9c5fe2f82ff7cb203049480c0f1bc749daf53b21f10270b1feea9",
+  "output": "stol_volume_mm.stl",
+  "output_sha256": "813d6cd3220089ca79ff99bf38b195082bf8b4ff1257d3b974911bb0cc3af989",
+  "format": "binary STL",
+  "coordinate_units": "mm (select mm on import; STL has no standard units field)",
+  "triangles": 135330,
+  "vertices": 67667,
+  "connected_components": 1,
+  "closed_manifold": true,
+  "consistent_winding": true,
+  "normals_verified": true,
+  "degenerate_triangles": 0,
+  "bounds_mm": [
+    [
+      24.13933753967285,
+      669.5770874023438,
+      0.0
+    ],
+    [
+      1620.8607177734375,
+      3175.0,
+      20.0
+    ]
+  ],
+  "size_mm": [
+    1596.7213802337646,
+    2505.4229125976562,
+    20.0
+  ],
+  "volume_mm3": 56638950.20653216,
+  "source_volume_mm3": 56638950.21331737,
+  "max_conversion_vertex_error_mm": 0.00013600736822177452,
+  "remeshed": false,
+  "ArtCAM_import_tested": false,
+  "sheet_clearances_mm": {
+    "left": 24.13933753967285,
+    "right": 24.1392822265625,
+    "top": 25.0,
+    "bottom": 669.5770874023438
+  },
+  "fits_sheet": true
+}

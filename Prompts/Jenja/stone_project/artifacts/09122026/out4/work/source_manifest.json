@@ -1,0 +1,57 @@
+{
+  "source_name": "Белинского_48_13_06_26_Лист_23_Чертеж_кухонного_острова_М1_15.dxf",
+  "source_sha256": "1337eb63c1ca64213dcbba6b05fa93ea3b8fcbf0bcea8a97eb25887c55cdda98",
+  "handles": [
+    "A4DB",
+    "A4DC",
+    "A4DD",
+    "A4DE",
+    "A4DF",
+    "A4E0"
+  ],
+  "exact_min": [
+    12139.716588195788,
+    10227.57789925273
+  ],
+  "exact_max": [
+    13767.32828017439,
+    12651.475245019212
+  ],
+  "size": [
+    1627.6116919786018,
+    2423.8973457664815
+  ],
+  "area_mm2": 2780258.245095393,
+  "perimeter_mm": 6559.175001891654,
+  "joint_gaps_mm": [
+    1.2862197421537486e-11,
+    9.275062463698822e-12,
+    7.499885442698834e-12,
+    1.6770253673335696e-11,
+    4.9146387340829446e-11,
+    6.70227867766327e-10
+  ],
+  "joint_tangent_angles_degrees": [
+    0.1621143451150188,
+    -2.5202690273584243,
+    0.53246599853538,
+    -1.893144605183733,
+    -4.798443329564439,
+    -0.1525875642609548
+  ],
+  "sample_vertices": 1042,
+  "min_turn_degrees": -4.405522755243789,
+  "archived_inputs": {
+    "stol_volume_3d_mm.dxf": "d954da9aff2adfab4c3849f21c23cfd5be8ee6fa71a9ee82f7bda7f5e0af3df1",
+    "stol_volume_mm.stl": "ba147d4b886bde0b3fc2daf10859e997076b81097dab1682dedce98214f154e4"
+  },
+  "decisions": [
+    "User confirmed actual DXF contour instead of dimension labels 1630 x 2420.",
+    "Thickness 20; full perimeter V R10 protrudes 10 mm outward.",
+    "Available stone 1645 x 3200; no other stone.",
+    "Keep shape and 10 mm overhang; rotate 5 degrees CCW and center in width.",
+    "Place extreme top point 25 mm from sheet upper boundary.",
+    "All output plan/volume files share sheet coordinates; sections remain local.",
+    "PDF last, with updated stock layout."
+  ]
+}

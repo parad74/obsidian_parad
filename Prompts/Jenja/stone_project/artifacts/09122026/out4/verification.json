@@ -1,0 +1,122 @@
+{
+  "stol_base_exact_mm.dxf": {
+    "sha256": "5efae9f8bf75ea3c385d78852fb20fc8116704a1c7051cc686910e6a71287933",
+    "entities": 6,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_contour_mm.dxf": {
+    "sha256": "636e4c0515fcb68faf3dfb1a89f7496258064fabb2e616fe29b4b0d8fa6ab9ea",
+    "entities": 1,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_drawing_mm.dxf": {
+    "sha256": "4a57b2460c1411c06b814a53f0527c7327c8a718a4689465e63e3a9c4c375a75",
+    "entities": 21,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_sections_mm.dxf": {
+    "sha256": "0310bb4a1c0b5016bb08fb079d930e0f6407fc08ef3b92a966c4882c3e6cfdae",
+    "entities": 1,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_source_extracted_mm.dxf": {
+    "sha256": "60e6fd4c016365373e5a7f772178ebdc4204a7141dbaf9d9243d62be15847de4",
+    "entities": 6,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_stock_layout_mm.dxf": {
+    "sha256": "c64f6283aabea2676b345044865228b0a7a3a6c7cc0dda9bfd95b73e01ca8763",
+    "entities": 8,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "stol_volume_3d_mm.dxf": {
+    "sha256": "e025f3e589c9c5fe2f82ff7cb203049480c0f1bc749daf53b21f10270b1feea9",
+    "entities": 135330,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm"
+  },
+  "geometry": {
+    "base_exact_size_mm": [
+      1627.6116919786018,
+      2423.8973457664815
+    ],
+    "envelope_target_mm": [
+      1647.6116919786018,
+      2443.8973457664815,
+      20.0
+    ],
+    "envelope_mesh_mm": [
+      1647.6081536423947,
+      2443.8968895977137,
+      20.0
+    ],
+    "base_exact_area_mm2": 2780258.245095393,
+    "base_polygon_area_mm2": 2780243.327894958,
+    "base_perimeter_mm": 6559.175001891654,
+    "source_translation_mm": [
+      -12129.716588195788,
+      -10217.57789925273
+    ],
+    "perimeter_samples": 1041,
+    "profile_intervals": 64,
+    "vertices": 67667,
+    "triangles": 135330,
+    "mesh_volume_mm3": 56638950.21331737,
+    "independent_integrated_offset_volume_mm3": 56639366.45428927,
+    "volume_relative_error": 7.348969421996787e-06,
+    "base_curve_chord_bound_mm": 0.006,
+    "profile_chord_bound_mm": 0.0030140402173296937,
+    "join_miter_excess_bound_mm": 0.007394812839058851,
+    "ruled_patch_triangle_bound_mm": 0.004545368306765454,
+    "combined_model_bound_mm": 0.020954221363154,
+    "polygon_star_certificate": true,
+    "profile_radius_mm": 10.0,
+    "overhang_mm": 10.0,
+    "height_mm": 20.0,
+    "ArtCAM_import_tested": false,
+    "physical_accuracy_verified": false,
+    "envelope_mm": [
+      1596.7213240849414,
+      2505.422912957953,
+      20.0
+    ],
+    "bounds_mm": [
+      [
+        24.139337957529264,
+        669.5770870420469,
+        0.0
+      ],
+      [
+        1620.8606620424707,
+        3175.0,
+        20.0
+      ]
+    ],
+    "rotation_ccw_degrees": 5,
+    "translation_after_rotation_mm": [
+      150.886620901014,
+      645.5230021291181
+    ],
+    "clearances_mm": {
+      "left_mm": 24.139337957529264,
+      "right_mm": 24.13933795752928,
+      "top_mm": 25.0,
+      "bottom_mm": 669.5770870420469
+    },
+    "inverse_transform_error_mm": 6.821210263296962e-13,
+    "volume_before_transform_mm3": 56638950.21331712
+  }
+}

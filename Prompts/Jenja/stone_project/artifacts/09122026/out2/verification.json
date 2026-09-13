@@ -1,0 +1,59 @@
+{
+  "podoconnik_contour_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1,
+    "sha256": "9819c44dba014d569d357d2c138842743533e8c2dd291f1461086c10033e5c38"
+  },
+  "podoconnik_drawing_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 32,
+    "sha256": "612dc49be9a99f47a91482393d4fcc338ac439b70bc127ebac3cad3c25b2106b"
+  },
+  "podoconnik_section_HV_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1,
+    "sha256": "ed74200062d4cf614ab3cbfc915d6a4c79cd29335e104d86aecade5118757395"
+  },
+  "podoconnik_volume_3d_mm.dxf": {
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "units": "mm",
+    "entities": 1564,
+    "sha256": "f8c59c815400e970a61a7122a531eff8aafc03ebc7ddaa3ae77bc78f23d74502"
+  },
+  "geometry": {
+    "envelope_mm": [
+      2100.0,
+      270.0,
+      30
+    ],
+    "rear_width_mm": 2000.0,
+    "wings_mm": [
+      50,
+      50
+    ],
+    "wing_depth_mm": 50,
+    "contour_area_mm2": 545000.0,
+    "radius_mm": 13.5,
+    "arc_height_mm": 27,
+    "upper_vertical_mm": 3,
+    "mesh_vertices": 784,
+    "mesh_edges": 2346,
+    "mesh_triangles": 1564,
+    "euler_characteristic": 2,
+    "mesh_closed_manifold": true,
+    "winding_consistent": true,
+    "mesh_volume_mm3": 16090736.390959855,
+    "analytic_volume_mm3": 16090847.79517826,
+    "mesh_volume_relative_error": 6.923452376379338e-06,
+    "max_mesh_surface_error_bound_mm": 0.002555679381101714,
+    "ArtCAM_import_tested": false,
+    "physical_accuracy_verified": false
+  }
+}

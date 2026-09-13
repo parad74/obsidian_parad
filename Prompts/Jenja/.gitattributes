@@ -1,0 +1,10 @@
+# Preserve generated documents, CAD data and images byte-for-byte.
+*.[pP][dD][fF] binary
+*.[dD][xX][fF] binary
+*.[dD][wW][gG] binary
+*.[sS][tT][lL] binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.npz binary
+*.rar binary
