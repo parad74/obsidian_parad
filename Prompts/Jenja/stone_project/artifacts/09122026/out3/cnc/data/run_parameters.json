@@ -1,0 +1,115 @@
+{
+  "part": "PARAD-004",
+  "dimensions_mm": [
+    1280,
+    270,
+    30
+  ],
+  "work_axes": {
+    "X": "depth 270, right",
+    "Y": "length 1280, away from operator",
+    "Z": "up"
+  },
+  "coordinate_origin": "front-left bounding corner of part, not sheet or machine home",
+  "release_scope": "Four AIR_XY NC previews; no spindle start and no cutting depth in NC. Full working motions are offline JSON/DXF only.",
+  "cutting_spindle_policy": "M3/M5 from eventual cutting NC; water and tool changes manual",
+  "dvp": {
+    "diameter_mm": 4,
+    "flutes": 1,
+    "rpm_selected": 16000,
+    "feed_xy": 800,
+    "feed_z": 100,
+    "source": "ArtCAM",
+    "thickness_mm": 5,
+    "Z0": "table",
+    "depth_Z": [
+      2.5,
+      0.3
+    ],
+    "safe_Z": 45,
+    "rapid_to_Z": 7,
+    "pre_drill_mm": 8,
+    "tabs_width_min": 5,
+    "tabs_height": 5,
+    "tabs_count": 6,
+    "accepted_template_corners_R": 2,
+    "sheet_mm": [
+      1220,
+      2710
+    ],
+    "sheet_to_part_origin_mm": [
+      50,
+      50
+    ]
+  },
+  "pcd": {
+    "diameter_mm": 6,
+    "rpm_selected": 8000,
+    "feed_xy": 500,
+    "feed_z": 100,
+    "source_requested": "pendant, unverified settings",
+    "Z0": "stone top",
+    "depth_Z": [
+      -1.5,
+      -2.5
+    ],
+    "safe_Z": 40,
+    "rapid_to_Z": 2,
+    "width_steps": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.5
+    ]
+  },
+  "hv": {
+    "diameter_mm": 74,
+    "profile_R_mm": 13.5,
+    "cutting_height_mm": 28,
+    "ideal_extra_top_cylinder_mm": 1,
+    "Z0": "stone bottom",
+    "tool_reference": "lowest cutting point",
+    "work_Z": 0,
+    "safe_Z": 70,
+    "source_requested": "pendant, unverified settings",
+    "rpm_requested": 6000,
+    "stated_tool_max_rpm": 4000,
+    "rpm_status": "User experimental request above stated tool limit; no S or M3 in AIR NC; not validated for cutting",
+    "feed_rough": 292.5,
+    "feed_finish": 162.5,
+    "normal_infeed_steps": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0.5
+    ]
+  },
+  "new_implementation_choices": {
+    "approach_clearance_above_top_mm": 2,
+    "DVP_skip_width_including_round_end_compensation_mm": 9,
+    "HV_exit_center_X": 97,
+    "PCD_profile_exit_center_X": 63,
+    "PCD_profile_start_X": 283,
+    "HV_start_center_X": 317,
+    "machine_rapid_speed": null,
+    "tool_holder_dimensions": null
+  },
+  "material": "Emperador Dark, nominal contour, no external allowance",
+  "direction": "CCW around the outside with CW M3; conventional relative to the kept part",
+  "physical_tests": "none",
+  "ArtCAM_export_tests": "none"
+}

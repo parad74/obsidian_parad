@@ -1,0 +1,66 @@
+{
+  "version": "v2",
+  "decode_errors": 0,
+  "source_metadata": [
+    {
+      "atom": "mvhd",
+      "timescale": 900,
+      "duration": 11.748888888888889
+    },
+    {
+      "atom": "mdhd",
+      "timescale": 44100,
+      "duration": 11.749297052154194
+    },
+    {
+      "atom": "stts",
+      "sample_count": 506
+    },
+    {
+      "atom": "mdhd",
+      "timescale": 90000,
+      "duration": 11.7
+    },
+    {
+      "atom": "stts",
+      "sample_count": 351
+    }
+  ],
+  "output_metadata": [
+    {
+      "atom": "mvhd",
+      "timescale": 1000,
+      "duration": 16.0
+    },
+    {
+      "atom": "mdhd",
+      "timescale": 15360,
+      "duration": 16.0
+    },
+    {
+      "atom": "stts",
+      "sample_count": 480
+    },
+    {
+      "atom": "mdhd",
+      "timescale": 44100,
+      "duration": 16.023219954648525
+    },
+    {
+      "atom": "stts",
+      "sample_count": 691
+    }
+  ],
+  "duration_delta_seconds": 4.251111111111111,
+  "source_audio_sha256": "343bef40c86495ca130e2931bf3708eab8b5cacfc4068cd972557845742d2666",
+  "output_audio_sha256": "40e060c9e28a37bc22d7ca9f941d4ae1ecb847a21545986d2507dda472baa55a",
+  "audio_bitstream_identical": false,
+  "decoded_audio_peak": 0.6412448883056641,
+  "decoded_audio_rms": 0.09489361941814423,
+  "expected_duration_seconds": 16,
+  "decoded_video_frames": 480,
+  "frame_mean_min": 77.83640543619792,
+  "frame_mean_max": 150.4979248046875,
+  "output_sha256": "71581d8a97fb45a0902308d002eff9cc0f796a7c02b64237881a3e5574d3ac10",
+  "audio_review": "Integrity and decode verified; not auditioned by the assistant."
+}

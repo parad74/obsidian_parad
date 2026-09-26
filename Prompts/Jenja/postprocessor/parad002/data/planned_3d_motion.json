@@ -1,0 +1,6138 @@
+{
+  "01_dvp": [
+    {
+      "code": "G0",
+      "start": [
+        0.0,
+        0.0,
+        45
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        -8.0,
+        45
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -8.0,
+        7
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -8.0,
+        2.5
+      ],
+      "end": [
+        29.5,
+        -2.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -2.0,
+        2.5
+      ],
+      "end": [
+        50.0,
+        -2.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        50.0,
+        -2.0,
+        2.5
+      ],
+      "end": [
+        52.0,
+        3.552713678800501e-15,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        3.552713678800501e-15,
+        2.5
+      ],
+      "end": [
+        52.0,
+        48.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        48.0,
+        2.5
+      ],
+      "end": [
+        270.0,
+        48.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        270.0,
+        48.0,
+        2.5
+      ],
+      "end": [
+        272.0,
+        49.999999999999986,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        49.999999999999986,
+        2.5
+      ],
+      "end": [
+        272.0,
+        528.8333333333334,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        528.8333333333334,
+        2.5
+      ],
+      "end": [
+        272.0,
+        528.8333333333334,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        528.8333333333334,
+        45
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        278.0,
+        537.8333333333334,
+        45
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        537.8333333333334,
+        7
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        537.8333333333334,
+        2.5
+      ],
+      "end": [
+        272.0,
+        537.8333333333334,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        537.8333333333334,
+        2.5
+      ],
+      "end": [
+        272.0,
+        1062.1666666666667,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        1062.1666666666667,
+        2.5
+      ],
+      "end": [
+        272.0,
+        1062.1666666666667,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        1062.1666666666667,
+        45
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        45
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        7
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        2.5
+      ],
+      "end": [
+        272.0,
+        1071.1666666666667,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        1071.1666666666667,
+        2.5
+      ],
+      "end": [
+        272.0,
+        1550.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        272.0,
+        1550.0,
+        2.5
+      ],
+      "end": [
+        269.9999999999999,
+        1552.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -2.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        269.9999999999999,
+        1552.0,
+        2.5
+      ],
+      "end": [
+        52.0,
+        1552.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        1552.0,
+        2.5
+      ],
+      "end": [
+        52.0,
+        1600.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        52.0,
+        1600.0,
+        2.5
+      ],
+      "end": [
+        50.00000000000013,
+        1602.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -2.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        50.00000000000013,
+        1602.0,
+        2.5
+      ],
+      "end": [
+        29.5,
+        1602.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        1602.0,
+        2.5
+      ],
+      "end": [
+        29.5,
+        1602.0,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        1602.0,
+        45
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        1608.0,
+        45
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1608.0,
+        7
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1608.0,
+        2.5
+      ],
+      "end": [
+        20.5,
+        1602.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1602.0,
+        2.5
+      ],
+      "end": [
+        0.0,
+        1602.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        0.0,
+        1602.0,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        1600.0000000000002,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -1.2246467991473532e-16,
+        -2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        1600.0000000000002,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        1071.166666666667,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        1071.166666666667,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        1071.166666666667,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        1071.166666666667,
+        45
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        45
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        7
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        1062.166666666667,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        1062.166666666667,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        537.8333333333335,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        537.8333333333335,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        537.8333333333335,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        537.8333333333335,
+        45
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        45
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        7
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        528.8333333333335,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        528.8333333333335,
+        2.5
+      ],
+      "end": [
+        -2.0,
+        0.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        -2.0,
+        0.0,
+        2.5
+      ],
+      "end": [
+        -1.2471237279776174e-13,
+        -2.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        2.0,
+        -2.4492935982947064e-16
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1.2471237279776174e-13,
+        -2.0,
+        2.5
+      ],
+      "end": [
+        20.5,
+        -2.0,
+        2.5
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        -2.0,
+        2.5
+      ],
+      "end": [
+        20.5,
+        -2.0,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        -2.0,
+        45
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        -8.0,
+        45
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -8.0,
+        7
+      ],
+      "end": [
+        29.5,
+        -8.0,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -8.0,
+        0.3
+      ],
+      "end": [
+        29.5,
+        -2.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        29.5,
+        -2.0,
+        0.3
+      ],
+      "end": [
+        50.0,
+        -2.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        50.0,
+        -2.0,
+        0.3
+      ],
+      "end": [
+        52.0,
+        3.552713678800501e-15,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        3.552713678800501e-15,
+        0.3
+      ],
+      "end": [
+        52.0,
+        48.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        48.0,
+        0.3
+      ],
+      "end": [
+        270.0,
+        48.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        270.0,
+        48.0,
+        0.3
+      ],
+      "end": [
+        272.0,
+        49.999999999999986,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        49.999999999999986,
+        0.3
+      ],
+      "end": [
+        272.0,
+        528.8333333333334,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        528.8333333333334,
+        0.3
+      ],
+      "end": [
+        272.0,
+        528.8333333333334,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        528.8333333333334,
+        45
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        278.0,
+        537.8333333333334,
+        45
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        537.8333333333334,
+        7
+      ],
+      "end": [
+        278.0,
+        537.8333333333334,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        537.8333333333334,
+        0.3
+      ],
+      "end": [
+        272.0,
+        537.8333333333334,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        537.8333333333334,
+        0.3
+      ],
+      "end": [
+        272.0,
+        1062.1666666666667,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        1062.1666666666667,
+        0.3
+      ],
+      "end": [
+        272.0,
+        1062.1666666666667,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        272.0,
+        1062.1666666666667,
+        45
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        45
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        7
+      ],
+      "end": [
+        278.0,
+        1071.1666666666667,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        278.0,
+        1071.1666666666667,
+        0.3
+      ],
+      "end": [
+        272.0,
+        1071.1666666666667,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        272.0,
+        1071.1666666666667,
+        0.3
+      ],
+      "end": [
+        272.0,
+        1550.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        272.0,
+        1550.0,
+        0.3
+      ],
+      "end": [
+        269.9999999999999,
+        1552.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -2.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        269.9999999999999,
+        1552.0,
+        0.3
+      ],
+      "end": [
+        52.0,
+        1552.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        52.0,
+        1552.0,
+        0.3
+      ],
+      "end": [
+        52.0,
+        1600.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        52.0,
+        1600.0,
+        0.3
+      ],
+      "end": [
+        50.00000000000013,
+        1602.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -2.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        50.00000000000013,
+        1602.0,
+        0.3
+      ],
+      "end": [
+        29.5,
+        1602.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        1602.0,
+        0.3
+      ],
+      "end": [
+        29.5,
+        1602.0,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        29.5,
+        1602.0,
+        45
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        1608.0,
+        45
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1608.0,
+        7
+      ],
+      "end": [
+        20.5,
+        1608.0,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1608.0,
+        0.3
+      ],
+      "end": [
+        20.5,
+        1602.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        20.5,
+        1602.0,
+        0.3
+      ],
+      "end": [
+        0.0,
+        1602.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        0.0,
+        1602.0,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        1600.0000000000002,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        -1.2246467991473532e-16,
+        -2.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        1600.0000000000002,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        1071.166666666667,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        1071.166666666667,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        1071.166666666667,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        1071.166666666667,
+        45
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        45
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        7
+      ],
+      "end": [
+        -8.0,
+        1062.166666666667,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        1062.166666666667,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        1062.166666666667,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        1062.166666666667,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        537.8333333333335,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        537.8333333333335,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        537.8333333333335,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -2.0,
+        537.8333333333335,
+        45
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        45
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        45
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        7
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        7
+      ],
+      "end": [
+        -8.0,
+        528.8333333333335,
+        0.3
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -8.0,
+        528.8333333333335,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        528.8333333333335,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2.0,
+        528.8333333333335,
+        0.3
+      ],
+      "end": [
+        -2.0,
+        0.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        -2.0,
+        0.0,
+        0.3
+      ],
+      "end": [
+        -1.2471237279776174e-13,
+        -2.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": [
+        2.0,
+        -2.4492935982947064e-16
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1.2471237279776174e-13,
+        -2.0,
+        0.3
+      ],
+      "end": [
+        20.5,
+        -2.0,
+        0.3
+      ],
+      "role": "feed_path",
+      "feed": 800,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        -2.0,
+        0.3
+      ],
+      "end": [
+        20.5,
+        -2.0,
+        45
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        20.5,
+        -2.0,
+        45
+      ],
+      "end": [
+        0,
+        0,
+        45
+      ],
+      "role": "return_work_XY0",
+      "feed": null,
+      "ij": null
+    }
+  ],
+  "02_pcd": [
+    {
+      "code": "G0",
+      "start": [
+        0.0,
+        0.0,
+        40
+      ],
+      "end": [
+        283,
+        1550,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        1550,
+        40
+      ],
+      "end": [
+        283,
+        1550,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        283,
+        1550,
+        2
+      ],
+      "end": [
+        283,
+        1550,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        283,
+        1550,
+        -1.5
+      ],
+      "end": [
+        273,
+        1550,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        273,
+        1550,
+        -1.5
+      ],
+      "end": [
+        270.0,
+        1553.0,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": [
+        -3.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        270.0,
+        1553.0,
+        -1.5
+      ],
+      "end": [
+        53,
+        1553,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        1553,
+        -1.5
+      ],
+      "end": [
+        53,
+        1613,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        1613,
+        -1.5
+      ],
+      "end": [
+        53,
+        1613,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        1613,
+        40
+      ],
+      "end": [
+        63,
+        1602,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1602,
+        40
+      ],
+      "end": [
+        63,
+        1602,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1602,
+        2
+      ],
+      "end": [
+        63,
+        1602,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1602,
+        -1.5
+      ],
+      "end": [
+        -2,
+        1602,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2,
+        1602,
+        -1.5
+      ],
+      "end": [
+        -2,
+        -2,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2,
+        -2,
+        -1.5
+      ],
+      "end": [
+        63,
+        -2,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -2,
+        -1.5
+      ],
+      "end": [
+        63,
+        -2,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -2,
+        40
+      ],
+      "end": [
+        63,
+        1601,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1601,
+        40
+      ],
+      "end": [
+        63,
+        1601,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1601,
+        2
+      ],
+      "end": [
+        63,
+        1601,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1601,
+        -1.5
+      ],
+      "end": [
+        -1,
+        1601,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1,
+        1601,
+        -1.5
+      ],
+      "end": [
+        -1,
+        -1,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1,
+        -1,
+        -1.5
+      ],
+      "end": [
+        63,
+        -1,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -1,
+        -1.5
+      ],
+      "end": [
+        63,
+        -1,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -1,
+        40
+      ],
+      "end": [
+        63,
+        1600,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1600,
+        40
+      ],
+      "end": [
+        63,
+        1600,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1600,
+        2
+      ],
+      "end": [
+        63,
+        1600,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1600,
+        -1.5
+      ],
+      "end": [
+        0,
+        1600,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        0,
+        1600,
+        -1.5
+      ],
+      "end": [
+        0,
+        0,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        0,
+        0,
+        -1.5
+      ],
+      "end": [
+        63,
+        0,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        0,
+        -1.5
+      ],
+      "end": [
+        63,
+        0,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        0,
+        40
+      ],
+      "end": [
+        63,
+        1599,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1599,
+        40
+      ],
+      "end": [
+        63,
+        1599,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1599,
+        2
+      ],
+      "end": [
+        63,
+        1599,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1599,
+        -1.5
+      ],
+      "end": [
+        1,
+        1599,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        1,
+        1599,
+        -1.5
+      ],
+      "end": [
+        1,
+        1,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        1,
+        1,
+        -1.5
+      ],
+      "end": [
+        63,
+        1,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1,
+        -1.5
+      ],
+      "end": [
+        63,
+        1,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1,
+        40
+      ],
+      "end": [
+        63,
+        1598,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1598,
+        40
+      ],
+      "end": [
+        63,
+        1598,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1598,
+        2
+      ],
+      "end": [
+        63,
+        1598,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1598,
+        -1.5
+      ],
+      "end": [
+        2,
+        1598,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        2,
+        1598,
+        -1.5
+      ],
+      "end": [
+        2,
+        2,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        2,
+        2,
+        -1.5
+      ],
+      "end": [
+        63,
+        2,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        2,
+        -1.5
+      ],
+      "end": [
+        63,
+        2,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        2,
+        40
+      ],
+      "end": [
+        63,
+        1597,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1597,
+        40
+      ],
+      "end": [
+        63,
+        1597,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1597,
+        2
+      ],
+      "end": [
+        63,
+        1597,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1597,
+        -1.5
+      ],
+      "end": [
+        3,
+        1597,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        3,
+        1597,
+        -1.5
+      ],
+      "end": [
+        3,
+        3,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        3,
+        3,
+        -1.5
+      ],
+      "end": [
+        63,
+        3,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        3,
+        -1.5
+      ],
+      "end": [
+        63,
+        3,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        3,
+        40
+      ],
+      "end": [
+        63,
+        1596,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1596,
+        40
+      ],
+      "end": [
+        63,
+        1596,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1596,
+        2
+      ],
+      "end": [
+        63,
+        1596,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1596,
+        -1.5
+      ],
+      "end": [
+        4,
+        1596,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        4,
+        1596,
+        -1.5
+      ],
+      "end": [
+        4,
+        4,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        4,
+        4,
+        -1.5
+      ],
+      "end": [
+        63,
+        4,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        4,
+        -1.5
+      ],
+      "end": [
+        63,
+        4,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        4,
+        40
+      ],
+      "end": [
+        63,
+        1595,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1595,
+        40
+      ],
+      "end": [
+        63,
+        1595,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1595,
+        2
+      ],
+      "end": [
+        63,
+        1595,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1595,
+        -1.5
+      ],
+      "end": [
+        5,
+        1595,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        5,
+        1595,
+        -1.5
+      ],
+      "end": [
+        5,
+        5,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        5,
+        5,
+        -1.5
+      ],
+      "end": [
+        63,
+        5,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        5,
+        -1.5
+      ],
+      "end": [
+        63,
+        5,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        5,
+        40
+      ],
+      "end": [
+        63,
+        1594,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1594,
+        40
+      ],
+      "end": [
+        63,
+        1594,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1594,
+        2
+      ],
+      "end": [
+        63,
+        1594,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1594,
+        -1.5
+      ],
+      "end": [
+        6,
+        1594,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        6,
+        1594,
+        -1.5
+      ],
+      "end": [
+        6,
+        6,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        6,
+        6,
+        -1.5
+      ],
+      "end": [
+        63,
+        6,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        6,
+        -1.5
+      ],
+      "end": [
+        63,
+        6,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        6,
+        40
+      ],
+      "end": [
+        63,
+        1593,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1593,
+        40
+      ],
+      "end": [
+        63,
+        1593,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1593,
+        2
+      ],
+      "end": [
+        63,
+        1593,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1593,
+        -1.5
+      ],
+      "end": [
+        7,
+        1593,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        7,
+        1593,
+        -1.5
+      ],
+      "end": [
+        7,
+        7,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        7,
+        7,
+        -1.5
+      ],
+      "end": [
+        63,
+        7,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        7,
+        -1.5
+      ],
+      "end": [
+        63,
+        7,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        7,
+        40
+      ],
+      "end": [
+        63,
+        1592,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1592,
+        40
+      ],
+      "end": [
+        63,
+        1592,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1592,
+        2
+      ],
+      "end": [
+        63,
+        1592,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1592,
+        -1.5
+      ],
+      "end": [
+        8,
+        1592,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        8,
+        1592,
+        -1.5
+      ],
+      "end": [
+        8,
+        8,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        8,
+        8,
+        -1.5
+      ],
+      "end": [
+        63,
+        8,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        8,
+        -1.5
+      ],
+      "end": [
+        63,
+        8,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        8,
+        40
+      ],
+      "end": [
+        63,
+        1591,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1591,
+        40
+      ],
+      "end": [
+        63,
+        1591,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1591,
+        2
+      ],
+      "end": [
+        63,
+        1591,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1591,
+        -1.5
+      ],
+      "end": [
+        9,
+        1591,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        9,
+        1591,
+        -1.5
+      ],
+      "end": [
+        9,
+        9,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        9,
+        9,
+        -1.5
+      ],
+      "end": [
+        63,
+        9,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        9,
+        -1.5
+      ],
+      "end": [
+        63,
+        9,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        9,
+        40
+      ],
+      "end": [
+        63,
+        1590,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1590,
+        40
+      ],
+      "end": [
+        63,
+        1590,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1590,
+        2
+      ],
+      "end": [
+        63,
+        1590,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1590,
+        -1.5
+      ],
+      "end": [
+        10,
+        1590,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10,
+        1590,
+        -1.5
+      ],
+      "end": [
+        10,
+        10,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10,
+        10,
+        -1.5
+      ],
+      "end": [
+        63,
+        10,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10,
+        -1.5
+      ],
+      "end": [
+        63,
+        10,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10,
+        40
+      ],
+      "end": [
+        63,
+        1589.5,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1589.5,
+        40
+      ],
+      "end": [
+        63,
+        1589.5,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1589.5,
+        2
+      ],
+      "end": [
+        63,
+        1589.5,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1589.5,
+        -1.5
+      ],
+      "end": [
+        10.5,
+        1589.5,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10.5,
+        1589.5,
+        -1.5
+      ],
+      "end": [
+        10.5,
+        10.5,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10.5,
+        10.5,
+        -1.5
+      ],
+      "end": [
+        63,
+        10.5,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10.5,
+        -1.5
+      ],
+      "end": [
+        63,
+        10.5,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10.5,
+        40
+      ],
+      "end": [
+        53,
+        -13,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        -13,
+        40
+      ],
+      "end": [
+        53,
+        -13,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        -13,
+        2
+      ],
+      "end": [
+        53,
+        -13,
+        -1.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        -13,
+        -1.5
+      ],
+      "end": [
+        53,
+        0,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        0,
+        -1.5
+      ],
+      "end": [
+        53,
+        47,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        47,
+        -1.5
+      ],
+      "end": [
+        270,
+        47,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        270,
+        47,
+        -1.5
+      ],
+      "end": [
+        273.0,
+        50.0,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": [
+        0.0,
+        3.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        273.0,
+        50.0,
+        -1.5
+      ],
+      "end": [
+        283,
+        50,
+        -1.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        50,
+        -1.5
+      ],
+      "end": [
+        283,
+        50,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        50,
+        40
+      ],
+      "end": [
+        283,
+        1550,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        1550,
+        40
+      ],
+      "end": [
+        283,
+        1550,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        283,
+        1550,
+        2
+      ],
+      "end": [
+        283,
+        1550,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        283,
+        1550,
+        -2.5
+      ],
+      "end": [
+        273,
+        1550,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        273,
+        1550,
+        -2.5
+      ],
+      "end": [
+        270.0,
+        1553.0,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": [
+        -3.0,
+        0.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        270.0,
+        1553.0,
+        -2.5
+      ],
+      "end": [
+        53,
+        1553,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        1553,
+        -2.5
+      ],
+      "end": [
+        53,
+        1613,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        1613,
+        -2.5
+      ],
+      "end": [
+        53,
+        1613,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        1613,
+        40
+      ],
+      "end": [
+        63,
+        1602,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1602,
+        40
+      ],
+      "end": [
+        63,
+        1602,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1602,
+        2
+      ],
+      "end": [
+        63,
+        1602,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1602,
+        -2.5
+      ],
+      "end": [
+        -2,
+        1602,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2,
+        1602,
+        -2.5
+      ],
+      "end": [
+        -2,
+        -2,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -2,
+        -2,
+        -2.5
+      ],
+      "end": [
+        63,
+        -2,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -2,
+        -2.5
+      ],
+      "end": [
+        63,
+        -2,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -2,
+        40
+      ],
+      "end": [
+        63,
+        1601,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1601,
+        40
+      ],
+      "end": [
+        63,
+        1601,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1601,
+        2
+      ],
+      "end": [
+        63,
+        1601,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1601,
+        -2.5
+      ],
+      "end": [
+        -1,
+        1601,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1,
+        1601,
+        -2.5
+      ],
+      "end": [
+        -1,
+        -1,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -1,
+        -1,
+        -2.5
+      ],
+      "end": [
+        63,
+        -1,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -1,
+        -2.5
+      ],
+      "end": [
+        63,
+        -1,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        -1,
+        40
+      ],
+      "end": [
+        63,
+        1600,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1600,
+        40
+      ],
+      "end": [
+        63,
+        1600,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1600,
+        2
+      ],
+      "end": [
+        63,
+        1600,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1600,
+        -2.5
+      ],
+      "end": [
+        0,
+        1600,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        0,
+        1600,
+        -2.5
+      ],
+      "end": [
+        0,
+        0,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        0,
+        0,
+        -2.5
+      ],
+      "end": [
+        63,
+        0,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        0,
+        -2.5
+      ],
+      "end": [
+        63,
+        0,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        0,
+        40
+      ],
+      "end": [
+        63,
+        1599,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1599,
+        40
+      ],
+      "end": [
+        63,
+        1599,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1599,
+        2
+      ],
+      "end": [
+        63,
+        1599,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1599,
+        -2.5
+      ],
+      "end": [
+        1,
+        1599,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        1,
+        1599,
+        -2.5
+      ],
+      "end": [
+        1,
+        1,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        1,
+        1,
+        -2.5
+      ],
+      "end": [
+        63,
+        1,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1,
+        -2.5
+      ],
+      "end": [
+        63,
+        1,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1,
+        40
+      ],
+      "end": [
+        63,
+        1598,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1598,
+        40
+      ],
+      "end": [
+        63,
+        1598,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1598,
+        2
+      ],
+      "end": [
+        63,
+        1598,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1598,
+        -2.5
+      ],
+      "end": [
+        2,
+        1598,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        2,
+        1598,
+        -2.5
+      ],
+      "end": [
+        2,
+        2,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        2,
+        2,
+        -2.5
+      ],
+      "end": [
+        63,
+        2,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        2,
+        -2.5
+      ],
+      "end": [
+        63,
+        2,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        2,
+        40
+      ],
+      "end": [
+        63,
+        1597,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1597,
+        40
+      ],
+      "end": [
+        63,
+        1597,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1597,
+        2
+      ],
+      "end": [
+        63,
+        1597,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1597,
+        -2.5
+      ],
+      "end": [
+        3,
+        1597,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        3,
+        1597,
+        -2.5
+      ],
+      "end": [
+        3,
+        3,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        3,
+        3,
+        -2.5
+      ],
+      "end": [
+        63,
+        3,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        3,
+        -2.5
+      ],
+      "end": [
+        63,
+        3,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        3,
+        40
+      ],
+      "end": [
+        63,
+        1596,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1596,
+        40
+      ],
+      "end": [
+        63,
+        1596,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1596,
+        2
+      ],
+      "end": [
+        63,
+        1596,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1596,
+        -2.5
+      ],
+      "end": [
+        4,
+        1596,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        4,
+        1596,
+        -2.5
+      ],
+      "end": [
+        4,
+        4,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        4,
+        4,
+        -2.5
+      ],
+      "end": [
+        63,
+        4,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        4,
+        -2.5
+      ],
+      "end": [
+        63,
+        4,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        4,
+        40
+      ],
+      "end": [
+        63,
+        1595,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1595,
+        40
+      ],
+      "end": [
+        63,
+        1595,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1595,
+        2
+      ],
+      "end": [
+        63,
+        1595,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1595,
+        -2.5
+      ],
+      "end": [
+        5,
+        1595,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        5,
+        1595,
+        -2.5
+      ],
+      "end": [
+        5,
+        5,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        5,
+        5,
+        -2.5
+      ],
+      "end": [
+        63,
+        5,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        5,
+        -2.5
+      ],
+      "end": [
+        63,
+        5,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        5,
+        40
+      ],
+      "end": [
+        63,
+        1594,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1594,
+        40
+      ],
+      "end": [
+        63,
+        1594,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1594,
+        2
+      ],
+      "end": [
+        63,
+        1594,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1594,
+        -2.5
+      ],
+      "end": [
+        6,
+        1594,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        6,
+        1594,
+        -2.5
+      ],
+      "end": [
+        6,
+        6,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        6,
+        6,
+        -2.5
+      ],
+      "end": [
+        63,
+        6,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        6,
+        -2.5
+      ],
+      "end": [
+        63,
+        6,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        6,
+        40
+      ],
+      "end": [
+        63,
+        1593,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1593,
+        40
+      ],
+      "end": [
+        63,
+        1593,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1593,
+        2
+      ],
+      "end": [
+        63,
+        1593,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1593,
+        -2.5
+      ],
+      "end": [
+        7,
+        1593,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        7,
+        1593,
+        -2.5
+      ],
+      "end": [
+        7,
+        7,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        7,
+        7,
+        -2.5
+      ],
+      "end": [
+        63,
+        7,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        7,
+        -2.5
+      ],
+      "end": [
+        63,
+        7,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        7,
+        40
+      ],
+      "end": [
+        63,
+        1592,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1592,
+        40
+      ],
+      "end": [
+        63,
+        1592,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1592,
+        2
+      ],
+      "end": [
+        63,
+        1592,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1592,
+        -2.5
+      ],
+      "end": [
+        8,
+        1592,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        8,
+        1592,
+        -2.5
+      ],
+      "end": [
+        8,
+        8,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        8,
+        8,
+        -2.5
+      ],
+      "end": [
+        63,
+        8,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        8,
+        -2.5
+      ],
+      "end": [
+        63,
+        8,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        8,
+        40
+      ],
+      "end": [
+        63,
+        1591,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1591,
+        40
+      ],
+      "end": [
+        63,
+        1591,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1591,
+        2
+      ],
+      "end": [
+        63,
+        1591,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1591,
+        -2.5
+      ],
+      "end": [
+        9,
+        1591,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        9,
+        1591,
+        -2.5
+      ],
+      "end": [
+        9,
+        9,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        9,
+        9,
+        -2.5
+      ],
+      "end": [
+        63,
+        9,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        9,
+        -2.5
+      ],
+      "end": [
+        63,
+        9,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        9,
+        40
+      ],
+      "end": [
+        63,
+        1590,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1590,
+        40
+      ],
+      "end": [
+        63,
+        1590,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1590,
+        2
+      ],
+      "end": [
+        63,
+        1590,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1590,
+        -2.5
+      ],
+      "end": [
+        10,
+        1590,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10,
+        1590,
+        -2.5
+      ],
+      "end": [
+        10,
+        10,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10,
+        10,
+        -2.5
+      ],
+      "end": [
+        63,
+        10,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10,
+        -2.5
+      ],
+      "end": [
+        63,
+        10,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10,
+        40
+      ],
+      "end": [
+        63,
+        1589.5,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        1589.5,
+        40
+      ],
+      "end": [
+        63,
+        1589.5,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1589.5,
+        2
+      ],
+      "end": [
+        63,
+        1589.5,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        63,
+        1589.5,
+        -2.5
+      ],
+      "end": [
+        10.5,
+        1589.5,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10.5,
+        1589.5,
+        -2.5
+      ],
+      "end": [
+        10.5,
+        10.5,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        10.5,
+        10.5,
+        -2.5
+      ],
+      "end": [
+        63,
+        10.5,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10.5,
+        -2.5
+      ],
+      "end": [
+        63,
+        10.5,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        63,
+        10.5,
+        40
+      ],
+      "end": [
+        53,
+        -13,
+        40
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        53,
+        -13,
+        40
+      ],
+      "end": [
+        53,
+        -13,
+        2
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        -13,
+        2
+      ],
+      "end": [
+        53,
+        -13,
+        -2.5
+      ],
+      "role": "controlled_descent",
+      "feed": 100,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        -13,
+        -2.5
+      ],
+      "end": [
+        53,
+        0,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        0,
+        -2.5
+      ],
+      "end": [
+        53,
+        47,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        53,
+        47,
+        -2.5
+      ],
+      "end": [
+        270,
+        47,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G3",
+      "start": [
+        270,
+        47,
+        -2.5
+      ],
+      "end": [
+        273.0,
+        50.0,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": [
+        0.0,
+        3.0
+      ]
+    },
+    {
+      "code": "G1",
+      "start": [
+        273.0,
+        50.0,
+        -2.5
+      ],
+      "end": [
+        283,
+        50,
+        -2.5
+      ],
+      "role": "feed_path",
+      "feed": 500,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        50,
+        -2.5
+      ],
+      "end": [
+        283,
+        50,
+        40
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        283,
+        50,
+        40
+      ],
+      "end": [
+        0,
+        0,
+        40
+      ],
+      "role": "return_work_XY0",
+      "feed": null,
+      "ij": null
+    }
+  ],
+  "03_hv_rough": [
+    {
+      "code": "G0",
+      "start": [
+        0.0,
+        0.0,
+        70
+      ],
+      "end": [
+        97,
+        1636,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1636,
+        70
+      ],
+      "end": [
+        97,
+        1636,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1636,
+        0
+      ],
+      "end": [
+        -36,
+        1636,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -36,
+        1636,
+        0
+      ],
+      "end": [
+        -36,
+        -36,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -36,
+        -36,
+        0
+      ],
+      "end": [
+        97,
+        -36,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -36,
+        0
+      ],
+      "end": [
+        97,
+        -36,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -36,
+        70
+      ],
+      "end": [
+        97,
+        1634,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1634,
+        70
+      ],
+      "end": [
+        97,
+        1634,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1634,
+        0
+      ],
+      "end": [
+        -34,
+        1634,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -34,
+        1634,
+        0
+      ],
+      "end": [
+        -34,
+        -34,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -34,
+        -34,
+        0
+      ],
+      "end": [
+        97,
+        -34,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -34,
+        0
+      ],
+      "end": [
+        97,
+        -34,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -34,
+        70
+      ],
+      "end": [
+        97,
+        1632,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1632,
+        70
+      ],
+      "end": [
+        97,
+        1632,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1632,
+        0
+      ],
+      "end": [
+        -32,
+        1632,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -32,
+        1632,
+        0
+      ],
+      "end": [
+        -32,
+        -32,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -32,
+        -32,
+        0
+      ],
+      "end": [
+        97,
+        -32,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -32,
+        0
+      ],
+      "end": [
+        97,
+        -32,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -32,
+        70
+      ],
+      "end": [
+        97,
+        1630,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1630,
+        70
+      ],
+      "end": [
+        97,
+        1630,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1630,
+        0
+      ],
+      "end": [
+        -30,
+        1630,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -30,
+        1630,
+        0
+      ],
+      "end": [
+        -30,
+        -30,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -30,
+        -30,
+        0
+      ],
+      "end": [
+        97,
+        -30,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -30,
+        0
+      ],
+      "end": [
+        97,
+        -30,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -30,
+        70
+      ],
+      "end": [
+        97,
+        1628,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1628,
+        70
+      ],
+      "end": [
+        97,
+        1628,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1628,
+        0
+      ],
+      "end": [
+        -28,
+        1628,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -28,
+        1628,
+        0
+      ],
+      "end": [
+        -28,
+        -28,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -28,
+        -28,
+        0
+      ],
+      "end": [
+        97,
+        -28,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -28,
+        0
+      ],
+      "end": [
+        97,
+        -28,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -28,
+        70
+      ],
+      "end": [
+        97,
+        1626,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1626,
+        70
+      ],
+      "end": [
+        97,
+        1626,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1626,
+        0
+      ],
+      "end": [
+        -26,
+        1626,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -26,
+        1626,
+        0
+      ],
+      "end": [
+        -26,
+        -26,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -26,
+        -26,
+        0
+      ],
+      "end": [
+        97,
+        -26,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -26,
+        0
+      ],
+      "end": [
+        97,
+        -26,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -26,
+        70
+      ],
+      "end": [
+        97,
+        1624,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1624,
+        70
+      ],
+      "end": [
+        97,
+        1624,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1624,
+        0
+      ],
+      "end": [
+        -24,
+        1624,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -24,
+        1624,
+        0
+      ],
+      "end": [
+        -24,
+        -24,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -24,
+        -24,
+        0
+      ],
+      "end": [
+        97,
+        -24,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 292.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -24,
+        0
+      ],
+      "end": [
+        97,
+        -24,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    }
+  ],
+  "04_hv_finish": [
+    {
+      "code": "G0",
+      "start": [
+        0.0,
+        0.0,
+        70
+      ],
+      "end": [
+        97,
+        1623.5,
+        70
+      ],
+      "role": "air_return",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        1623.5,
+        70
+      ],
+      "end": [
+        97,
+        1623.5,
+        0
+      ],
+      "role": "clear_vertical_approach",
+      "feed": null,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        97,
+        1623.5,
+        0
+      ],
+      "end": [
+        -23.5,
+        1623.5,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 162.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -23.5,
+        1623.5,
+        0
+      ],
+      "end": [
+        -23.5,
+        -23.5,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 162.5,
+      "ij": null
+    },
+    {
+      "code": "G1",
+      "start": [
+        -23.5,
+        -23.5,
+        0
+      ],
+      "end": [
+        97,
+        -23.5,
+        0
+      ],
+      "role": "feed_path",
+      "feed": 162.5,
+      "ij": null
+    },
+    {
+      "code": "G0",
+      "start": [
+        97,
+        -23.5,
+        0
+      ],
+      "end": [
+        97,
+        -23.5,
+        70
+      ],
+      "role": "retract_after_exit",
+      "feed": null,
+      "ij": null
+    }
+  ]
+}

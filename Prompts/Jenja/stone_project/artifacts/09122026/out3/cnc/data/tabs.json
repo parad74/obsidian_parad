@@ -1,0 +1,110 @@
+[
+  {
+    "center": [
+      25,
+      0
+    ],
+    "axis": [
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      -1
+    ],
+    "s": 25.0,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  },
+  {
+    "center": [
+      270,
+      426.6666666666667
+    ],
+    "axis": [
+      0,
+      1
+    ],
+    "normal": [
+      1,
+      0
+    ],
+    "s": 698.9498519738463,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  },
+  {
+    "center": [
+      270,
+      853.3333333333334
+    ],
+    "axis": [
+      0,
+      1
+    ],
+    "normal": [
+      1,
+      0
+    ],
+    "s": 1125.6165186405128,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  },
+  {
+    "center": [
+      135,
+      1280
+    ],
+    "axis": [
+      -1,
+      0
+    ],
+    "normal": [
+      0,
+      1
+    ],
+    "s": 1690.4247779607695,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  },
+  {
+    "center": [
+      0,
+      853.3333333333334
+    ],
+    "axis": [
+      0,
+      -1
+    ],
+    "normal": [
+      -1,
+      0
+    ],
+    "s": 2255.233037281026,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  },
+  {
+    "center": [
+      0,
+      426.6666666666667
+    ],
+    "axis": [
+      0,
+      -1
+    ],
+    "normal": [
+      -1,
+      0
+    ],
+    "s": 2681.8997039476926,
+    "width_min_mm": 5,
+    "height_mm": 5,
+    "centerline_skip_mm": 9
+  }
+]

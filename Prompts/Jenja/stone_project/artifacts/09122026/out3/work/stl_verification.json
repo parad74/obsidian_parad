@@ -1,8 +1,8 @@
 {
-  "source": "podoconnik_volume_3d_mm.dxf",
-  "source_sha256": "75808d07edb42bb186d85d221a1b1e3cfaf29324a8971fb1245a6eb2d7e7ea07",
+  "source": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\out3\\podoconnik_volume_3d_mm.dxf",
+  "source_sha256": "bf27844c78a93cf9b8d978519c7d33076e4a522f54342ebc3908277152279df6",
   "output": "podoconnik_volume_mm.stl",
-  "output_sha256": "cd4c3836643db21de00ae6ca41d0f5e0e280fbb46bc4bf946e4dd8dd05749041",
+  "output_sha256": "10a1b877d5cf3e0faa003222bf872ed08f42a9033b1497c942816f164110c277",
   "format": "binary STL",
   "coordinate_units": "mm (select mm on import; STL has no standard units field)",
   "triangles": 1172,
@@ -19,18 +19,18 @@
       0.0
     ],
     [
-      1300.0,
+      1280.0,
       270.0,
       30.0
     ]
   ],
   "size_mm": [
-    1300.0,
+    1280.0,
     270.0,
     30.0
   ],
-  "volume_mm3": 10009624.9980962,
-  "source_volume_mm3": 10009624.999777205,
+  "volume_mm3": 9850000.467365893,
+  "source_volume_mm3": 9850000.469046706,
   "max_conversion_vertex_error_mm": 5.8771402349506194e-05,
   "remeshed": false,
   "ArtCAM_import_tested": false

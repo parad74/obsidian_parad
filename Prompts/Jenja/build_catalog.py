@@ -56,7 +56,7 @@ class CatalogDoc(SimpleDocTemplate):
             self.canv.addOutlineEntry(flowable.getPlainText(),flowable.catalog_key,level=0)
 
 story=[Paragraph('Каталог работ Parad',title),Paragraph('История инженерных работ, графики и интерьеров',normal),Paragraph('Первый выпуск · 13 сентября 2026',small),Spacer(1,8)]
-story.append(Paragraph('От старых работ к новым',head))
+story.append(Paragraph('От старых работ к новым',ParagraphStyle('TOCHead',parent=head,keepWithNext=False)))
 rows=[]
 for entry in entries:
     label=entry.splitlines()[0][3:]
@@ -65,13 +65,13 @@ for entry in entries:
     image_match=re.search(r'!\[[^\]]*\]\(([^)]+)\)',entry)
     image_path=ROOT/unquote(image_match.group(1)) if image_match else None
     desc=Paragraph('<link href="#'+key+'" color="#12647b"><b>'+html.escape(label)+'</b></link><br/>'+inline(date),small)
-    rows.append([picture(image_path,100,64) if image_path else Paragraph('Дополнение',small),desc])
+    rows.append([picture(image_path,100,48) if image_path else Paragraph('Дополнение',small),desc])
 table=Table(rows,colWidths=[116,395],hAlign='LEFT')
-table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'MIDDLE'),('ROWBACKGROUNDS',(0,0),(-1,-1),[colors.HexColor('#f0f5f7'),colors.white]),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),8)]))
+table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'MIDDLE'),('ROWBACKGROUNDS',(0,0),(-1,-1),[colors.HexColor('#f0f5f7'),colors.white]),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
 story.extend([table,Spacer(1,16),Paragraph('Как продолжаем историю',head)])
 for text in [
     'Начальный порядок задан датами создания папок: stone_08_2026 — 22.08.2026; stone_project — 12.09.2026. Внутри проекта — по датам out1–out4. Время: Asia/Tomsk. Дату папки отличаем от даты выполнения.',
-    'После подтверждения всего результата новые работы дописываем в конец CATALOG_PARAD.md. Прежние записи сохраняем; уточнения и исправления оформляем датированными дополнениями со ссылкой на номер работы. PDF пересоздаём последним.',
+    'Каталог содержит все созданные результаты, включая расчёты, черновики и УП без проверки на станке. Приёмка и физическое испытание не являются условием включения; их статус указываем отдельно. Новые работы дописываем в конец, старые записи сохраняем. PDF пересоздаём последним.',
     'В первом выпуске приёмка не предполагается по наличию файлов. Картинки помогают узнать объект; технология, входные данные и поисковые признаки — найти похожее решение. Размеры старой работы автоматически не переносим.',
     'Ссылки PDF ведут к исходным папкам работ. Для переноса каталога служат относительные ссылки в Markdown; изображения некоторых работ не хранятся в Git.'
 ]: story.append(Paragraph(text,small))

@@ -1,6 +1,6 @@
 {
   "variant": 3,
-  "length_mm": 1300,
+  "length_mm": 1280,
   "depth_mm": 270,
   "height_mm": 30,
   "radius_mm": 13.5,
@@ -9,8 +9,11 @@
   "right_wing_depth_mm": 50,
   "left_notch": false,
   "left_hv_full_depth": true,
-  "rear_width_mm": 1250,
+  "rear_width_mm": 1230,
   "task": "TASK-20260912-004",
-  "date": "2026-09-12",
-  "pdf_order": "Create PDF last after final files and checks"
+  "date": "2026-09-23",
+  "pdf_order": "Create PDF last after final files and checks",
+  "previous_length_mm": 1300,
+  "archive_file": "out3_1300_before_1280_20260923.zip",
+  "step_file": "sill_1280x270x30_HV_SW2016.step"
 }

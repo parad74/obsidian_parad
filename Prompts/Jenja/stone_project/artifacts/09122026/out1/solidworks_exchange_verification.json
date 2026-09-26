@@ -1,0 +1,88 @@
+{
+  "source_stl": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\out1\\sill_volume_mm.stl",
+  "stl_sha256": "e5f5cbf45c7ab240fdd067dbfa9e081314a7a05477152a48eec4eac98cc02f79",
+  "triangles": 1564,
+  "vertices": 784,
+  "closed_manifold": true,
+  "consistent_winding": true,
+  "connected_components": 1,
+  "bounds_mm": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1600.0,
+      270.0,
+      30.0
+    ]
+  ],
+  "size_mm": [
+    1600.0,
+    270.0,
+    30.0
+  ],
+  "mesh_volume_mm3": 12100123.121017424,
+  "STL_coordinate_units": "mm",
+  "source_unchanged": true,
+  "target_application": "SOLIDWORKS 2016 via STEP AP214",
+  "step_file": "sill_1600x270x30_HV_SW2016.step",
+  "step_sha256": "27873b6723980638c289b9831ba92158c4e9788dd54aa693f599e965c8d56b87",
+  "step_format": "STEP AP214 / AUTOMOTIVE_DESIGN",
+  "step_units": "mm",
+  "validation_kernel": "OpenCASCADE via Gmsh 4.15.2",
+  "initial_step_read": {
+    "solid_bodies": 1,
+    "bounds_mm": [
+      [
+        -1e-07,
+        -1.0000001421085471e-07,
+        -1.000000002810252e-07
+      ],
+      [
+        1600.0000001000003,
+        270.00000010000014,
+        30.00000010000001
+      ]
+    ],
+    "size_mm": [
+      1600.0000002000004,
+      270.00000020000016,
+      30.00000020000001
+    ],
+    "volume_mm3": 12100123.121017547,
+    "faces": 1564
+  },
+  "final_step_read": {
+    "solid_bodies": 1,
+    "bounds_mm": [
+      [
+        -1e-07,
+        -1e-07,
+        -1.0000000392047505e-07
+      ],
+      [
+        1600.0000001004375,
+        270.00000010000014,
+        30.0000001000006
+      ]
+    ],
+    "size_mm": [
+      1600.0000002004376,
+      270.00000020000016,
+      30.000000200000606
+    ],
+    "volume_mm3": 12100123.121005518,
+    "faces": 1564
+  },
+  "roundtrip_passed": true,
+  "geometry_type": "Conventional solid BREP with planar faces matching the source STL",
+  "SW2020_STL_solid_import_tested": true,
+  "SW2020_STEP_translator_issue": "API returned generic error 1 for both STEP export and STEP import; independent OpenCASCADE validation used instead.",
+  "SW2016_native_open_tested": false,
+  "native_SLDPRT_2016_created": false,
+  "SW2020_initial_STEP_import_attempted": true,
+  "SW2020_initial_STEP_import_successful": false,
+  "SW2020_final_STEP_import_tested": false
+}

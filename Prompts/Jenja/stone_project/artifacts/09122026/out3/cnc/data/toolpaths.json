@@ -1,0 +1,2540 @@
+[
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_1",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          29.5,
+          -8.0
+        ],
+        "end": [
+          29.5,
+          -2.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          29.5,
+          -2.0
+        ],
+        "end": [
+          50.0,
+          -2.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          50,
+          0
+        ],
+        "radius": 2,
+        "a": -1.5707963267948966,
+        "b": 1.7763568394002505e-15,
+        "start": [
+          50.0,
+          -2.0
+        ],
+        "end": [
+          52.0,
+          3.552713678800501e-15
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          52.0,
+          0.0
+        ],
+        "end": [
+          52.0,
+          48.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          52.0,
+          48.0
+        ],
+        "end": [
+          270.0,
+          48.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          50
+        ],
+        "radius": 2,
+        "a": -1.5707963267948966,
+        "b": -5.329070518200751e-15,
+        "start": [
+          270.0,
+          48.0
+        ],
+        "end": [
+          272.0,
+          49.999999999999986
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          50.0
+        ],
+        "end": [
+          272.0,
+          422.16666666666674
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_2",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          278.0,
+          431.16666666666674
+        ],
+        "end": [
+          272.0,
+          431.16666666666674
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          431.16666666666674
+        ],
+        "end": [
+          272.0,
+          848.8333333333331
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_3",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          278.0,
+          857.8333333333333
+        ],
+        "end": [
+          272.0,
+          857.8333333333333
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          857.8333333333333
+        ],
+        "end": [
+          272.0,
+          1280.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          1280
+        ],
+        "radius": 2,
+        "a": 0.0,
+        "b": 1.570796326794948,
+        "start": [
+          272.0,
+          1280.0
+        ],
+        "end": [
+          269.9999999999999,
+          1282.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          270.0,
+          1282.0
+        ],
+        "end": [
+          139.5,
+          1282.0
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_4",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          130.5,
+          1288.0
+        ],
+        "end": [
+          130.5,
+          1282.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          130.5,
+          1282.0
+        ],
+        "end": [
+          0.0,
+          1282.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          0,
+          1280
+        ],
+        "radius": 2,
+        "a": 1.5707963267948966,
+        "b": 3.1415926535898446,
+        "start": [
+          1.2246467991473532e-16,
+          1282.0
+        ],
+        "end": [
+          -2.0,
+          1280.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          1280.0
+        ],
+        "end": [
+          -2.0,
+          857.8333333333333
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          -8.0,
+          848.8333333333333
+        ],
+        "end": [
+          -2.0,
+          848.8333333333333
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          848.8333333333333
+        ],
+        "end": [
+          -2.0,
+          431.16666666666674
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_2.5_section_6",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          -8.0,
+          422.16666666666674
+        ],
+        "end": [
+          -2.0,
+          422.16666666666674
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          422.16666666666674
+        ],
+        "end": [
+          -2.0,
+          -2.2737367544323206e-13
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          0,
+          0
+        ],
+        "radius": 2,
+        "a": 3.141592653589793,
+        "b": 4.7123889803846275,
+        "start": [
+          -2.0,
+          2.4492935982947064e-16
+        ],
+        "end": [
+          -1.2471237279776174e-13,
+          -2.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0.0,
+          -2.0
+        ],
+        "end": [
+          20.5,
+          -2.0
+        ]
+      }
+    ],
+    "z": 2.5,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_1",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          29.5,
+          -8.0
+        ],
+        "end": [
+          29.5,
+          -2.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          29.5,
+          -2.0
+        ],
+        "end": [
+          50.0,
+          -2.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          50,
+          0
+        ],
+        "radius": 2,
+        "a": -1.5707963267948966,
+        "b": 1.7763568394002505e-15,
+        "start": [
+          50.0,
+          -2.0
+        ],
+        "end": [
+          52.0,
+          3.552713678800501e-15
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          52.0,
+          0.0
+        ],
+        "end": [
+          52.0,
+          48.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          52.0,
+          48.0
+        ],
+        "end": [
+          270.0,
+          48.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          50
+        ],
+        "radius": 2,
+        "a": -1.5707963267948966,
+        "b": -5.329070518200751e-15,
+        "start": [
+          270.0,
+          48.0
+        ],
+        "end": [
+          272.0,
+          49.999999999999986
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          50.0
+        ],
+        "end": [
+          272.0,
+          422.16666666666674
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_2",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          278.0,
+          431.16666666666674
+        ],
+        "end": [
+          272.0,
+          431.16666666666674
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          431.16666666666674
+        ],
+        "end": [
+          272.0,
+          848.8333333333331
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_3",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          278.0,
+          857.8333333333333
+        ],
+        "end": [
+          272.0,
+          857.8333333333333
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          272.0,
+          857.8333333333333
+        ],
+        "end": [
+          272.0,
+          1280.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          1280
+        ],
+        "radius": 2,
+        "a": 0.0,
+        "b": 1.570796326794948,
+        "start": [
+          272.0,
+          1280.0
+        ],
+        "end": [
+          269.9999999999999,
+          1282.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          270.0,
+          1282.0
+        ],
+        "end": [
+          139.5,
+          1282.0
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_4",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          130.5,
+          1288.0
+        ],
+        "end": [
+          130.5,
+          1282.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          130.5,
+          1282.0
+        ],
+        "end": [
+          0.0,
+          1282.0
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          0,
+          1280
+        ],
+        "radius": 2,
+        "a": 1.5707963267948966,
+        "b": 3.1415926535898446,
+        "start": [
+          1.2246467991473532e-16,
+          1282.0
+        ],
+        "end": [
+          -2.0,
+          1280.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          1280.0
+        ],
+        "end": [
+          -2.0,
+          857.8333333333333
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          -8.0,
+          848.8333333333333
+        ],
+        "end": [
+          -2.0,
+          848.8333333333333
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          848.8333333333333
+        ],
+        "end": [
+          -2.0,
+          431.16666666666674
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "01_dvp",
+    "name": "depth_0.3_section_6",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          -8.0,
+          422.16666666666674
+        ],
+        "end": [
+          -2.0,
+          422.16666666666674
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2.0,
+          422.16666666666674
+        ],
+        "end": [
+          -2.0,
+          -2.2737367544323206e-13
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          0,
+          0
+        ],
+        "radius": 2,
+        "a": 3.141592653589793,
+        "b": 4.7123889803846275,
+        "start": [
+          -2.0,
+          2.4492935982947064e-16
+        ],
+        "end": [
+          -1.2471237279776174e-13,
+          -2.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0.0,
+          -2.0
+        ],
+        "end": [
+          20.5,
+          -2.0
+        ]
+      }
+    ],
+    "z": 0.3,
+    "safe_z": 45,
+    "feed_xy": 800,
+    "approach_z": 7,
+    "feed_z": 100,
+    "radial_step": null,
+    "profile": null
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_1",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1282
+        ],
+        "end": [
+          -2,
+          1282
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2,
+          1282
+        ],
+        "end": [
+          -2,
+          -2
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2,
+          -2
+        ],
+        "end": [
+          63,
+          -2
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_2",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1281
+        ],
+        "end": [
+          -1,
+          1281
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -1,
+          1281
+        ],
+        "end": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -1,
+          -1
+        ],
+        "end": [
+          63,
+          -1
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_3",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1280
+        ],
+        "end": [
+          0,
+          1280
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0,
+          1280
+        ],
+        "end": [
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0,
+          0
+        ],
+        "end": [
+          63,
+          0
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_4",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1279
+        ],
+        "end": [
+          1,
+          1279
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          1,
+          1279
+        ],
+        "end": [
+          1,
+          1
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          1,
+          1
+        ],
+        "end": [
+          63,
+          1
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1278
+        ],
+        "end": [
+          2,
+          1278
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          2,
+          1278
+        ],
+        "end": [
+          2,
+          2
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          2,
+          2
+        ],
+        "end": [
+          63,
+          2
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_6",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1277
+        ],
+        "end": [
+          3,
+          1277
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          3,
+          1277
+        ],
+        "end": [
+          3,
+          3
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          3,
+          3
+        ],
+        "end": [
+          63,
+          3
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_7",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1276
+        ],
+        "end": [
+          4,
+          1276
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          4,
+          1276
+        ],
+        "end": [
+          4,
+          4
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          4,
+          4
+        ],
+        "end": [
+          63,
+          4
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_8",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1275
+        ],
+        "end": [
+          5,
+          1275
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          5,
+          1275
+        ],
+        "end": [
+          5,
+          5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          5,
+          5
+        ],
+        "end": [
+          63,
+          5
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_9",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1274
+        ],
+        "end": [
+          6,
+          1274
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          6,
+          1274
+        ],
+        "end": [
+          6,
+          6
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          6,
+          6
+        ],
+        "end": [
+          63,
+          6
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_10",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1273
+        ],
+        "end": [
+          7,
+          1273
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          7,
+          1273
+        ],
+        "end": [
+          7,
+          7
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          7,
+          7
+        ],
+        "end": [
+          63,
+          7
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_11",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1272
+        ],
+        "end": [
+          8,
+          1272
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          8,
+          1272
+        ],
+        "end": [
+          8,
+          8
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          8,
+          8
+        ],
+        "end": [
+          63,
+          8
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_12",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1271
+        ],
+        "end": [
+          9,
+          1271
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          9,
+          1271
+        ],
+        "end": [
+          9,
+          9
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          9,
+          9
+        ],
+        "end": [
+          63,
+          9
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_13",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1270
+        ],
+        "end": [
+          10,
+          1270
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10,
+          1270
+        ],
+        "end": [
+          10,
+          10
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10,
+          10
+        ],
+        "end": [
+          63,
+          10
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_width_13.5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1269.5
+        ],
+        "end": [
+          10.5,
+          1269.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10.5,
+          1269.5
+        ],
+        "end": [
+          10.5,
+          10.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10.5,
+          10.5
+        ],
+        "end": [
+          63,
+          10.5
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 0.5,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-1.5_near_nominal",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          53,
+          -13
+        ],
+        "end": [
+          53,
+          0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          53,
+          0
+        ],
+        "end": [
+          53,
+          47
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          53,
+          47
+        ],
+        "end": [
+          270,
+          47
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          50
+        ],
+        "radius": 3,
+        "a": -1.5707963267948966,
+        "b": 0,
+        "start": [
+          270.0,
+          47.0
+        ],
+        "end": [
+          273.0,
+          50.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          273,
+          50
+        ],
+        "end": [
+          283,
+          50
+        ]
+      }
+    ],
+    "z": -1.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 0,
+    "profile": "nominal_edges"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_1",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1282
+        ],
+        "end": [
+          -2,
+          1282
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2,
+          1282
+        ],
+        "end": [
+          -2,
+          -2
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -2,
+          -2
+        ],
+        "end": [
+          63,
+          -2
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_2",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1281
+        ],
+        "end": [
+          -1,
+          1281
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -1,
+          1281
+        ],
+        "end": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -1,
+          -1
+        ],
+        "end": [
+          63,
+          -1
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_3",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1280
+        ],
+        "end": [
+          0,
+          1280
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0,
+          1280
+        ],
+        "end": [
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          0,
+          0
+        ],
+        "end": [
+          63,
+          0
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_4",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1279
+        ],
+        "end": [
+          1,
+          1279
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          1,
+          1279
+        ],
+        "end": [
+          1,
+          1
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          1,
+          1
+        ],
+        "end": [
+          63,
+          1
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1278
+        ],
+        "end": [
+          2,
+          1278
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          2,
+          1278
+        ],
+        "end": [
+          2,
+          2
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          2,
+          2
+        ],
+        "end": [
+          63,
+          2
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_6",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1277
+        ],
+        "end": [
+          3,
+          1277
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          3,
+          1277
+        ],
+        "end": [
+          3,
+          3
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          3,
+          3
+        ],
+        "end": [
+          63,
+          3
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_7",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1276
+        ],
+        "end": [
+          4,
+          1276
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          4,
+          1276
+        ],
+        "end": [
+          4,
+          4
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          4,
+          4
+        ],
+        "end": [
+          63,
+          4
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_8",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1275
+        ],
+        "end": [
+          5,
+          1275
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          5,
+          1275
+        ],
+        "end": [
+          5,
+          5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          5,
+          5
+        ],
+        "end": [
+          63,
+          5
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_9",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1274
+        ],
+        "end": [
+          6,
+          1274
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          6,
+          1274
+        ],
+        "end": [
+          6,
+          6
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          6,
+          6
+        ],
+        "end": [
+          63,
+          6
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_10",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1273
+        ],
+        "end": [
+          7,
+          1273
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          7,
+          1273
+        ],
+        "end": [
+          7,
+          7
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          7,
+          7
+        ],
+        "end": [
+          63,
+          7
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_11",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1272
+        ],
+        "end": [
+          8,
+          1272
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          8,
+          1272
+        ],
+        "end": [
+          8,
+          8
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          8,
+          8
+        ],
+        "end": [
+          63,
+          8
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_12",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1271
+        ],
+        "end": [
+          9,
+          1271
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          9,
+          1271
+        ],
+        "end": [
+          9,
+          9
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          9,
+          9
+        ],
+        "end": [
+          63,
+          9
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_13",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1270
+        ],
+        "end": [
+          10,
+          1270
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10,
+          1270
+        ],
+        "end": [
+          10,
+          10
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10,
+          10
+        ],
+        "end": [
+          63,
+          10
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 1,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_width_13.5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          283,
+          1269.5
+        ],
+        "end": [
+          10.5,
+          1269.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10.5,
+          1269.5
+        ],
+        "end": [
+          10.5,
+          10.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          10.5,
+          10.5
+        ],
+        "end": [
+          63,
+          10.5
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 0.5,
+    "profile": "HV_band"
+  },
+  {
+    "operation": "02_pcd",
+    "name": "depth_-2.5_near_nominal",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          53,
+          -13
+        ],
+        "end": [
+          53,
+          0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          53,
+          0
+        ],
+        "end": [
+          53,
+          47
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          53,
+          47
+        ],
+        "end": [
+          270,
+          47
+        ]
+      },
+      {
+        "kind": "arc",
+        "center": [
+          270,
+          50
+        ],
+        "radius": 3,
+        "a": -1.5707963267948966,
+        "b": 0,
+        "start": [
+          270.0,
+          47.0
+        ],
+        "end": [
+          273.0,
+          50.0
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          273,
+          50
+        ],
+        "end": [
+          283,
+          50
+        ]
+      }
+    ],
+    "z": -2.5,
+    "safe_z": 40,
+    "feed_xy": 500,
+    "approach_z": 2,
+    "feed_z": 100,
+    "radial_step": 0,
+    "profile": "nominal_edges"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_1",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1316
+        ],
+        "end": [
+          -36,
+          1316
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -36,
+          1316
+        ],
+        "end": [
+          -36,
+          -36
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -36,
+          -36
+        ],
+        "end": [
+          97,
+          -36
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 1,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_3",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1314
+        ],
+        "end": [
+          -34,
+          1314
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -34,
+          1314
+        ],
+        "end": [
+          -34,
+          -34
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -34,
+          -34
+        ],
+        "end": [
+          97,
+          -34
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1312
+        ],
+        "end": [
+          -32,
+          1312
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -32,
+          1312
+        ],
+        "end": [
+          -32,
+          -32
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -32,
+          -32
+        ],
+        "end": [
+          97,
+          -32
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_7",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1310
+        ],
+        "end": [
+          -30,
+          1310
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -30,
+          1310
+        ],
+        "end": [
+          -30,
+          -30
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -30,
+          -30
+        ],
+        "end": [
+          97,
+          -30
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_9",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1308
+        ],
+        "end": [
+          -28,
+          1308
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -28,
+          1308
+        ],
+        "end": [
+          -28,
+          -28
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -28,
+          -28
+        ],
+        "end": [
+          97,
+          -28
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_11",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1306
+        ],
+        "end": [
+          -26,
+          1306
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -26,
+          1306
+        ],
+        "end": [
+          -26,
+          -26
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -26,
+          -26
+        ],
+        "end": [
+          97,
+          -26
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "03_hv_rough",
+    "name": "infeed_13",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1304
+        ],
+        "end": [
+          -24,
+          1304
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -24,
+          1304
+        ],
+        "end": [
+          -24,
+          -24
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -24,
+          -24
+        ],
+        "end": [
+          97,
+          -24
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 292.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 2,
+    "profile": "R13.5_D74"
+  },
+  {
+    "operation": "04_hv_finish",
+    "name": "infeed_13.5",
+    "segments": [
+      {
+        "kind": "line",
+        "start": [
+          317,
+          1303.5
+        ],
+        "end": [
+          -23.5,
+          1303.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -23.5,
+          1303.5
+        ],
+        "end": [
+          -23.5,
+          -23.5
+        ]
+      },
+      {
+        "kind": "line",
+        "start": [
+          -23.5,
+          -23.5
+        ],
+        "end": [
+          97,
+          -23.5
+        ]
+      }
+    ],
+    "z": 0,
+    "safe_z": 70,
+    "feed_xy": 162.5,
+    "approach_z": null,
+    "feed_z": null,
+    "radial_step": 0.5,
+    "profile": "R13.5_D74"
+  }
+]

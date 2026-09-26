@@ -1,0 +1,66 @@
+{
+  "status": "pass_static_checks",
+  "sheet": 1,
+  "origin_B_from_sheet_mm": [
+    50,
+    50
+  ],
+  "parts": [
+    {
+      "id": "002",
+      "length_mm": 1600,
+      "origin_B": [
+        0,
+        0
+      ],
+      "origin_sheet": [
+        50,
+        50
+      ]
+    },
+    {
+      "id": "003",
+      "length_mm": 2100,
+      "origin_B": [
+        320,
+        0
+      ],
+      "origin_sheet": [
+        370,
+        50
+      ]
+    },
+    {
+      "id": "004",
+      "length_mm": 1280,
+      "origin_B": [
+        640,
+        0
+      ],
+      "origin_sheet": [
+        690,
+        50
+      ]
+    }
+  ],
+  "holes": 18,
+  "tabs": 18,
+  "depths_Z_mm": [
+    2.5,
+    0.3
+  ],
+  "safe_Z": 45,
+  "spindle_RPM": 16000,
+  "G04_P": 21000,
+  "plunges": 36,
+  "arc_radius_error_mm": 0.0,
+  "gouge_beyond_002mm_tolerance_mm2": 0.0,
+  "tab_intersection_beyond_002mm_tolerance_mm2": 0.0,
+  "feed_motion_minutes": 30.914517687777575,
+  "feed_plus_explicit_dwell_minutes": 31.264517687777577,
+  "rapid_distance_mm": 4643.727521099904,
+  "full_cycle_minutes": null,
+  "physical_test": false,
+  "actual_ArtCAM_export": false,
+  "limits": "No measured fixtures/holder/travel; setup and dry checks by operator required; dwell not tested on this firmware."
+}

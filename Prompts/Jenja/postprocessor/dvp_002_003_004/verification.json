@@ -1,0 +1,76 @@
+{
+  "sheet_mm": [
+    1220,
+    2710,
+    5
+  ],
+  "selected_origin": "B",
+  "NC_released": false,
+  "sheets": {
+    "1": {
+      "placements": [
+        {
+          "id": "002",
+          "xy_from_sheet": [
+            50,
+            50
+          ]
+        },
+        {
+          "id": "003",
+          "xy_from_sheet": [
+            370,
+            50
+          ]
+        },
+        {
+          "id": "004",
+          "xy_from_sheet": [
+            690,
+            50
+          ]
+        }
+      ],
+      "minimum_gap_between_cut_and_drill_zones_mm": 33.99999999999999,
+      "minimum_sheet_margin_cut_and_drill_mm": 38.0,
+      "holes": 18,
+      "tabs": 18
+    },
+    "2": {
+      "placements": [
+        {
+          "id": "002-1",
+          "xy_from_sheet": [
+            40,
+            50
+          ]
+        },
+        {
+          "id": "002-2",
+          "xy_from_sheet": [
+            330,
+            150
+          ]
+        },
+        {
+          "id": "002-3",
+          "xy_from_sheet": [
+            620,
+            50
+          ]
+        },
+        {
+          "id": "002-4",
+          "xy_from_sheet": [
+            910,
+            150
+          ]
+        }
+      ],
+      "minimum_gap_between_cut_and_drill_zones_mm": 3.9999999999999996,
+      "minimum_sheet_margin_cut_and_drill_mm": 28.0,
+      "holes": 24,
+      "tabs": 24
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "version": 3,
+  "duration_seconds": 16,
+  "fps": 30,
+  "frames": 480,
+  "video_source": "W:\\obsidian\\_parad\\Prompts\\Jenja\\natasha\\artifacts\\video_2026-09-17_21-44-16.mp4",
+  "authoritative_product_reference": "W:\\obsidian\\_parad\\Prompts\\Jenja\\natasha\\artifacts\\photo_2026-09-17_22-24-24.jpg",
+  "generated_keyframe": "cybele_golden_keyframe_v3.png",
+  "image_edit_mode": "built-in image_gen, two passes",
+  "image_prompts": [
+    "image_prompt_v3.txt",
+    "image_prompt_v3_refinement.txt"
+  ],
+  "title": {
+    "text": "Браслет богини Кибеллы",
+    "font": "Segoe UI Light",
+    "size_px": 54,
+    "position": "top center",
+    "lines": 1
+  },
+  "segments": [
+    {
+      "start": 0,
+      "end": 1.85,
+      "content": "golden bracelet wrist close-up"
+    },
+    {
+      "start": 1.6,
+      "end": 3.2,
+      "content": "goddess, original motion"
+    },
+    {
+      "start": 2.95,
+      "end": 9.8,
+      "content": "woman receives power, original motion"
+    },
+    {
+      "start": 9.35,
+      "end": 10.15,
+      "content": "corrected transformed woman, one visible hand"
+    },
+    {
+      "start": 10.15,
+      "end": 14.9,
+      "content": "continuous digital camera push to the bracelet"
+    },
+    {
+      "start": 14.9,
+      "end": 16,
+      "content": "hold on the bracelet, same golden mountain background"
+    }
+  ],
+  "audio": "Copied unchanged from version 2, no further re-encoding",
+  "notes": "New close-ups use an AI-composited keyframe guided by the real product photo. The middle moving scene remains from the supplied video. Apple-tree photo and two-hand final shot are no longer used.",
+  "source_files_modified": false
+}

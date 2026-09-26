@@ -1,0 +1,148 @@
+{
+  "date": "2026-09-24",
+  "scope": "Read-only source analysis; not simulation or machine test",
+  "files": [
+    {
+      "file": "3.NC",
+      "sha256": "39b1392f81b9fa346a8e57e04fa5463878cdae0ecdc85f50a700bc21dfd82cac",
+      "bytes": 11625,
+      "lines": 410,
+      "header": [
+        "(3)",
+        "G90G80G21G49",
+        "(Tool Number:1) (3.500 мм радиус цилиндрический фрезы)",
+        "G0Z4.00",
+        "M3 S15000",
+        "G0 X88.47 Y86.65 Z4.00"
+      ],
+      "tail": [
+        "G0   Z4.00",
+        "G0 X0.00 Y0.00 ",
+        "G0Z4.00",
+        "G0X0.00Y0.00",
+        "M5",
+        "M30"
+      ],
+      "explicit_codes": {
+        "G0": 36,
+        "G1": 160,
+        "G2": 96,
+        "G21": 1,
+        "G3": 96,
+        "G49": 1,
+        "G80": 1,
+        "G90": 1,
+        "M3": 1,
+        "M30": 1,
+        "M5": 1
+      },
+      "programmed_values": {
+        "F": [
+          3000.0,
+          4560.0
+        ],
+        "S": [
+          15000.0
+        ],
+        "T": []
+      },
+      "programmed_endpoint_ranges": {
+        "X": [
+          0.0,
+          102.78
+        ],
+        "Y": [
+          0.0,
+          825.36
+        ],
+        "Z": [
+          -12.0,
+          4.0
+        ]
+      },
+      "ranges_exclude_arc_extrema": true,
+      "implicit_motion_blocks": 16,
+      "last_units": "mm",
+      "last_absolute": true,
+      "plane": "G17 assumed (not selected explicitly)",
+      "arcs": 192,
+      "arc_Z_changes": 0,
+      "arc_center_incremental_max_radius_error_mm": 0.00744397936549035,
+      "arc_center_absolute_max_radius_error_mm": 12.44536833825157,
+      "warnings": [],
+      "arc_to_linear_transitions_count": 16,
+      "all_arc_to_linear_transitions_explicit_G1": true
+    },
+    {
+      "file": "уп.NC",
+      "sha256": "1fba3f66c566dd3dacab86dffd757e5fabb47c4f6ce6c2456e7b4bf20794b2aa",
+      "bytes": 211439,
+      "lines": 7944,
+      "header": [
+        "(уп)",
+        "G90G80G21G49",
+        "(Tool Number:1) (6.000 мм радиус сферической фрезы )",
+        "G0Z5.00",
+        "M3 S15000",
+        "G0 X32.00 Y36.75 Z5.00"
+      ],
+      "tail": [
+        "G0   Z5.00",
+        "G0 X0.00 Y0.00 ",
+        "G0Z5.00",
+        "G0X0.00Y0.00",
+        "M5",
+        "M30"
+      ],
+      "explicit_codes": {
+        "G0": 16,
+        "G1": 7560,
+        "G2": 180,
+        "G21": 1,
+        "G3": 180,
+        "G49": 1,
+        "G80": 1,
+        "G90": 1,
+        "M3": 2,
+        "M30": 1,
+        "M5": 1
+      },
+      "programmed_values": {
+        "F": [
+          720.0,
+          2520.0
+        ],
+        "S": [
+          15000.0
+        ],
+        "T": []
+      },
+      "programmed_endpoint_ranges": {
+        "X": [
+          0.0,
+          189.0
+        ],
+        "Y": [
+          0.0,
+          64.75
+        ],
+        "Z": [
+          -10.2,
+          5.0
+        ]
+      },
+      "ranges_exclude_arc_extrema": true,
+      "implicit_motion_blocks": 0,
+      "last_units": "mm",
+      "last_absolute": true,
+      "plane": "G17 assumed (not selected explicitly)",
+      "arcs": 360,
+      "arc_Z_changes": 0,
+      "arc_center_incremental_max_radius_error_mm": 0.0,
+      "arc_center_absolute_max_radius_error_mm": 43.84011838053998,
+      "warnings": [],
+      "arc_to_linear_transitions_count": 84,
+      "all_arc_to_linear_transitions_explicit_G1": true
+    }
+  ]
+}

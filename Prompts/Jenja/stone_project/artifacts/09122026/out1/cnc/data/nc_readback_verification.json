@@ -1,0 +1,171 @@
+{
+  "scope": "static NC parsing and ideal geometry only",
+  "nc": {
+    "01_dvp_AIR_XY.nc": {
+      "status": "pass",
+      "feed_blocks": 52,
+      "XY_feed_length_mm": 7465.699111843078,
+      "safe_Z_only": 45.0,
+      "max_arc_radius_error_mm": 0.0,
+      "arcs": 12,
+      "end_XY": [
+        0,
+        0
+      ],
+      "spindle_start_commands": 0,
+      "spindle_speed_words": 0,
+      "XYZ_endpoint_bounds": [
+        -8.0,
+        -8.0,
+        278.0,
+        1608.0
+      ]
+    },
+    "02_pcd_AIR_XY.nc": {
+      "status": "pass",
+      "feed_blocks": 102,
+      "XY_feed_length_mm": 48994.84955592154,
+      "safe_Z_only": 40.0,
+      "max_arc_radius_error_mm": 0.0,
+      "arcs": 4,
+      "end_XY": [
+        0,
+        0
+      ],
+      "spindle_start_commands": 0,
+      "spindle_speed_words": 0,
+      "XYZ_endpoint_bounds": [
+        -2.0,
+        -13.0,
+        283.0,
+        1613.0
+      ]
+    },
+    "03_hv_rough_AIR_XY.nc": {
+      "status": "pass",
+      "feed_blocks": 21,
+      "XY_feed_length_mm": 13398.0,
+      "safe_Z_only": 70.0,
+      "max_arc_radius_error_mm": 0,
+      "arcs": 0,
+      "end_XY": [
+        97,
+        -24
+      ],
+      "spindle_start_commands": 0,
+      "spindle_speed_words": 0,
+      "XYZ_endpoint_bounds": [
+        -36.0,
+        -36.0,
+        97.0,
+        1636.0
+      ]
+    },
+    "04_hv_finish_AIR_XY.nc": {
+      "status": "pass",
+      "feed_blocks": 3,
+      "XY_feed_length_mm": 1888.0,
+      "safe_Z_only": 70.0,
+      "max_arc_radius_error_mm": 0,
+      "arcs": 0,
+      "end_XY": [
+        97,
+        -23.5
+      ],
+      "spindle_start_commands": 0,
+      "spindle_speed_words": 0,
+      "XYZ_endpoint_bounds": [
+        -23.5,
+        -23.5,
+        97.0,
+        1623.5
+      ]
+    }
+  },
+  "dxf": {
+    "01_dvp_center_paths.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 60
+    },
+    "01_dvp_planned_3d_motion.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 101
+    },
+    "02_pcd_center_paths.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 110
+    },
+    "02_pcd_planned_3d_motion.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 231
+    },
+    "03_hv_rough_center_paths.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 29
+    },
+    "03_hv_rough_planned_3d_motion.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 42
+    },
+    "04_hv_finish_center_paths.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 11
+    },
+    "04_hv_finish_planned_3d_motion.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 6
+    },
+    "dvp_contour_R2_Y1600.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 1
+    },
+    "dvp_sheet_holes_tabs.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 20
+    },
+    "part_contours_Y1600.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 18
+    },
+    "stone_contour_Y1600.dxf": {
+      "audit_errors": 0,
+      "audit_fixes": 0,
+      "entities": 1
+    }
+  },
+  "full_3d_plans": {
+    "01_dvp": {
+      "continuous": true,
+      "rapid_XY_at_safe_Z": 13,
+      "HV_verified_lateral_exit_before_lift": 0
+    },
+    "02_pcd": {
+      "continuous": true,
+      "rapid_XY_at_safe_Z": 33,
+      "HV_verified_lateral_exit_before_lift": 0
+    },
+    "03_hv_rough": {
+      "continuous": true,
+      "rapid_XY_at_safe_Z": 7,
+      "HV_verified_lateral_exit_before_lift": 7
+    },
+    "04_hv_finish": {
+      "continuous": true,
+      "rapid_XY_at_safe_Z": 1,
+      "HV_verified_lateral_exit_before_lift": 1
+    }
+  },
+  "unchanged_input_files": 8,
+  "physical_machine_validation": false
+}

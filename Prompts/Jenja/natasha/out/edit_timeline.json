@@ -1,0 +1,43 @@
+{
+  "video_source": "video_2026-09-17_21-44-16.mp4",
+  "photo_source": "photo_2026-09-17_21-44-44.jpg",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "video_frames": 351,
+  "source_movie_duration_seconds": 11.748888888888889,
+  "audio": "Original stereo AAC bitstream copied in full, unchanged; no time shift.",
+  "segments": [
+    {
+      "from": 0,
+      "to": 2.35,
+      "content": "Real product photo, gentle push"
+    },
+    {
+      "from": 2.1,
+      "to": 3.5,
+      "content": "Myth, source 2.20–3.60"
+    },
+    {
+      "from": 3.3,
+      "to": 4.8,
+      "content": "Woman, source 5.90–7.40"
+    },
+    {
+      "from": 4.55,
+      "to": 7.4,
+      "content": "Return to real product photo"
+    },
+    {
+      "from": 7.4,
+      "to": 11.748888888888889,
+      "content": "Product and name, ivory panel reveal"
+    }
+  ],
+  "crossfades_seconds": [
+    0.25,
+    0.2,
+    0.25
+  ],
+  "notes": "Source has 351 video frames; the original longer audio track preserves total runtime."
+}

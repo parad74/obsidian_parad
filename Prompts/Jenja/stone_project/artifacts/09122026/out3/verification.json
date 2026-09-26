@@ -4,43 +4,43 @@
     "audit_fixes": 0,
     "units": "mm",
     "entities": 1,
-    "sha256": "5eb208149013625d394a5fc43db887ccfa2f28bb0d5fb7004ff04a479f5f6ab8"
+    "sha256": "aefc7f624c8546ef7fa66a84f7e95581d7ba33d05fc3a61fe37030a45392262e"
   },
   "podoconnik_drawing_mm.dxf": {
     "audit_errors": 0,
     "audit_fixes": 0,
     "units": "mm",
     "entities": 36,
-    "sha256": "089d07a7ae5d9bc25b5bf8221eeba197fddb008abc600c07b7eb9150d16694b9"
+    "sha256": "dd7f5070783deda06869a963fe46bf2644cc8198396f9c00362d22184da07f5d"
   },
   "podoconnik_section_HV_mm.dxf": {
     "audit_errors": 0,
     "audit_fixes": 0,
     "units": "mm",
     "entities": 1,
-    "sha256": "7af7c3e53d92084bbf9eae184529540e58f6c22162297a907de5a25c1199085a"
+    "sha256": "c8f7c320a39fc6d4a1d73e3f1ea42b0ff899cb1fc4331036d853a3216152a3d8"
   },
   "podoconnik_volume_3d_mm.dxf": {
     "audit_errors": 0,
     "audit_fixes": 0,
     "units": "mm",
     "entities": 1172,
-    "sha256": "75808d07edb42bb186d85d221a1b1e3cfaf29324a8971fb1245a6eb2d7e7ea07"
+    "sha256": "bf27844c78a93cf9b8d978519c7d33076e4a522f54342ebc3908277152279df6"
   },
   "geometry": {
     "envelope_mm": [
-      1300.0,
+      1280.0,
       270.0,
       30
     ],
-    "rear_width_mm": 1250.0,
+    "rear_width_mm": 1230.0,
     "right_wing_mm": [
       50,
       50
     ],
     "left_notch": false,
     "contour_vertices": 6,
-    "contour_area_mm2": 340000.0,
+    "contour_area_mm2": 334600.0,
     "radius_mm": 13.5,
     "arc_height_mm": 27,
     "upper_vertical_mm": 3,
@@ -50,9 +50,9 @@
     "euler_characteristic": 2,
     "mesh_closed_manifold": true,
     "winding_consistent": true,
-    "mesh_volume_mm3": 10009624.999775887,
-    "analytic_volume_mm3": 10009706.769454407,
-    "mesh_volume_relative_error": 8.169038354806441e-06,
+    "mesh_volume_mm3": 9850000.469045408,
+    "analytic_volume_mm3": 9850081.21684324,
+    "mesh_volume_relative_error": 8.19767837993229e-06,
     "max_mesh_surface_error_bound_mm": 0.002555679381101714,
     "ArtCAM_import_tested": false,
     "physical_accuracy_verified": false,

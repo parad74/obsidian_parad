@@ -1,0 +1,96 @@
+{
+  "source": {
+    "units": "mm",
+    "area_mm2": 334600.0,
+    "bbox_XY": [
+      0,
+      0,
+      270,
+      1280
+    ],
+    "transform": "X=Y_CAD; Y=1280-X_CAD; Z=Z_CAD",
+    "rotation_determinant": 1,
+    "sha256": "aefc7f624c8546ef7fa66a84f7e95581d7ba33d05fc3a61fe37030a45392262e"
+  },
+  "dvp": {
+    "accepted_inner_radius_mm": 2,
+    "max_corner_deviation_mm": 0.8284271247461903,
+    "area_added_by_R2_mm2_exact": 0.8584073464102069,
+    "concave_corners": 1,
+    "tabs": 6,
+    "tab_width_min_mm": 5,
+    "tab_width_at_nominal_wall_mm": 9,
+    "centerline_skip_mm": 9,
+    "holes": 6,
+    "final_bottom_z": 0.3,
+    "tab_height": 5,
+    "gouge_into_accepted_template_mm2": 0.0003491795000984652,
+    "bridge_intersection_mm2": 3.410605131687978e-13,
+    "holes_and_cut_inside_sheet": true,
+    "slot_sweep_bounds": [
+      -12.0,
+      -12.0,
+      282.0,
+      1292.0
+    ]
+  },
+  "pcd": {
+    "width_passes_per_depth": 14,
+    "depth_levels": 2,
+    "profile_strokes": 28,
+    "nominal_edge_strokes": 2,
+    "target_band_area_mm2": 21235.5,
+    "unremoved_band_area_mm2_tolerance_002": 0.0,
+    "overcut_final_top_mm2_tolerance_002": 0.0,
+    "tolerance_of_sweep_check_mm": 0.002,
+    "PCD_bottom_above_stone_bottom_mm": 27.5,
+    "HV_top_mm": 28,
+    "vertical_overlap_mm": 0.5
+  },
+  "hv": {
+    "profile_radius": 13.5,
+    "max_diameter": 74,
+    "groove_min_radius": 23.5,
+    "radial_total": 13.5,
+    "rough_passes": 7,
+    "finish_passes": 1,
+    "cumulative_infeeds": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      13.5
+    ],
+    "offsets_from_nominal_edge": [
+      36,
+      34,
+      32,
+      30,
+      28,
+      26,
+      24,
+      23.5
+    ],
+    "working_tool_bottom_Z": 0,
+    "cross_sections_checked": 109,
+    "max_symmetric_difference_area_mm2": 6.350616375574362e-11,
+    "sharp_miter_path": true,
+    "terminal_center_X": 97,
+    "start_center_X": 317,
+    "minimum_cutter_exit_clearance_mm": 15.547597471245055
+  },
+  "stone_entry_exit_min_clearance_mm": 10.0,
+  "checks_not_performed": [
+    "ArtCAM 2011/2018 actual export/import",
+    "actual A11S command and F/S settings",
+    "tool holder and shank envelope",
+    "clamps/support locations and heights",
+    "machine travel in work coordinates",
+    "physical dry run",
+    "actual cutting/tool wear/finish accuracy",
+    "permission to exceed tool max RPM"
+  ]
+}

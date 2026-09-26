@@ -1,0 +1,86 @@
+{
+  "01_dvp": {
+    "strokes": 12,
+    "XY_feed_path_mm": 7465.699111843077,
+    "XY_feed_minutes": 9.332123889803846,
+    "Z_feed_minutes": 0.672,
+    "feed_motion_minutes": 10.004123889803846,
+    "rapid_path_mm": 1149.3460254455138,
+    "center_bounds_xy": [
+      [
+        -8.0,
+        -8.0
+      ],
+      [
+        278.0,
+        1608.0
+      ]
+    ],
+    "safe_z": 45,
+    "full_cycle_minutes": null,
+    "time_note": "Ideal programmed feed time; no acceleration/corner slowdowns, setup, or machine rapid-time estimate."
+  },
+  "02_pcd": {
+    "strokes": 32,
+    "XY_feed_path_mm": 48994.84955592154,
+    "XY_feed_minutes": 97.98969911184308,
+    "Z_feed_minutes": 1.28,
+    "feed_motion_minutes": 99.26969911184308,
+    "rapid_path_mm": 47370.81689703249,
+    "center_bounds_xy": [
+      [
+        -2.0,
+        -13.0
+      ],
+      [
+        283.0,
+        1613.0
+      ]
+    ],
+    "safe_z": 40,
+    "full_cycle_minutes": null,
+    "time_note": "Ideal programmed feed time; no acceleration/corner slowdowns, setup, or machine rapid-time estimate."
+  },
+  "03_hv_rough": {
+    "strokes": 7,
+    "XY_feed_path_mm": 13398.0,
+    "XY_feed_minutes": 45.805128205128206,
+    "Z_feed_minutes": 0,
+    "feed_motion_minutes": 45.805128205128206,
+    "rapid_path_mm": 12578.873088436076,
+    "center_bounds_xy": [
+      [
+        -36.0,
+        -36.0
+      ],
+      [
+        97.0,
+        1636.0
+      ]
+    ],
+    "safe_z": 70,
+    "full_cycle_minutes": null,
+    "time_note": "Ideal programmed feed time; no acceleration/corner slowdowns, setup, or machine rapid-time estimate."
+  },
+  "04_hv_finish": {
+    "strokes": 1,
+    "XY_feed_path_mm": 1888.0,
+    "XY_feed_minutes": 11.618461538461538,
+    "Z_feed_minutes": 0,
+    "feed_motion_minutes": 11.618461538461538,
+    "rapid_path_mm": 1766.3951703076348,
+    "center_bounds_xy": [
+      [
+        -23.5,
+        -23.5
+      ],
+      [
+        97.0,
+        1623.5
+      ]
+    ],
+    "safe_z": 70,
+    "full_cycle_minutes": null,
+    "time_note": "Ideal programmed feed time; no acceleration/corner slowdowns, setup, or machine rapid-time estimate."
+  }
+}

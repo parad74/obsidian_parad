@@ -1,0 +1,84 @@
+{
+  "source_file": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\out2\\podoconnik_volume_mm.stl",
+  "source_sha256": "9ef7be13a2865b0bfa9dcc706114ecaa5a7795ae7b624c977fa6b85628b4c2c7",
+  "units": "mm",
+  "triangles": 1564,
+  "vertices": 784,
+  "edges": 2346,
+  "connected_shells": 1,
+  "closed": true,
+  "consistently_oriented": true,
+  "euler_characteristic": 2,
+  "bounds_mm": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      2100.0,
+      270.0,
+      30.0
+    ]
+  ],
+  "size_mm": [
+    2100.0,
+    270.0,
+    30.0
+  ],
+  "mesh_volume_mm3": 16090736.39272196,
+  "initial_step_read": {
+    "solid_bodies": 1,
+    "bounds_mm": [
+      [
+        -1e-07,
+        -1.0000000710542735e-07,
+        -1.000000002810252e-07
+      ],
+      [
+        2100.0000001,
+        270.00000010000014,
+        30.00000010000001
+      ]
+    ],
+    "size_mm": [
+      2100.0000001999997,
+      270.00000020000016,
+      30.00000020000001
+    ],
+    "volume_mm3": 16090736.392722033,
+    "faces": 1564
+  },
+  "final_step_read": {
+    "solid_bodies": 1,
+    "bounds_mm": [
+      [
+        -1e-07,
+        -1.0000006586051148e-07,
+        -1.0000000392047505e-07
+      ],
+      [
+        2100.0000001,
+        270.00000010000014,
+        30.0000001000006
+      ]
+    ],
+    "size_mm": [
+      2100.0000001999997,
+      270.0000002000002,
+      30.000000200000606
+    ],
+    "volume_mm3": 16090736.392703416,
+    "faces": 1564
+  },
+  "step_file": "sill_2100x270x30_HV_SW2016.step",
+  "step_sha256": "81eea0c26375aad893d70d9141898845b573c83634644abe33f0a8450b55eb39",
+  "step_format": "STEP AP214 / AUTOMOTIVE_DESIGN",
+  "validation_kernel": "OpenCASCADE via Gmsh 4.15.2",
+  "roundtrip_passed": true,
+  "geometry_type": "Faceted solid BREP from source STL",
+  "SW2016_native_open_tested": false,
+  "native_SLDPRT_2016_created": false,
+  "self_intersection_tested": false,
+  "checked_at": "2026-09-23T19:20:57"
+}

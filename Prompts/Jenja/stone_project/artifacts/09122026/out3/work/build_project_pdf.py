@@ -18,7 +18,8 @@ required=[
     'podoconnik_volume_3d_mm.dxf','podoconnik_volume_mm.stl','podoconnik_preview.png',
     'podoconnik_drawing.svg','podoconnik_drawing.png','verification.json','README.md',
     'work/stl_verification.json','work/run_parameters.json','work/build_podoconnik3.py',
-    'work/convert_podoconnik_stl.py','work/build_project_pdf.py','work/requirements.txt']
+    'work/convert_podoconnik_stl.py','work/build_project_pdf.py','work/requirements.txt',
+    'sill_1280x270x30_HV_SW2016.step','sill_1280x270x30_HV_SW2016.verification.json','SOLIDWORKS_2016_README.md']
 assert all((ROOT/name).is_file() and (ROOT/name).stat().st_size>0 for name in required)
 params=json.loads((ROOT/'work/run_parameters.json').read_text(encoding='utf8'))
 verification=json.loads((ROOT/'verification.json').read_text(encoding='utf8'))
@@ -43,10 +44,21 @@ styles.add(ParagraphStyle(name='Cell',parent=styles['Main'],fontSize=8.3,leading
 styles.add(ParagraphStyle(name='SmallRu',parent=styles['Main'],fontSize=8,leading=11))
 
 def inline(s):
-    s=html.escape(s)
-    s=re.sub(r'`([^`]+)`',r'<font name="Mono">\1</font>',s)
-    s=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',r'<link href="\2" color="#12647b"><u>\1</u></link>',s)
-    return s
+    chunks = re.split(r'(\[[^\]]+\]\([^)]+\))', s)
+    result = ''
+    for chunk in chunks:
+        match = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', chunk)
+        if match:
+            href = match[2]
+            if not href.startswith(('https://', 'http://')):
+                target = (ROOT/href).resolve()
+                assert target.exists(), target
+                href = target.as_uri()
+            result += '<link href="'+html.escape(href,quote=True)+'" color="#12647b"><u>'+html.escape(match[1])+'</u></link>'
+        else:
+            result += re.sub(r'`([^`]+)`',r'<font name="Mono">\1</font>',html.escape(chunk))
+    return result
+
 
 lines=README_PATH.read_text(encoding='utf-8-sig').splitlines()
 story=[]; i=0
@@ -83,7 +95,7 @@ while i<len(lines):
         story.append(Paragraph(inline(' '.join(parts)),styles['Main']))
 
 def page_frame(c,doc):
-    c.setTitle(f'Подоконник {params["length_mm"]:g} x {params["depth_mm"]:g} x 30 мм - DXF и STL')
+    c.setTitle(f'Подоконник {params["length_mm"]:g} x {params["depth_mm"]:g} x 30 мм - DXF, STL и STEP')
     c.setAuthor('stone_project')
     c.setFont('Arial',8)
     c.setFillColor(colors.HexColor('#657988'))
@@ -98,7 +110,7 @@ doc=SimpleDocTemplate(str(target),pagesize=A4,leftMargin=40,rightMargin=40,
 doc.build(story,onFirstPage=page_frame,onLaterPages=page_frame)
 reader=PdfReader(target)
 text='\n'.join(p.extract_text() or '' for p in reader.pages)
-for term in [f'{params["length_mm"]:g}',f'{params["depth_mm"]:g}','13,5','0,002556','1250','лев','ArtCAM','3DFACE','STL']:
+for term in [f'{params["length_mm"]:g}',f'{params["depth_mm"]:g}','13,5','0,002556',f'{params["rear_width_mm"]:g}','лев','ArtCAM','3DFACE','STL']:
     assert term in text,term
 assert all(p.extract_text().strip() for p in reader.pages)
 print(f'PDF: {len(reader.pages)} pages, {target.stat().st_size} bytes; text checks passed.')
