@@ -151,9 +151,11 @@ project: dotnet_architecture_examples
 
 ## Код и GitHub
 
-- Код Model/ExportImport с `NoEntityAttribute` сохранён локальным коммитом [`473bf75`](https://github.com/parad74/dotnet_architecture_examples/commit/473bf7529f541fa771c50720f7a05199dd29f760). Сборка всего solution прошла: 0 предупреждений, 0 ошибок. Push пока не выполнен: автоматическая проверка требует явного подтверждения адреса репозитория GitHub.
+- Согласованные правила вопросов перед созданием приложения и Excel Attributes опубликованы в `main`: [`288c03c`](https://github.com/parad74/obsidian_parad/commit/288c03c383ae011152c4bb5e7d8d1eb2df98b9b2).
 
-- Снимок документации перед чистым ревью: `0179c110294fd5ed25aef74f20ee8940114855eb`, 2026-10-02, 19 файлов. [Ссылка на коммит после публикации](https://github.com/parad74/obsidian_parad/commit/0179c110294fd5ed25aef74f20ee8940114855eb); коммит пока локальный, push не выполнялся.
+- Код Model/ExportImport с `NoEntityAttribute` опубликован в `main` коммитом [`473bf75`](https://github.com/parad74/dotnet_architecture_examples/commit/473bf7529f541fa771c50720f7a05199dd29f760). Сборка всего solution прошла: 0 предупреждений, 0 ошибок. Push выполнен 2026-10-02 после явного разрешения Parad на публикацию в этом репозитории.
+
+- Снимок документации перед чистым ревью: `0179c110294fd5ed25aef74f20ee8940114855eb`, 2026-10-02, 19 файлов. [Опубликованный коммит](https://github.com/parad74/obsidian_parad/commit/0179c110294fd5ed25aef74f20ee8940114855eb); отправлен в `main` 2026-10-02.
 - Репозиторий будущей эталонной реализации: `Sources/Architectures` (`dotnet_architecture_examples`).
 - На этапе фиксации цели код не изменялся.
 - Согласованные решения по EF Entity workflow: [4dcd52a](https://github.com/parad74/obsidian_parad/commit/4dcd52a79781cb9ea6dd681109ea56608ac33824).
@@ -197,6 +199,8 @@ project: dotnet_architecture_examples
 Стартовый образец и пять интерфейсов сохраняются как опора Parad; удаление ненужного откладывается до отдельного запроса на этапе бизнес-правил. Модель согласуется возвратом проверенного Excel, затем весь запрошенный комплект создаётся одним проходом в обоих проектах либо только в прямо указанном проекте. Проверка документации не означает успешной проверки всех EF-профилей.
 
 ## Журнал
+
+- 2026-10-02 — Parad явно разрешила push в main репозиториев parad74/obsidian_parad и parad74/dotnet_architecture_examples. Оба push выполнены успешно: код 473bf75, документы 288c03c вместе с предшествующими коммитами. Ссылки и актуальный статус публикации обновлены в разделе «Код и GitHub». Посторонние изменения WinForms и Jenja не включены; общая задача остаётся Review, migrations и БД не запускались.
 
 - 2026-10-02 — По просьбе Parad «залей изменения в Git» подготовлены публикации в настроенные origin: vault `parad74/obsidian_parad` и код `parad74/dotnet_architecture_examples`. Код Model/ExportImport, новый NoEntityAttribute и соответствующий README сохранены локальным коммитом 473bf75. Отправка этого коммита не выполнялась: автоматическая проверка отклонила push, потребовав явное подтверждение конкретного destination. Документы workflow подготовлены отдельно от посторонних правок WinForms и Jenja. Готовность публикации и ожидаемое подтверждение адресов записаны здесь; общая задача не объявляется завершённой.
 
