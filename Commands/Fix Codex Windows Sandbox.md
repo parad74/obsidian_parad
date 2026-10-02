@@ -10,7 +10,50 @@ helper_unknown_error: setup refresh had errors
 
 Сначала выполни одну безопасную проверку чтения в песочнице. Если она возвращает эту же ошибку, не повторяй одинаковые попытки и не создавай серию запросов `require_escalated` без объяснения причины.
 
+## Ошибка редактора `apply_patch` на `reparse point`
+
+Это отдельная ошибка, не требующая изменения владельца или ACL:
+
+```text
+Failed to read file ...: path contains a reparse point
+```
+
+Она может возникать, даже если PowerShell читает файл, рабочий каталог доступен для записи, а `LinkType` у пути не указан. Если встроенный редактор не принимает путь, не применяй к этой ошибке исправление владельца из следующего раздела.
+
+Проверенный обход на Windows — вызвать тот же `codex.exe` напрямую и передать весь patch одним UTF-8 аргументом. Сначала найди wrapper и прочитай из него фактический путь к исполняемому файлу:
+
+```powershell
+$applyPatchWrapper = (Get-Command apply_patch).Source
+Get-Content -LiteralPath $applyPatchWrapper -Raw
+```
+
+В `apply_patch.bat` команда содержит `codex.exe` и параметр `--codex-run-as-apply-patch`. Разреши показанный относительный путь от каталога wrapper либо используй точный абсолютный путь к этому `codex.exe`. Затем передай patch напрямую:
+
+```powershell
+$codexExe = '<точный путь к codex.exe из apply_patch.bat>'
+$patchText = @'
+*** Begin Patch
+*** Update File: path/to/file.md
+@@
+-old
++new
+*** End Patch
+'@
+$patchText = $patchText.TrimEnd("`r", "`n")
+& $codexExe --codex-run-as-apply-patch $patchText
+```
+
+Вызов самого `apply_patch.bat` с многострочным patch может разбить аргумент и завершиться сообщением `--codex-run-as-apply-patch requires a UTF-8 PATCH argument` либо `The last line of the patch must be '*** End Patch'`. Поэтому при этом обходе вызывай именно `codex.exe` и передавай `$patchText` одним аргументом. После применения проверь целевой diff. Путь к `codex.exe` зависит от установленной сборки Codex, поэтому не сохраняй текущий hash каталога как постоянный.
+
 ## Диагностика
+
+### Большой patch не запускается из-за длины команды
+
+При прямом вызове редактора с большим patch в этой сессии получено сообщение `Имя файла или его расширение имеет слишком большую длину`. Тот же целевой файл успешно изменялся меньшими patch. Это локально проверенный случай передачи большого аргумента, а не основание переименовывать файл или менять ACL.
+
+Раздели правку на небольшие самостоятельные patch по разделам, применяя их последовательно тем же редактором. Перед следующим patch учитывай уже изменённый текст; после всех частей проверь итоговый diff и сохранность разделов. Не заменяй редактирование перезаписью всего файла через shell. Обход проверен в этой рабочей сессии; официальный раздел Windows sandbox не описывает именно этот случай.
+
+### Диагностика setup refresh
 
 Если обычный доступ заблокирован, запроси один повышенный запуск только для чтения диагностических данных. Профиль пользователя определяй через:
 
@@ -72,4 +115,4 @@ icacls.exe $targetPath /setowner $currentIdentity
 
 ## Справка
 
-- [OpenAI Docs — Windows sandbox](https://learn.chatgpt.com/codex/windows/windows-sandbox)
+- [OpenAI Docs — Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox) — общая диагностика песочницы; локальные обходы редактора выше проверены отдельно.

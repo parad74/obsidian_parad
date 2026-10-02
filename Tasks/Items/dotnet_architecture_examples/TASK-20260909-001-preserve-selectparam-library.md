@@ -36,6 +36,7 @@ project: dotnet_architecture_examples
 
 - Исходник: `Sources/old/WebAPI.Monitor/src/Service.Model.EF.SelectParam`.
 - Результат: `Sources/Architectures/LibProject/netstandard2.0/SelectParam`.
+- Архитектурная карточка с текущими местами использования: [[Documents/Architectures/LibProject/netstandard2.0/SelectParam]].
 
 ## Код и GitHub
 
@@ -56,3 +57,4 @@ project: dotnet_architecture_examples
 - 2026-09-09 — Работа начата, статус `Doing`.
 - 2026-09-09 — Перенос и сборка завершены, статус `Review`.
 - 2026-09-09 — Commit `25997e7` отправлен в GitHub; повторная сборка успешна.
+- 2026-09-19 — Добавлена архитектурная карточка `SelectParam` со ссылками на исходный проект, `Monitor.Model` и ExportImport; связанные архитектурные карточки ссылаются на неё.

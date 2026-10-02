@@ -1,0 +1,99 @@
+---
+type: architecture
+runtime_family: netcoreapp
+target_framework: netcoreapp3.1
+project: Monitor.Model.Sqlite.CodeFirst.ExportImport
+---
+
+# Monitor.Model.Sqlite.CodeFirst.ExportImport
+
+## Назначение
+
+Первый образец EF Core-проекта для отображения `Monitor.Model` на SQLite и обратного преобразования данных. Источник для разбора — [исторический проект](../../../../Sources/old/WebAPI.Monitor/src/Monitor.Model.Sqlite.CodeFirst.ExportImport/Monitor.Model.Sqlite.CodeFirst.ExportImport.csproj). Для последующих применений имя сервиса `<Service>` берётся из ранее созданного `<Service>.Model` и задаёт общий префикс связанных проектов и namespaces и имя контекста `<Service>DbContext`. Если Model ещё нет, имя сервиса, имя БД, СУБД, семейство EF, пакет провайдера, подход и версии определяются при старте, до создания проектов solution. Имя БД не переопределяет имя сервиса: для `Inventory.Model` БД `WarehouseDb` сохраняет префикс `Inventory` и контекст `InventoryDbContext`.
+
+Первый профиль задаёт технологические defaults нового применения: проект `<Service>.Model.Sqlite.CodeFirst.ExportImport`, namespace `<Service>.Sqlite.CodeFirst`, Code First, SQLite, `netcoreapp3.1` и EF Core с `Microsoft.EntityFrameworkCore.Sqlite` 3.1.9. При отсутствии выбранного имени сервиса используется `Monitor`; если Model уже создан, сохраняется его `<Service>`. Имя БД не является автоматическим default: при старте ExportImport, до создания проектов, спроси его отдельно, если Parad ещё не задала его для этого применения. Оно не выводится из имени сервиса. Явно указанные или ранее согласованные параметры имеют приоритет. При интеграции в solution с другими версиями .NET и EF сначала используются технологические defaults и проверяется совместимость; при несовместимости Машина задаёт вопрос, а версии автоматически не меняет.
+
+`Sqlite` в имени проекта и namespace обозначает СУБД. Оно не обозначает EF Core: тот же принцип имён для SQL Server использует сегмент `MSSQL` независимо от выбора EF Core или EF6. Подробная таблица терминов и ещё не созданных вариантов находится в [[Documents/Architectures/Catalog]].
+
+## Зависимости
+
+- Обязательные независимые `ProjectReference` на [Monitor.Model](../netstandard2.0/Monitor.Model.md) и [SelectParam](../netstandard2.0/SelectParam.md).
+- В рабочем репозитории приложения `Service.Model.EF.SelectParam` копируется как локальный проект с исходным кодом и включается в `<Service>.sln`. ExportImport получает `ProjectReference` на эту локальную копию, поскольку использует типы `SelectParam`. Ссылку на внешний checkout `Sources/Architectures` не создавай; если локальный проект уже существует, не дублируй его.
+- Текущий первый образец хранится в `Monitor.Model.Sqlite.CodeFirst.ExportImport.sln` и включает ExportImport, `Monitor.Model` и `SelectParam`. Для нового автономного применения solution называется по выбранному в начале имени сервиса: `<Service>.sln`, например `Inventory.sln`. Имя БД и имя ExportImport-проекта это имя не меняют. При интеграции используй указанный существующий solution. Для запроса ExportImport базовый состав включает три проекта: отсутствующие зависимости создаются или подключаются в рамках запроса. Общего запрета включать другие необходимые проекты в solution нет.
+- Текущий готовый образец по умолчанию использует `Microsoft.EntityFrameworkCore.Sqlite` 3.1.9 и `Microsoft.Extensions.Logging` 3.1.9. EF Core Design/Tools отсутствуют в его текущем `.csproj` и добавляются только при необходимости соответствующего отдельного шага с проверкой совместимости. SQL Server, Unity и старые Prism DLL не добавляются только потому, что они были в старом проекте.
+- `BaseEFRepository.cs` остаётся с кодом EF6 и пометкой `NOT USE`; ссылка на интерфейс переводится на `Monitor.Model.Interface`. EF6 доступен через `SelectParam`.
+
+## Стартовый комплект нового solution
+
+Запрос создать `<Service>.Model.<DataStore>.CodeFirst.ExportImport` означает создание готового стартового solution из трёх связанных проектов: ExportImport, `<Service>.Model` и `Service.Model.EF.SelectParam`. В Model включаются готовые DomainObject `CommandResult`, `CommandResults`, необходимые перечисления и все пять интерфейсов, включая интерфейс репозитория. В ExportImport для `CommandResult` включаются Entity, Fluent-конфигурация, `DbSet` в `<Service>DbContext`, MappingEF и EF-репозиторий.
+
+Этот состав создаётся как единый стартовый комплект без повторного согласования готового `CommandResult`. Гибкий кубик применяется к последующим новым объектам и дополнениям. Тестовые проекты и автоматизированные тесты на текущем этапе в solution не добавляются.
+
+## Структура первого образца
+
+```text
+Monitor.Model.Sqlite.CodeFirst.ExportImport/
+├─ Context/
+│  ├─ MonitorDbContext.cs
+│  └─ DbInitializer.cs
+├─ MonitorDb/CommandResult/
+│  ├─ CommandResult.cs
+│  └─ CommandResultConfiguration.cs
+├─ MappingEF/
+│  ├─ CommandResultMapper.cs
+│  └─ StringLength.cs
+├─ RepositoryEF/
+│  ├─ CommandResultEFRepository.cs
+│  └─ PaginatedList.cs
+├─ BaseEFDbSetRepository.cs
+├─ BaseEFRepository.cs
+├─ CollectionOf.cs
+├─ CollectionPagingOf.cs
+├─ ConnectionSqliteMonitorDB.cs
+├─ DomainObjects.cs
+└─ Monitor.Model.Sqlite.CodeFirst.ExportImport.csproj
+```
+
+Шесть корневых файлов берутся из исторического проекта. `ConnectionSqliteMonitorDB` реализует `Monitor.Model.Interface.IConnectionSqliteMonitorDB`. В первом образце сохраняется минимальная строка подключения из старого кода `Data Source=command.db`. Имя логической модели БД `MonitorDb` и имя файла SQLite — разные значения. В новом применении имя/путь файла обязательно определяется при старте ExportImport отдельно от сервиса и логического имени БД; если оно не задано, задай отдельный вопрос до создания проектов. `command.db` автоматически не переносится. Вопросы задаются по одному с вариантами и свободным ответом; уже заданные параметры не спрашиваются повторно. Согласованное подключение хранится простым строковым литералом в классе подключения. Все файлы первого образца используют namespace `Monitor.Sqlite.CodeFirst`, включая вложенные папки.
+
+`MonitorDbContext` получает `DbContextOptions<MonitorDbContext>` через конструктор, объявляет `DbSet<CommandResult> CommandResultDatas` и подключает Fluent API-конфигурации через `ApplyConfigurationsFromAssembly`. В нём нет `OnConfiguring`, строки подключения, создания БД и начальных данных.
+
+`DbInitializer` проверяет путь SQLite из строки подключения контекста. Для отсутствующего файла БД он применяет только заранее подготовленные migrations; при отсутствии `InitialCreate` выдаёт ошибку. Для существующего файла pending migrations автоматически не применяются. `EnsureCreated()` и автоматическое создание migration не используются.
+
+`Entity` и конфигурация создаются из `Monitor.Model/Domain/CommandResult` и исторических ограничений столбцов. Состав свойств Domain Model и Entity одинаков. Первичный ключ таблицы — `ID` с генерацией Identity, как в старом Entity. `Code` в Domain Model служит логическим ключом сравнения объектов, но не первичным или уникальным ключом таблицы. `Code` и `CommandResultCode` — независимые значения и два обычных текстовых столбца максимальной длины 50. `IturCodes` и `DocumentHeaderCodes` удалены из обоих классов; `Files` и `UnsureFiles` представлены обычными строками и столбцами максимальной длины 500. Маппер преобразует все свойства между `Entity` и `Monitor.Model.CommandResult`. Исключённый из Domain Model `AdapterType` не переносится. Репозиторий реализует `Monitor.Model.Interface.ICommandResultRepository` на EF Core. `GetTestDataCommandResults` возвращает пример данных в памяти и не записывает его в БД.
+
+Для каждой новой пары `DomainObject` ↔ `Entity` первое свойство обоих классов — обязательное `long ID`. Если во входном описании его нет, оно добавляется автоматически, без отдельного вопроса; уже указанное корректное `ID long` не дублируется. В EF-конфигурации `ID` явно назначается первичным ключом (`builder.HasKey(p => p.ID)`); методы типового репозитория по `ID` используют `long`. `Code` сохраняет роль логического ключа сравнения.
+
+Состав работы определяется запросом Parad и фактическим состоянием проекта: названные части создаются или дополняются, существующие части используются без дублирования. 11 последовательностей кубика — примеры, а не закрытый список команд. Сначала Машина готовит Excel и ждёт его проверки и возврата Parad. Затем весь запрошенный комплект классов создаётся одним проходом: по умолчанию в Model и ExportImport, а при явно ограниченном запросе — только в названном проекте или составе. Отдельные подтверждения каждого класса, объекта или этапа после утверждения Excel не требуются. При недостающих зависимостях пути или расширение состава уточняются до генерации. Правила: [[Documents/Architectures/Cubes/DotNet/DomainObject - Entity - MappingEF - Repository#Гибкий состав работы и согласование модели]].
+
+Дополнение существующих объектов определяется запросом и найденным кодом. Используй существующие классы; не создавай пару заново и не запускай не запрошенные части автоматически. При запросе синхронизации поля одним проходом дополни все входящие в запрос Entity, DomainObject, конфигурации и мапперы. Если отсутствует необходимая часть, уточни её путь либо создание до генерации. После возвращения утверждённого Excel отдельные подтверждения по объектам и этапам не требуются. Существующие поля автоматически не удаляются и не переделываются; migrations остаются отдельными запрошенными действиями.
+
+На выбранном этапе MappingEF для пары `Entity` ↔ `DomainObject` создаётся отдельный `<Имя>Mapper.cs` с методами `ToDomainObject`, `ToSimpleDomainObject`, `ToEntity` и `ApplyChanges`. В первом образце ToSimpleDomainObject пока имеет заглушку. В новом применении метод даёт сокращённое представление по составу проекта; если состав определён, предложи реализацию. `ApplyChanges` копирует `ID` из DomainObject по выбору Parad; смена ключа отслеживаемого Entity не является поддерживаемой операцией обновления EF Core. Старый `CutLength` вынесен в общий файл `MappingEF/StringLength.cs` и вызывается для поля только по явному правилу, без автоматической обрезки всех строк с `HasMaxLength`. Все файлы используют namespace `Monitor.Sqlite.CodeFirst`.
+
+На выбранном этапе Repository создаются `I<Имя>Repository` в `Monitor.Model/Interface` и `<Имя>EFRepository` в папке `RepositoryEF` проекта EF. Типовой набор реализует чтение всех записей и выборку с `SelectParams`, чтение по `ID` и `Code`, вставку одной и нескольких записей, обновление, удаление по `ID` и `Code`, а также `DeleteAll`. Для чтения и удаления при повторяющемся Code политику выбора/обработки совпадений согласуй отдельно в конкретном проекте. Методы по другим полям и тестовым данным добавляются только по запросу. Если поведение дополнительного метода из файла достаточно описано, предложи реализацию; неизвестное поведение оставь явно обозначенной заглушкой.
+
+`PaginatedList<T>` перенесён из исторической папки в один общий файл `RepositoryEF/PaginatedList.cs` с namespace EF-проекта. Он остаётся примером и не меняет выборку через `SelectParams` и `CommandResults.TotalCount`. У существующего `CommandResult` метод `Delete(string commandResultCode)` сохраняется; для нового типового удаления по `Code` из-за совпадения сигнатур используется `DeleteByCode(string code)`.
+
+## Текущее состояние
+
+Шесть корневых файлов перенесены в `Sources/Architectures/LibProject/netcoreapp3.1/Monitor.Model.Sqlite.CodeFirst.ExportImport`. Их namespace — `Monitor.Sqlite.CodeFirst`; обращения к интерфейсу приведены к `Monitor.Model.Interface`. Создан `.csproj` с обоими `ProjectReference` и версиями SQLite/Logging из старого проекта. Выбранный solution содержит три проекта. Добавлены `MonitorDbContext`, `DbInitializer`, Entity, Fluent API-конфигурация, полный шаблон маппера, общий `CutLength` и репозиторий. Папка репозитория переименована в `RepositoryEF`; добавлен один общий `PaginatedList<T>` и методы по `Code`. Domain Model и Entity содержат по 74 совпадающих по имени свойства. Solution собирается без предупреждений и ошибок. Migration `InitialCreate` пока не создана; проверка работы с реальной SQLite-БД остаётся следующим отдельным шагом.
+
+## Проверка
+
+После создания собрать целевой solution и проверить ссылки, namespaces, маппинг `Code`, фильтрацию и paging через `SelectParam`. Успешную сборку явно сообщить Parad; автоматизированные тесты на этом этапе не требуются.
+
+Перед созданием migration проверить design-time готовность выбранного профиля: доступность инструмента, Design-пакета и способ создания `DbContext`. Если для этого нужно добавить зависимость или design-time factory, сначала согласовать изменение с Parad. После успешной сборки выдать две точные команды с фактическими путями, project, startup project и контекстом: отдельно создать `InitialCreate`, затем применить migrations для создания отсутствующей БД. По умолчанию команды запускает Parad; Машина может выполнить каждую из них по отдельному явному запросу.
+
+Существующую БД автоматически не обновлять. После применения `InitialCreate` к отсутствующей БД проверить, что файл или экземпляр БД создан, migration зарегистрирована в истории и ожидаемая схема присутствует, затем сообщить результат. Исторические файлы остаются без изменений.
+
+## Связанные материалы
+
+- [[Tasks/Items/dotnet_architecture_examples/TASK-20260909-003-design-selectparam-guided-workflow]]
+- [[Tasks/Artifacts/TASK-20260909-003/project-structure-discussion-v1]]
+- [[Documents/Architectures/LibProject/netstandard2.0/Monitor.Model]]
+
+## Согласованные правила развития и вычитки
+
+Таблицы этой архитектуры независимы. Повторы Code допустимы; поведение согласуется по операциям проекта, без универсального выбора минимального ID. Равенство состава DomainObject/Entity относится к стартовому шаблону; последующие бизнес-различия описываются и отображаются явно. Достаточно описанные дополнительные методы реализуются, неизвестное поведение оставляется явно обозначенной заглушкой. Подробности: [[Documents/Architectures/Cubes/DotNet/DomainObject - Entity - MappingEF - Repository#Предметные правила и развитие шаблона]].
+
+После создания согласованного комплекта показывай итоговые файлы/классы целиком для вычитки. Перед классом и новыми/изменёнными членами ставь комментарии с датой генерации и статусом вычитки. Новый код требует Full, изменение ранее вычитанного — проверки Changes с отметкой участка; ранее невычитанное не считается прочитанным. Read ставится только по проверке Parad; возврат Excel сам по себе не означает вычитку кода. Рабочий формат: [[Documents/Architectures/Cubes/DotNet/DomainObject - Entity - MappingEF - Repository#Показ кода и отметки вычитки]].
