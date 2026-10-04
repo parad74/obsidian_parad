@@ -9,6 +9,8 @@ project: Service.Model.EF.SelectParam
 
 ## Назначение
 
+Границы модуля и направления зависимостей: [[Documents/Architectures/Data Model Harness#Модули и устойчивые границы]].
+
 Общая библиотека параметров выборки: фильтры, сортировка и paging для `IQueryable<T>`. Имя проекта и сборки — `Service.Model.EF.SelectParam`, namespace исходного API — `Count4U.Model.SelectionParams`. Проект сохранён из [исторического источника](../../../../Sources/old/WebAPI.Monitor/src/Service.Model.EF.SelectParam/Service.Model.EF.SelectParam.csproj) без переименования публичных типов.
 
 ## Исходный код и зависимости
@@ -19,7 +21,7 @@ project: Service.Model.EF.SelectParam
 
 ## Перенос в рабочее приложение
 
-`Service.Model.EF.SelectParam` копируется в рабочий Git-репозиторий приложения как отдельный проект с исходным кодом и включается в `<Service>.sln`. Источник — `Sources/Architectures/LibProject/netstandard2.0/SelectParam/`; копируются `Service.Model.EF.SelectParam.csproj` и исходники, но не отдельный эталонный `.sln`, `bin`, `obj` и Git-метаданные. Проект не подключается относительной ссылкой на checkout `Sources/Architectures` и не заменяется NuGet-пакетом. Если локальный `Service.Model.EF.SelectParam` уже существует, используется он без создания второй копии.
+`Service.Model.EF.SelectParam` копируется в рабочий Git-репозиторий приложения как отдельный проект с исходным кодом и включается в `<Service>.sln`. Источник — `Service.Model.EF.SelectParam` из фиксированной версии Book4U по [[Documents/Architectures/Data Model Examples]]; прежний источник `Sources/Architectures/LibProject/netstandard2.0/SelectParam/` сохраняется как первый эталон; копируются `Service.Model.EF.SelectParam.csproj` и исходники, но не отдельный эталонный `.sln`, `bin`, `obj` и Git-метаданные. Проект не подключается относительной ссылкой на checkout `Sources/Architectures` и не заменяется NuGet-пакетом. Если локальный `Service.Model.EF.SelectParam` уже существует, используется он без создания второй копии.
 
 Каждый проект solution, который использует `SelectParams` или другие типы этой библиотеки, получает `ProjectReference` на локальный `Service.Model.EF.SelectParam.csproj`. Проектам без такого использования ссылка не добавляется. В стартовом ExportImport solution ссылка нужна как минимум `<Service>.Model` для интерфейсов репозитория и EF-проекту для реализации фильтрации, сортировки и paging.
 

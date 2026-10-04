@@ -14,3 +14,6 @@
 /.trash/
 .DS_Store
 Thumbs.db
+
+# Временные файлы блокировки открытых документов Microsoft Office.
+~$*

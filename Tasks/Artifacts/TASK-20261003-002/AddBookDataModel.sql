@@ -1,0 +1,51 @@
+﻿CREATE TABLE "Author" (
+    "ID" INTEGER NOT NULL CONSTRAINT "PK_Author" PRIMARY KEY AUTOINCREMENT,
+    "Code" TEXT NULL DEFAULT '',
+    "Name" TEXT NULL DEFAULT '',
+    "Description" TEXT NULL DEFAULT '',
+    "Tag" TEXT NULL DEFAULT '',
+    "Count" INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE "Book" (
+    "ID" INTEGER NOT NULL CONSTRAINT "PK_Book" PRIMARY KEY AUTOINCREMENT,
+    "Code" TEXT NULL DEFAULT '',
+    "Name" TEXT NULL DEFAULT '',
+    "LocationCode" TEXT NULL DEFAULT '',
+    "AuthorCode" TEXT NULL DEFAULT '',
+    "CategoryCode" TEXT NULL DEFAULT '',
+    "Description" TEXT NULL DEFAULT '',
+    "Tag" TEXT NULL DEFAULT ''
+);
+
+CREATE TABLE "Category" (
+    "ID" INTEGER NOT NULL CONSTRAINT "PK_Category" PRIMARY KEY AUTOINCREMENT,
+    "Code" TEXT NULL DEFAULT '',
+    "Name" TEXT NULL DEFAULT '',
+    "Description" TEXT NULL DEFAULT '',
+    "Tag" TEXT NULL DEFAULT '',
+    "Count" INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE "Location" (
+    "ID" INTEGER NOT NULL CONSTRAINT "PK_Location" PRIMARY KEY AUTOINCREMENT,
+    "Code" TEXT NULL DEFAULT '',
+    "RoomCode" TEXT NULL DEFAULT '',
+    "Name" TEXT NULL DEFAULT '',
+    "Description" TEXT NULL DEFAULT '',
+    "Tag" TEXT NULL DEFAULT '',
+    "Count" INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE "Room" (
+    "ID" INTEGER NOT NULL CONSTRAINT "PK_Room" PRIMARY KEY AUTOINCREMENT,
+    "Code" TEXT NULL DEFAULT '',
+    "Name" TEXT NULL DEFAULT '',
+    "Description" TEXT NULL DEFAULT '',
+    "Tag" TEXT NULL DEFAULT '',
+    "Count" INTEGER NOT NULL DEFAULT 0
+);
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20261003113005_AddBookDataModel', '3.1.9');
+

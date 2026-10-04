@@ -5,18 +5,26 @@ platform: WinForms
 
 # Каталог архитектур WinForms
 
+Общий указатель проектов и сочетаний: [[Documents/Architectures/Catalog]].
+
 Архитектуры разделены по семейству runtime, а не по возрасту. `.NET Framework` и современный `.NET` считаются равноправными вариантами для разных задач.
 
 | Архитектура | Runtime | Главное отличие | Эталон |
 | --- | --- | --- | --- |
 | [[Documents/Architectures/WinForms/DotNetFramework/WinForms - View - Presenter - DIUnity - IModule]] | .NET Framework 4.6.1 | Форма получает Presenter и связывает его с View; модули и зависимости регистрируются в Unity | `Sources/Architectures/WinForms/DotNetFramework/WinForms.NETFramework.App1/` |
-| [[Documents/Architectures/WinForms/DotNet/WinForms - View - Presenter - DI]] | Версия .NET выбирается перед созданием | View публикует события и ничего не знает о Presenter | Ещё не создан |
+| [[Documents/Architectures/WinForms/DotNet/WinForms - View - Presenter - DI]] | Версия .NET выбирается перед созданием; проверенный эталон использует .NET 8 | View публикует события и ничего не знает о Presenter | `Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App1/` |
 
 ## Кубики .NET Framework
 
 | Кубик | Назначение | Проект | Режимы применения |
 | --- | --- | --- | --- |
 | [[Documents/Architectures/Cubes/DotNetFramework/Service - DIUnity]] | Сервис состояния с операциями `Save` и `Clear`, подключаемый через Unity | `Common.Service` | Интеграция в существующий solution или отдельный solution |
+
+## Кубики современного .NET
+
+| Кубик | Назначение | Проект | Режимы применения |
+| --- | --- | --- | --- |
+| [[Documents/Architectures/Cubes/DotNet/Service - DI]] | Сервис состояния с операциями `Save` и `Clear`, подключаемый через стандартный DI | `Common.Service` | Интеграция в существующий solution или отдельный solution |
 
 ## Где находится код
 
