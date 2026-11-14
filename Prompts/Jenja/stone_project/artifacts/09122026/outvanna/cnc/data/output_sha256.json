@@ -1,0 +1,10 @@
+{
+  "cnc\\nc\\VANNA_DVP_D4_CUT.nc": "c074fd41c2770e73481882429c3415d5638e81b931d1eb4ef4f681933762d643",
+  "cnc\\nc\\VANNA_DVP_AIR_XY.nc": "818163622cf0bc9d66c73828483d597c085a33fe3144d4207759c0b385e6e5eb",
+  "vanna_contours_mm.dxf": "c121d41a2cbab403156d562e53fe395c35e63b28b0c5063ba72b8fa3fa868f7c",
+  "vanna_dimensioned_mm.dxf": "9697036b5aafcdd1b0931005f7a75fc934240dbd250ea630c81133678ad121f7",
+  "cnc\\geometry\\vanna_sheet_toolpaths_mm.dxf": "d85f2dda68d73006f007222b54ba0a39e1e04288ba1a54b8cf574836be3df12a",
+  "cnc\\geometry\\vanna_motion_XYZ.dxf": "188691099fb25684f9e389cb655fa780649c217a916ef18e69a243e41c9319d1",
+  "cnc\\test_checks\\CHECK_DWELL_5S_NO_MOTION.nc": "9cee02b3d08e8aa13f77dbf0c312cbd0cd5c2af34de6cc6c5b00f6a3f5726fa8",
+  "cnc\\test_checks\\CHECK_SPINDLE_16000_5S_NO_MOTION.nc": "8ae1c12dc9dd954adcc559c59d2c54d3583c2218a4d3b0f3c65328486a41af81"
+}

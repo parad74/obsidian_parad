@@ -1,0 +1,32 @@
+{
+  "source": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\invanna2\\photo_2026-11-12_19-19-33.jpg",
+  "source_sha256": "6ac1745a58f932f76cb8c7ee4a16f597ca513bd9b8f826fcea2079b70a1b2e8f",
+  "pixel_center": [
+    365.15935636632423,
+    405.89759162206
+  ],
+  "pixel_radius": 199.5165914598681,
+  "pixel_rms": 0.200034320572115,
+  "point_count": 368,
+  "upper_circle": [
+    365.2228737620632,
+    406.00102594052737,
+    199.62303934252043
+  ],
+  "lower_circle": [
+    365.9458722627616,
+    405.3311888306979,
+    200.42665510296112
+  ],
+  "center_separation_pixels": 0.9856006218123184,
+  "radius_mm": 306.5,
+  "metric_center_relative_to_leftmost_midpoint_mm": [
+    306.5,
+    0
+  ],
+  "basis": "Circular end tangent to upper/lower parallel edges separated by 613 mm; approximate model, not manufacturer radius.",
+  "warning": "Diagram dimensions do not share a uniform pixel scale. Overlay fits visual arc; physical circularity is an assumption.",
+  "equal_xy_diameter": true,
+  "unchanged_pixels_outside_annotation": true,
+  "output_png": "circle_on_original_exact2.png"
+}

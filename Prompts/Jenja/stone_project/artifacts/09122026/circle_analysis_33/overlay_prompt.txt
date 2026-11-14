@@ -1,0 +1,4 @@
+Mode: built-in image_gen, precise-object-edit.
+Edit target: ../invanna2/photo_2026-11-12_19-19-33.jpg.
+Preserve original drawing, frame, pale yellow existing material color, white interior, black outlines, dimension lines and text (1730, 810, 1583, 613, bottom corner note), and full framing. Only overlay one thin blue complete circumference on the left rounded end, a small blue center cross labelled O, and one blue radius arrow labelled "R = 306,5 мм". No new fills, recoloring, separate diagrams or explanatory paragraphs.
+Placement relative to original 1280x770: center approximately (365,406), screen radius 200 px, bounds x165..565 and y206..606. Left half traces the existing left rounded opening; right half extends into the white opening. Radius line from center diagonally to upper-left circumference near (224,264), label adjacent, avoiding original dimensions. Millimeter radius is 613/2; placement follows schematic. Preserve original black outlines.
