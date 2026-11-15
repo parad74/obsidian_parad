@@ -1,0 +1,6 @@
+numpy==1.26.4
+ezdxf==1.4.5
+shapely==2.2.0
+reportlab==4.4.9
+Pillow==12.1.1
+PyMuPDF==2.1

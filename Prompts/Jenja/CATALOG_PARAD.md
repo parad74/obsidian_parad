@@ -754,3 +754,53 @@
 **Материалы:** [Сравнительная схема](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/cut_vs_r315.png) · [Подробности](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/README.md) · [Хеши](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/cut_vs_r315_file_hashes.json).
 
 **Материалы — папки от \Jenja\:** [\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — схема и исследование; [\Jenja\stone_project\artifacts\09122026\outvanna\cnc\nc](stone_project/artifacts/09122026/outvanna/cnc/nc/) — проверенные неизменённые программы.
+
+<!-- entry -->
+
+## PARAD-027 — Симметричная рамка ванны из ДВП, R315
+
+**Дата выполнения** 15.11.2026. Папка outvanna2 создана 14.11.2026. Продолжение работы PARAD-016 по промту PARAD-017.
+
+![Рамка ванны с полукруглыми торцами](stone_project/artifacts/09122026/outvanna2/vanna2_preview.png)
+
+**Постановка и решение.** Подготовить одну рамку 1730 × 810 мм с вырезом 1605 × 630 мм по размерам производителя. Две дуги R315 касаются прямых по 975 мм. Центры по горизонтали 377,5 и 1352,5 мм от левой стороны, по вертикали 405 мм от верха и низа. Поля по бокам 62,5 мм, сверху и снизу 90 мм. Нижние уступы по 8 × 25 мм.
+
+**Раскрой и проверка.** ДВП 5 мм, фреза Ø4, S16000, F800 по XY, F100 по Z, выдержка G04 P5000 после M3. Входы Ø8 в отходе, два уровня до Z0 стола, по одной перемычке 5 × 1 мм на контур. Чтение DXF и NC подтвердило радиусы, привязки, порядок резания и совпадение XY холостой и режущей программ. Время подачи с паузой около 22 мин 55 с. Геометрия согласована. Испытание на станке и примерка предстоят.
+
+**Материалы.** [Описание и согласованный рисунок (PDF)](stone_project/artifacts/09122026/outvanna2/project_overview.pdf) · [Размерный DXF](stone_project/artifacts/09122026/outvanna2/vanna2_dimensioned_mm.dxf) · [Файлы и порядок запуска](stone_project/artifacts/09122026/outvanna2/README.md) · [Промт «Ванна и ДВП»](Commands/Bath%20Frame%20DVP.md).
+
+[\Jenja\stone_project\artifacts\09122026\invanna2](stone_project/artifacts/09122026/invanna2/) — исходные схемы. [\Jenja\stone_project\artifacts\09122026\outvanna2](stone_project/artifacts/09122026/outvanna2/) — результат, номинальный и размерный DXF, PDF и наложение.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\nc](stone_project/artifacts/09122026/outvanna2/cnc/nc/) — CUT и AIR_XY. [\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\geometry](stone_project/artifacts/09122026/outvanna2/cnc/geometry/) — раскладка и XYZ.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\test_checks](stone_project/artifacts/09122026/outvanna2/cnc/test_checks/) — станочные тесты. [\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\data](stone_project/artifacts/09122026/outvanna2/cnc/data/) — разметка и протоколы.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\scripts](stone_project/artifacts/09122026/outvanna2/cnc/scripts/) — построение и проверка. [\Jenja\Commands](Commands/) — промт.
+
+**Поиск.** Ванна, рамка, ДВП, R315, равные поля, симметричный вырез.
+
+<!-- entry -->
+
+## PARAD-028 — Рамка ванны с выносом внутрь на 11 мм, R304
+
+**Дата выполнения** 15.11.2026. По запросу Parad на основе [PARAD-027](stone_project/artifacts/09122026/outvanna2/README.md).
+
+![Рамка с вырезом 1583 × 608 мм](stone_project/artifacts/09122026/outvanna2-11/frame11_preview.png)
+
+**Изменение.** Расширить рамку внутрь на 11 мм по всему овалу. Из выреза 1605 × 630 мм получен вырез 1583 × 608 мм. Торцы R304 имеют прежние центры, прямые по 975 мм. Поля по 73,5 и 101 мм. Наружный габарит 1730 × 810 мм, нижние уступы по 8 × 25 мм.
+
+**Раскрой.** ДВП 5 мм, фреза Ø4, ось на дугах R302. S16000, F800 по XY, F100 по Z. После M3 пауза 5 с. Рез до Z0 стола, по одной перемычке 5 × 1 мм на каждом контуре. Внутреннее входное отверстие Ø8 от края листа X159, Y919,5 мм. Время подачи с паузой около 22 мин 44 с.
+
+**Проверка.** При сравнении записанных DXF подтверждён равномерный вынос 11 мм на обеих дугах и прямых. Проверены центры, кромки, УП и совпадение XY холостого и рабочего проходов. Испытание на станке и примерка предстоят.
+
+**Материалы.** [PDF и построение](stone_project/artifacts/09122026/outvanna2-11/project_overview.pdf) · [Размерный DXF](stone_project/artifacts/09122026/outvanna2-11/frame11_dimensioned_mm.dxf) · [Контур R12](stone_project/artifacts/09122026/outvanna2-11/frame11_contours_R12_mm.dxf) · [Файлы и разметка](stone_project/artifacts/09122026/outvanna2-11/README.md) · [Промт «Ванна и ДВП»](Commands/Bath%20Frame%20DVP.md).
+
+[\Jenja\stone_project\artifacts\09122026\invanna2-11](stone_project/artifacts/09122026/invanna2-11/) — копия исходной схемы. [\Jenja\stone_project\artifacts\09122026\outvanna2-11](stone_project/artifacts/09122026/outvanna2-11/) — результат, номинальный и размерный DXF, PDF и наложение.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\nc](stone_project/artifacts/09122026/outvanna2-11/cnc/nc/) — CUT и AIR_XY. [\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\geometry](stone_project/artifacts/09122026/outvanna2-11/cnc/geometry/) — раскладка и XYZ.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\test_checks](stone_project/artifacts/09122026/outvanna2-11/cnc/test_checks/) — станочные тесты. [\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\data](stone_project/artifacts/09122026/outvanna2-11/cnc/data/) — разметка и протоколы.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\scripts](stone_project/artifacts/09122026/outvanna2-11/cnc/scripts/) — построение и проверка. [\Jenja\Commands](Commands/) — промт.
+
+**Поиск.** Ванна, рамка, ДВП, вынос внутрь 11 мм, R304.

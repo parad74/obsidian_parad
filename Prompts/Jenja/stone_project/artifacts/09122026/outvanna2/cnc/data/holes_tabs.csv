@@ -1,0 +1,5 @@
+﻿type,contour,X_work_mm,Y_work_mm,X_sheet_mm,Y_sheet_mm,diameter_or_width_mm,residual_height_mm
+hole,INNER,98.0,869.5,148.0,919.5,8,
+tab,INNER,90.0,865.0,140.0,915.0,5,1
+hole,OUTER,-8.0,860.5,42.0,910.5,8,
+tab,OUTER,0.0,865.0,50.0,915.0,5,1
