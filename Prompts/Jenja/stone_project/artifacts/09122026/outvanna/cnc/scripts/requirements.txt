@@ -1,0 +1,7 @@
+numpy
+scipy
+Pillow
+ezdxf==1.4.5
+shapely==2.2.0
+reportlab
+pymupdf==2.1

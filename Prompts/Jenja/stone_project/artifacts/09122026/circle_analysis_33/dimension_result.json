@@ -1,0 +1,13 @@
+{
+  "basis": "Dimension 613 mm; circular semicircle model of the left end",
+  "units": "mm",
+  "inner_width": 1583,
+  "inner_height": 613,
+  "radius": 306.5,
+  "center_relative_to_leftmost_midheight_point": [306.5, 0],
+  "quarter_circles_have_same_center": true,
+  "straight_length_if_both_ends_are_semicircular": 970,
+  "green_vertical_is_auxiliary_ignored": true,
+  "raster_scale_used_for_final_dimensions": false,
+  "exact_manufacturer_curve_confirmed": false
+}

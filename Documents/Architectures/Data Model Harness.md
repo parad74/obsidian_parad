@@ -23,6 +23,7 @@ V1 заморожена в репозитории vault: тег `model-harness-v
 | Состав кубика, единичный объект и коллекция, Excel, NoEntity, политика ID/Code и вычитка | [[Documents/Architectures/Cubes/DotNet/DomainObject - Entity - MappingEF - Repository]] | Создание и дополнение выбранных частей |
 | Реализация дополнения полей, Mapper и Repository | [[Commands/Add Code First Fields by Step]] | Для запрошенных частей работы |
 | Технологический профиль EF и его ограничения | [[Documents/Architectures/LibProject/netcoreapp3.1/Monitor.Model.Sqlite.CodeFirst.ExportImport]] | При работе с проектом доступа к данным |
+| Общие строки маршрутов WebAPI и клиента | [[Documents/Architectures/WebAPI/DotNet/WebAPI.Monitor.Model.Sqlite.CodeFirst#Общие маршруты WebAPI и клиента]] | При создании или изменении WebAPI и его клиента |
 | Контракт параметров выборки | [[Documents/Architectures/LibProject/netstandard2.0/SelectParam]] | При использовании SelectParams |
 | Примеры, фиксированная версия и особенности переноса | [[Documents/Architectures/Data Model Examples]] | Выбрать нужный приём и прочитать соответствующий исходник |
 
@@ -32,7 +33,7 @@ V1 заморожена в репозитории vault: тег `model-harness-v
 
 | Модуль | Ответственность и внешний контракт | Зависимости и ограничения |
 | --- | --- | --- |
-| Model | Внутренние данные: DomainObject, коллекции, перечисления, value objects, операции модели и интерфейсы | Использует SelectParam для сигнатур выборки. Не ссылается на UI, бизнес-проекты или реализацию ExportImport; не содержит Entity, DbContext, migrations и provider-specific реализацию |
+| Model | Внутренние данные: DomainObject, коллекции, перечисления, value objects, операции модели и интерфейсы; при наличии WebAPI — общие строки маршрутов по профильной карточке | Использует SelectParam для сигнатур выборки. Не ссылается на UI, бизнес-проекты или реализацию ExportImport; не содержит Entity, DbContext, migrations и provider-specific реализацию |
 | SelectParam | Общие параметры фильтрации, сортировки и страниц; операции их применения согласно карточке | Не зависит от предметных объектов Book4U. Его реальные пакетные зависимости учитываются при сборке; слово Model не означает отсутствия транзитивных зависимостей |
 | ExportImport | Entity, конфигурации, DbContext, MappingEF, реализации репозиториев для выбранного профиля | Зависит от Model и SelectParam. Наружу репозиторий возвращает DomainObject/коллекцию, EF-объекты и tracking остаются внутри |
 | Приложение-потребитель | UI, бизнес-операции, сервисы и подключение реализаций согласно выбранной архитектуре | Использует контракты Model; место создания и подключения ExportImport определяется архитектурой приложения. Обратная зависимость Model от потребителя не добавляется |

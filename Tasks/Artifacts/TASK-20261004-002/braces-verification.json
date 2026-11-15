@@ -1,0 +1,106 @@
+{
+  "result": "passed",
+  "scope": "All four Book4U projects; handwritten and adapted C# sources",
+  "scannedFiles": 117,
+  "unbracedBodiesBefore": 213,
+  "unbracedBodiesAfter": 0,
+  "changedFiles": [
+    {
+      "file": "Book4U.Model.Sqlite.CodeFirst.ExportImport\\BaseEFDbSetRepository.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "Book4U.Model.Sqlite.CodeFirst.ExportImport\\BaseEFRepository.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "Book4U.Model.Sqlite.CodeFirst.ExportImport\\CollectionOf.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "Book4U.Model.Sqlite.CodeFirst.ExportImport\\DomainObjects.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\StartupBook4UWebAPI.cs",
+      "addedBlocks": 7
+    },
+    {
+      "file": "Book4U.Model\\Domain\\CommandResult\\CommandResult.cs",
+      "addedBlocks": 5
+    },
+    {
+      "file": "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Book4UDb\\CommandResult\\CommandResult.cs",
+      "addedBlocks": 5
+    },
+    {
+      "file": "Service.Model.EF.SelectParam\\SelectionParams\\DynamicQueryable.cs",
+      "addedBlocks": 126
+    },
+    {
+      "file": "Service.Model.EF.SelectParam\\SelectionParams\\SelectParams.cs",
+      "addedBlocks": 15
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\HostedService\\NotificationHostedService.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Infrastructure\\FileSystem.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Infrastructure\\JwtService.cs",
+      "addedBlocks": 3
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Selection\\SelectionParametersBuilder.cs",
+      "addedBlocks": 29
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Settings\\JwtOptions.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Settings\\SignalROptions.cs",
+      "addedBlocks": 3
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\SignalR\\ConfiguredHubClient.cs",
+      "addedBlocks": 9
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\StartupFilters\\SettingsValidationStartupFilter.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Filter\\ActionFilter\\CheckTestFilterAttribute.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Filter\\ActionFilter\\ControllerSignalRChatHubAsyncActionFilter.cs",
+      "addedBlocks": 1
+    },
+    {
+      "file": "WebAPI.Book4U.Model.Sqlite.CodeFirst\\Filter\\ActionFilter\\ControllerSignalRChatHubFilter.cs",
+      "addedBlocks": 1
+    }
+  ],
+  "syntaxValidation": "Control-tree structure, non-brace tokens and comments preserved; braces and whitespace added only.",
+  "excludedPaths": [
+    "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Migrations\\20261002181021_InitialCreate.cs",
+    "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Migrations\\20261002181021_InitialCreate.Designer.cs",
+    "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Migrations\\20261003113005_AddBookDataModel.cs",
+    "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Migrations\\20261003113005_AddBookDataModel.Designer.cs",
+    "Book4U.Model.Sqlite.CodeFirst.ExportImport\\Migrations\\Book4UDbContextModelSnapshot.cs",
+    "Service.Model.EF.SelectParam\\SelectionParams\\System.Linq.Dynamic.cs"
+  ],
+  "exclusionReason": "Existing readability rule excludes generated migrations and the Microsoft System.Linq.Dynamic.cs vendor source.",
+  "build": "passed; 0 errors; existing NETSDK1138 warning",
+  "publish": "passed",
+  "httpVerification": "webapi-verification.json",
+  "httpCheckGroupsPassed": 20,
+  "sourceDatabaseSha256": "0f3a4cd04e66bbd312fc58f0e9e41eecf4eab1ef83ff33a81dc2e101e73e2c9e",
+  "otherExistingProjectFiles": "SHA-256 unchanged against the snapshot before this request",
+  "gitDiffCheck": "passed"
+}

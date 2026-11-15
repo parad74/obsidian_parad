@@ -1,0 +1,32 @@
+{
+  "result": "passed",
+  "knownLimitations": [
+    "Known library defect reproduced: a sole FilterParams Code Equal [All] produces an empty expression and HTTP 500; literal [All] through FilterStringListParams succeeds."
+  ],
+  "checks": [
+    "Host starts with Unity and resolves both repository/controller graphs",
+    "rooms: collection/count, validation, generated ID, duplicate Code, both updates, literal filters, delete-all-by-Code, async error and recovery",
+    "command-results: collection/count, validation, generated ID, duplicate Code, both updates, literal filters, delete-all-by-Code, async error and recovery",
+    "Parameterized reads use POST with JSON bodies; query-only input fails; PUT by-id retains ID in the route",
+    "Swagger JSON/UI, XML action summaries, fully qualified schema names and expanded routes",
+    "Original Ping contract: HTTP 200, application/json, exact JSON string Pong, common response and service-specific routes",
+    "Unity named registrations, four shared validated options, ServiceLocator bridge, session cookie, both action filters, CORS, errors, JWT/SignalR disabled defaults",
+    "Expanded repository operations: batch/all, body-Code update, ID/parent/result reads, direct SelectParams: lists, filters, paging, reserved marker and ignored metadata, session filter examples, in-memory samples and Room, CommandResult and diagnostic read-only SQLite ADO actions (ordered codes, duplicates, empty table)",
+    "Missing DB: host applies both prepared migrations, creates all six model tables without seed, and serves HTTP",
+    "Restart with existing DB: user row, ID and full database SHA-256 unchanged",
+    "After deleting only the temporary DB file, restart recreates an empty migrated database",
+    "Existing two-table fixture left without migration history or extra tables: startup does not migrate an existing file",
+    "Invalid typed options or failure to create the database stops the host with a nonzero exit code",
+    "Each IValidatable participates: invalid Book4U paths, JWT and SignalR settings reject startup",
+    "Production/default profile disables diagnostics and maintenance; protected Ping remains 401",
+    "Opt-in JWT: valid local signature succeeds; wrong signature/issuer/audience and expired tokens fail",
+    "Opt-in local SignalR server: negotiate/handshake and real queued HostedService notification delivered via LongPolling",
+    "Explicit maintenance option allows DeleteAll on temporary data only",
+    "Invalid model logs a bad request before the controller action",
+    "Published win-x64 artifact includes EXE/XML/settings/service scripts and runs with Swagger and fresh migrated DB; no Windows service installed",
+    "User database SHA-256 unchanged; migrations applied only to newly created temporary database files"
+  ],
+  "sourceDatabaseSha256": "0f3a4cd04e66bbd312fc58f0e9e41eecf4eab1ef83ff33a81dc2e101e73e2c9e",
+  "temporaryWorkspace": "C:\\Users\\Parad\\AppData\\Local\\Temp\\book4u-webapi-07j3yvpk",
+  "hostLog": "C:\\Users\\Parad\\AppData\\Local\\Temp\\book4u-webapi-07j3yvpk\\host.log"
+}

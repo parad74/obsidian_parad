@@ -1,0 +1,16 @@
+{
+  "current_manifest_files": 6,
+  "previous_release_manifest_files": 8,
+  "readme_links": 22,
+  "catalog_links": 267,
+  "project_pages": 7,
+  "page_1_matches": "photo_2026-11-06_20-17-19.jpg",
+  "page_2_matches": "symmetric_frame_r315_dimensioned.png",
+  "catalog_pages": 30,
+  "catalog_entry_page": 30,
+  "test_program_sha256": {
+    "CHECK_DWELL_5S_NO_MOTION.nc": "9cee02b3d08e8aa13f77dbf0c312cbd0cd5c2af34de6cc6c5b00f6a3f5726fa8",
+    "CHECK_SPINDLE_16000_5S_NO_MOTION.nc": "8ae1c12dc9dd954adcc559c59d2c54d3583c2218a4d3b0f3c65328486a41af81"
+  },
+  "project_pdf_sha256": "753beef569610472a53497a84a8c7846cb50705be5f615bad5f8240e0f39c9d8"
+}

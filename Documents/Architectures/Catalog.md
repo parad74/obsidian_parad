@@ -41,6 +41,14 @@ type: architecture-catalog
 
 Стартовый состав и подготовка БД: [[Commands/Create Project Domain Model by Step]].
 
+## WebAPI: исследованный источник
+
+| Как можно попросить | Что найдено | Подробная карточка |
+| --- | --- | --- |
+| «Использовать вычитанную модель через WebAPI», «исследовать SQLite API Monitor» | HTTP-контроллеры и общие маршруты Model/клиента, DI/настройки/запуск, диагностика, интеграции, заготовки расширения и развёртывание. Карта функций исходного host и пропусков первого применения. | [[Documents/Architectures/WebAPI/DotNet/WebAPI.Monitor.Model.Sqlite.CodeFirst]] |
+
+Карточка содержит исследование, разбор пропусков первого CRUD-примера и повторную генерацию Book4U от 2026-10-08. Новый host включает функции и настраиваемые заготовки по карте исходного проекта; сборка, публикация и расширенные локальные проверки прошли. JWT/внешние SignalR выключены по выбору Parad; установка службы и реальные внешние интеграции не проверены. Код ожидает вычитки. Версии .NET Core 3.1 и Unity этого применения не становятся параметрами нового приложения по умолчанию; действующие контракты модели сохраняются.
+
 ## WinForms и сервисные кубики
 
 | Как можно попросить | Что выбрать | Точная карточка |
@@ -65,6 +73,7 @@ type: architecture-catalog
 | [WinForms .NET, App1](WinForms/DotNet/WinForms%20-%20View%20-%20Presenter%20-%20DI.md) | [WinForms.dotnet.App1.sln](../../Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App1/WinForms.dotnet.App1.sln) | Базовая View–Presenter архитектура на .NET 8 со стандартным DI проверена. |
 | [WinForms .NET + Service - DI, App2](WinForms/DotNet/WinForms%20-%20View%20-%20Presenter%20-%20DI.md) | [WinForms.dotnet.App2.sln](../../Sources/Architectures/WinForms/DotNet/WinForms.dotnet.App2/WinForms.dotnet.App2.sln) | Интегрирован [кубик сервиса](Cubes/DotNet/Service%20-%20DI.md); DI, запуск, сервис и View–Presenter проверены. |
 | [Service - DI](Cubes/DotNet/Service%20-%20DI.md) | [DataService.dotnet.App1.sln](../../Sources/Architectures/Cubes/DotNet/DataService.dotnet.App1/DataService.dotnet.App1.sln) | Отдельный Console-пример .NET 8 со стандартным DI проверен. |
+| [Book4U + WebAPI](WebAPI/DotNet/WebAPI.Monitor.Model.Sqlite.CodeFirst.md) | [Book4U.sln](../../Sources/Book4U/Book4U.sln) | netcoreapp3.1, Unity.Container; повторная генерация по карте host. Проверены сборка/publish, расширенный HTTP, SQLite startup, Swagger, DI/session/filters, локальные JWT/SignalR. Код — на вычитке; Windows-служба и внешние интеграции не проверены. |
 
 ## Как составить новый запрос или решение
 

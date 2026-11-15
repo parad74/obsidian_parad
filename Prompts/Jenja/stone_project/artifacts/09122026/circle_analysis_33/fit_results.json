@@ -1,0 +1,85 @@
+{
+  "source": "W:\\obsidian\\_parad\\Prompts\\Jenja\\stone_project\\artifacts\\09122026\\invanna2\\33.jpg",
+  "sha256": "bd7ca05939d4f0de147aa688b678fb8e37bcd0d3ce45625f152f163f084754cd",
+  "pixel_origin": "top-left image; x right, y down",
+  "metric_origin": "leftmost opening point at mid-height; x right, y up",
+  "scales_mm_per_pixel": {
+    "inner_x": 1.6014162873039959,
+    "inner_y": 1.536340852130326,
+    "outer_x": 1.6305372290292177,
+    "outer_y": 1.7161016949152543
+  },
+  "pixel": {
+    "one": {
+      "center": [
+        365.1599121167259,
+        405.8990664569358
+      ],
+      "radius": 199.5201211709388,
+      "rms": 0.20118895480353224,
+      "max_error": 0.6169084518520265,
+      "n": 368
+    },
+    "upper": {
+      "center": [
+        365.2347390632396,
+        406.0016726641928
+      ],
+      "radius": 199.63389691936936,
+      "rms": 0.19643631952091103,
+      "max_error": 0.5388948543264291,
+      "n": 184
+    },
+    "lower": {
+      "center": [
+        365.9102527796353,
+        405.3508121567407
+      ],
+      "radius": 200.39324277437044,
+      "rms": 0.19893097957677533,
+      "max_error": 0.5629174034143318,
+      "n": 184
+    }
+  },
+  "metric_from_inner_dimensions": {
+    "one": {
+      "center": [
+        300.08135159337775,
+        0.18054142078888016
+      ],
+      "radius": 300.92802083910533,
+      "rms": 0.6774697871513136,
+      "max_error": 2.9363501528499114,
+      "n": 368
+    },
+    "upper": {
+      "center": [
+        307.11591162427237,
+        -5.429619719318146
+      ],
+      "radius": 309.37246236773933,
+      "rms": 0.3797828887663341,
+      "max_error": 1.2778170844662213,
+      "n": 184
+    },
+    "lower": {
+      "center": [
+        307.6930235902675,
+        6.116783551221599
+      ],
+      "radius": 310.00731777206346,
+      "rms": 0.4228141702400691,
+      "max_error": 1.0808273338994923,
+      "n": 184
+    }
+  },
+  "semicircle_if_height_is_diameter": {
+    "radius_mm": 306.5,
+    "center_mm": [
+      306.5,
+      0
+    ]
+  },
+  "green_chord_x_pixel": 350,
+  "warning": "No single consistent image scale; metric fitted circles are approximate, not manufacturing dimensions."
+}

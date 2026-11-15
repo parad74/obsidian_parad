@@ -1,0 +1,56 @@
+{
+  "status": "PASS_STATIC_CHECKS",
+  "physical_test": false,
+  "actual_ArtCAM_export": false,
+  "outer_bounds": [
+    0.0,
+    0.0,
+    810.0,
+    1730.0
+  ],
+  "inner_bounds": [
+    90.0,
+    62.5,
+    720.0,
+    1667.5
+  ],
+  "notches": [
+    8,
+    25
+  ],
+  "source_sha256": "7868d710fb404f6b8bf9ed58acc23d8ea6e336b106ef37c3aa636cc095413ba7",
+  "plunges": 4,
+  "holes": [
+    [
+      98.0,
+      869.5
+    ],
+    [
+      -8.0,
+      860.5000000000001
+    ]
+  ],
+  "tabs": 2,
+  "min_z": 0.0,
+  "air_z": 45,
+  "xy_air_matches_cut": true,
+  "frame_gouge_beyond_003mm_tolerance_mm2": 0.0,
+  "remaining_sheet_components": 1,
+  "tab_width_min": 5,
+  "tab_axis_span": 9,
+  "tab_height": 1,
+  "external_concave_corner_radius": 2,
+  "external_nominal_vs_effective_area_mm2": 1.7174454981344942,
+  "feed_minutes": 22.76436468457408,
+  "feed_plus_explicit_dwell_minutes": 22.847698017907412,
+  "total_cycle_minutes": null,
+  "move_count": 2876,
+  "limitations": [
+    "Schematic curve approximation, not certified bath fit",
+    "Clamps/holder/travel unmeasured",
+    "Z0 table: no allowance below table; full release depends on flatness and zero accuracy",
+    "One thin tab per contour is user choice; holding strength not validated",
+    "A11S dwell and short-line handling require machine check"
+  ],
+  "dwell_seconds": 5
+}

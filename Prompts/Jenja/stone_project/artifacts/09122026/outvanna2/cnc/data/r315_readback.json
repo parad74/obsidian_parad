@@ -1,0 +1,8 @@
+{
+  "vanna2_contours_mm.dxf": "two R315 semicircles, two tangent lines 975 mm, two 8 x 25 notches",
+  "vanna2_dimensioned_mm.dxf": "two R315 semicircles, two tangent lines 975 mm, two 8 x 25 notches",
+  "vanna2_sheet_toolpaths_mm.dxf": "two R315 semicircles, two tangent lines 975 mm, two 8 x 25 notches",
+  "sampled_cut_axis_max_error_mm": 0.001984069786828968,
+  "sample_count": 2055,
+  "test_programs": "verified"
+}

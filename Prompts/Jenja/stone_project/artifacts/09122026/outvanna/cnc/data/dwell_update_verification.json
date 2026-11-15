@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-06",
+  "reason": "Operator request relayed and authorized by Parad",
+  "old_seconds": 21,
+  "new_seconds": 5,
+  "cut_only_changed_line": "G04 P21000 -> G04 P5000",
+  "cut_before_sha256": "0b55f23d3994b62bc75a6fde88572de2b9ea685a00b6ef083ea21b61926fc19d",
+  "cut_after_sha256": "c074fd41c2770e73481882429c3415d5638e81b931d1eb4ef4f681933762d643",
+  "unchanged_sha256": {
+    "vanna_contours_mm.dxf": "c121d41a2cbab403156d562e53fe395c35e63b28b0c5063ba72b8fa3fa868f7c",
+    "vanna_dimensioned_mm.dxf": "9697036b5aafcdd1b0931005f7a75fc934240dbd250ea630c81133678ad121f7",
+    "cnc\\nc\\VANNA_DVP_AIR_XY.nc": "818163622cf0bc9d66c73828483d597c085a33fe3144d4207759c0b385e6e5eb",
+    "cnc\\geometry\\vanna_sheet_toolpaths_mm.dxf": "d85f2dda68d73006f007222b54ba0a39e1e04288ba1a54b8cf574836be3df12a",
+    "cnc\\geometry\\vanna_motion_XYZ.dxf": "188691099fb25684f9e389cb655fa780649c217a916ef18e69a243e41c9319d1",
+    "cnc\\data\\parsed_motion.json": "1ff79ffad480d85b1479043f3b9593b9cf33941a5a47e8ad0403d11e455233d1",
+    "cnc\\data\\paths.json": "9dc1fcf651f98e59a5e86b7c16b013096775eaeb5bd9fc02c15e6f45fa6ae5ef",
+    "cnc\\data\\holes_tabs.csv": "e9c39da96672f74ef76bc27ac7eac336e5d2fc4dee1bc568feb10b74d852f2d8"
+  },
+  "old_feed_plus_dwell_minutes": 23.11436468457408,
+  "new_feed_plus_dwell_minutes": 22.847698017907412,
+  "time_reduction_seconds": 16,
+  "physical_test": false
+}

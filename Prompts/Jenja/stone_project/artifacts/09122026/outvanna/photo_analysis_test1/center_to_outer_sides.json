@@ -1,0 +1,9 @@
+{
+  "left_mm": 370.01651905081155,
+  "right_mm": 1359.9834809491886,
+  "top_mm": 405.2063197172348,
+  "bottom_mm": 404.7936802827652,
+  "basis": "Conditional affine reconstruction. Outer 1730x810 from drawing; right edge outside photo, inferred.",
+  "horizontal_sum_mm": 1730,
+  "vertical_sum_mm": 810
+}

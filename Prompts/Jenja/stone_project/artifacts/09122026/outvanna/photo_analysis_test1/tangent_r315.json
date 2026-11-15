@@ -1,0 +1,26 @@
+{
+  "radius_mm": 315.0,
+  "center_mm": [
+    371.83136239938335,
+    405.0
+  ],
+  "reference_center_mm": [
+    377.5,
+    405.0
+  ],
+  "horizontal_center_shift_mm": -5.668637600616648,
+  "join_top_mm": [
+    371.83136239938335,
+    90.0
+  ],
+  "join_bottom_mm": [
+    371.83136239938335,
+    720.0
+  ],
+  "opening_width_mm": 630.0,
+  "marker_radial_rms_mm": 1.1648089337273857,
+  "marker_max_radial_error_mm": 2.4154228476892854,
+  "continuity": "Position and tangent direction continuous at both joins (G1), not curvature continuity.",
+  "assumption": "Uses prior conditional photo affine mapping and manual marker points. Fits X only; R=315 and Y=405 fixed.",
+  "reference": "Circular centred 1605x630 opening; this is NOT the existing superellipse DXF."
+}

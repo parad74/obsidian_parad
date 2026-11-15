@@ -510,3 +510,297 @@
 [\Jenja\postprocessor](postprocessor/) — База ответов.
 
 **Поиск:** резка ДВП, CUT, два листа, M3, G04 P21000, пауза 21 секунда, S16000, физическая резка, NC.
+
+<!-- entry -->
+
+## PARAD-016 — Рамка ванны из ДВП 1730 × 810 мм
+
+**Дата работы:** 06.11.2026. **Папка:** outvanna рядом с out1; существовала пустой до расчёта. **Основа режимов:** PARAD-015.
+
+![Рамка ванны по схеме производителя](stone_project/artifacts/09122026/outvanna/vanna_preview.png)
+
+**Первая постановка:** новый раскрой ДВП по другому чертежу; сохранить проект в outvanna, выдать DXF, PDF, AIR_XY и CUT и добавить в каталог. Перед выполнением Parad согласовала условия и дала «выполняй».
+
+**Объект:** одна рамка 1730 × 810 мм, центральный вырез 1605 × 630 мм; два нижних выреза 8 × 25 мм, между ними 1714 мм. Лист 1220 × 2710 × 5 мм; длина по Y, ширина по X, отступы 50 мм. XY0 — габаритный угол рамки, Z0 — стол.
+
+**Вход и технология:** три JPG в invanna; выбран photo_2026-11-06_20-20-39.jpg. По указанию Parad форма внутренних кривых восстановлена по схеме при точных габаритах. Это аппроксимация, не точные радиусы производителя; посадка ванны не проверена. Скриптовое построение DXF и осевых путей Ø4, генерация G1 NC с повторным разбором. Внутренние углы нижних вырезов после фрезы имеют R2.
+
+**Обработка:** сначала внутренний контур, затем наружный; вход через два предварительных Ø8 в отходе. S16000, XY800, Z100, G04 P21000; уровни Z+2,5 и Z0, переходы Z45. По текущему решению общий недорез отменён; на каждом контуре одна перемычка минимум 5 мм × 1 мм по Z, осевой участок 9 мм. Прижимы механические, вне путей по сообщению Parad; геометрия крепления не измерена.
+
+**Результат и статус:** два основных DXF, раскладка и XYZ DXF, CUT и AIR_XY, CSV/JSON, скрипты, README и PDF. Статические проверки пройдены: четыре входа в отверстия, отсутствие Z ниже стола, соответствие XY AIR/CUT, сохранность рамки и перемычек, аудит DXF; пять страниц PDF просмотрены. Время подачи с явной паузой 23,11 мин, не полный цикл. Пользовательская приёмка и испытание на станке не подтверждены.
+
+**Материалы:** [PDF](stone_project/artifacts/09122026/outvanna/project_overview.pdf) · [README](stone_project/artifacts/09122026/outvanna/README.md) · [Размерный DXF](stone_project/artifacts/09122026/outvanna/vanna_dimensioned_mm.dxf) · [Контуры DXF](stone_project/artifacts/09122026/outvanna/vanna_contours_mm.dxf) · [Проверки](stone_project/artifacts/09122026/outvanna/cnc/data/verification.json).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna](stone_project/artifacts/09122026/invanna/) — входящие JPG.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna](stone_project/artifacts/09122026/outvanna/) — DXF детали, PDF, README, превью.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\nc](stone_project/artifacts/09122026/outvanna/cnc/nc/) — AIR_XY и CUT.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\geometry](stone_project/artifacts/09122026/outvanna/cnc/geometry/) — раскладка и движения XYZ.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\data](stone_project/artifacts/09122026/outvanna/cnc/data/) — координаты, параметры, проверки, хеши и наложение на исходную схему.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\scripts](stone_project/artifacts/09122026/outvanna/cnc/scripts/) — воспроизводимые скрипты.
+
+**Поиск:** ванна, рамка, outvanna, invanna, ДВП, 1730, 810, 1605, 630, уголки 8 × 25, две перемычки, Z0, AIR_XY, CUT.
+
+<!-- entry -->
+
+## PARAD-017 — PARAD-016: пауза разгона шпинделя 5 секунд
+
+**Дата изменения:** 06.11.2026. **Связь:** PARAD-016, рамка ванны outvanna.
+
+**Основание:** Parad передала просьбу оператора изменить паузу разгона с 21 на 5 секунд и поручила обновить комплект. Изменение относится к outvanna; параметры прежних заказов не менялись.
+
+**Актуальное решение:** после M3 S16000 стоит G04 P5000. Значения G04 P21000 и 23,11 мин в исходной записи PARAD-016 описывают первый выпуск и заменены этим дополнением. Новое время подачи с явной паузой — 22,85 мин, на 16 секунд меньше; полный цикл по-прежнему неизвестен.
+
+**Результат и проверки:** в CUT изменена ровно одна строка выдержки; остальной файл совпадает побайтно. Хешами подтверждена неизменность AIR_XY, DXF, траекторий и координат. Синхронизированы параметры, генераторы, расчёт времени, README и PDF. Созданы отдельные тесты выдержки и шпинделя на 5 секунд в папке проекта. Выполнение на станке и фактическое время разгона не проверялись.
+
+**Материалы:** [Актуальный PDF](stone_project/artifacts/09122026/outvanna/project_overview.pdf) · [README](stone_project/artifacts/09122026/outvanna/README.md) · [CUT с паузой 5 с](stone_project/artifacts/09122026/outvanna/cnc/nc/VANNA_DVP_D4_CUT.nc) · [Проверка изменения](stone_project/artifacts/09122026/outvanna/cnc/data/dwell_update_verification.json).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\outvanna](stone_project/artifacts/09122026/outvanna/) — PDF, README и DXF.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\nc](stone_project/artifacts/09122026/outvanna/cnc/nc/) — CUT и AIR_XY.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\test_checks](stone_project/artifacts/09122026/outvanna/cnc/test_checks/) — тесты на 5 секунд.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\data](stone_project/artifacts/09122026/outvanna/cnc/data/) — параметры, проверки и хеши.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\cnc\scripts](stone_project/artifacts/09122026/outvanna/cnc/scripts/) — обновлённые генераторы.
+
+**Поиск:** outvanna, ванна, пауза разгона, 5 секунд, G04 P5000, изменение оператора.
+
+<!-- entry -->
+
+## PARAD-018 — Окружность левого торца ванны: построение по размерам
+
+**Дата работы:** 12.11.2026. **Тип:** геометрическое исследование, без раскроя и УП.
+
+![Круговой торец: радиус и центр](stone_project/artifacts/09122026/circle_analysis_33/circle_diagram.png)
+
+**Первая постановка:** определить, одной или двум окружностям принадлежит зелёный сегмент, нарисовать центры и радиусы. Последующие указания Parad: ориентироваться на цифры, зелёную вертикаль не учитывать; сверить соседнюю картинку без заливки.
+
+**Вход:** invanna2/33.jpg и photo_2026-11-12_19-19-33.jpg; внутренний размер 1583 × 613 мм, наружный 1730 × 810 мм. Схема не является точным CAD.
+
+**Результат:** для модели полукруглого торца R = 613/2 = 306,5 мм; центр на середине высоты, на 306,5 мм вправо от крайней левой точки выреза. Верхняя и нижняя четверти имеют общий центр. При двух полукруглых торцах длина прямых 970 мм. Зелёная вертикаль не участвует в расчёте. Подписанные габариты сами по себе не доказывают строго круговую форму реального изделия.
+
+**Технология и проверки:** предварительная подгонка чёрной кромки по пикселям дала практически общий круг; после уточнения пользователя итог построен по числам, без использования масштаба растра. Выпущены PNG, PDF на двух страницах, JSON, README и скрипты. Проверены арифметика, координаты и страницы PDF. Исходники и программы резки не изменены; физическая проверка не выполнялась.
+
+**Материалы:** [PDF](stone_project/artifacts/09122026/circle_analysis_33/project_overview.pdf) · [README](stone_project/artifacts/09122026/circle_analysis_33/README.md) · [Размерный результат](stone_project/artifacts/09122026/circle_analysis_33/dimension_result.json).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna2](stone_project/artifacts/09122026/invanna2/) — две входящие картинки.
+
+[\Jenja\stone_project\artifacts\09122026\circle_analysis_33](stone_project/artifacts/09122026/circle_analysis_33/) — итоговые схемы и PDF, данные, скрипты, предварительное исследование.
+
+**Поиск:** ванна, зелёный сегмент, окружность, центр, радиус 306,5, диаметр 613, две четверти, 1583, геометрия.
+
+<!-- entry -->
+
+## PARAD-019 — PARAD-018: окружность поверх исходного чертежа
+
+**Дата уточнения:** 12.11.2026. **Связь:** PARAD-018.
+
+**Решение Parad:** нужен круг с центром и радиусом непосредственно поверх photo_2026-11-12_19-19-33.jpg, без добавленной заливки, вместо отдельной схемы круга. Исходный файл сохранён.
+
+**Результат:** отдельная PNG-копия с синей окружностью левого торца, центром O и подписью R306,5 мм. Выполнено встроенным ImageGen; визуальная аннотация, не точный CAD и не гарантия пиксельной неизменности чертежа. Проверены видимость окружности, подписи, исходных размеров и отсутствие новой заливки.
+
+**Материалы:** [Окружность на исходном чертеже](stone_project/artifacts/09122026/circle_analysis_33/circle_on_original.png) · [Описание и расчёт](stone_project/artifacts/09122026/circle_analysis_33/README.md) · [Промт редактирования](stone_project/artifacts/09122026/circle_analysis_33/overlay_prompt.txt).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna2](stone_project/artifacts/09122026/invanna2/) — исходный чертёж.
+
+[\Jenja\stone_project\artifacts\09122026\circle_analysis_33](stone_project/artifacts/09122026/circle_analysis_33/) — аннотированная копия, описание, промт и прежнее исследование.
+
+**Поиск:** ванна, окружность поверх чертежа, центр O, R306,5, без заливки.
+
+<!-- entry -->
+
+## PARAD-020 — PARAD-019: математическая окружность поверх исходника
+
+**Дата:** 13.11.2026. **Связь:** исправление PARAD-018/019 по новому промту.
+
+![Полная окружность, центр и радиус](stone_project/artifacts/09122026/circle_analysis_33/circle_on_original_exact2.png)
+
+**Запрос:** повторить подбор по photo_2026-11-12_19-19-33.jpg; полная окружность с центром и радиусом поверх чертежа, без заливки.
+
+**Результат:** одна окружность описывает левую дугу (368 точек, RMS 0,200 пикселя). Для кругового торца, касающегося параллельных прямых с расстоянием 613 мм, R306,5 мм; центр на средней линии, на 306,5 мм вправо от левой крайней точки. Подпись R ≈ 306,5 мм отражает приблизительность модели производителя по схеме. Размеры растра имеют несовместимые масштабы; производственная точность не подтверждена.
+
+**Исправление:** прежний ImageGen-вариант PARAD-019 отклонён Parad как овал. Новый результат построен математически; диаметры по X/Y равны. Пиксели вне слоя аннотаций совпадают с исходником; JPG не изменён. Верх/низ не требуют двух разных центров. УП не создавались. Пользовательская приёмка нового варианта ожидается.
+
+**Материалы:** [PNG](stone_project/artifacts/09122026/circle_analysis_33/circle_on_original_exact2.png) · [SVG](stone_project/artifacts/09122026/circle_analysis_33/circle_on_original_exact2.svg) · [Проверки](stone_project/artifacts/09122026/circle_analysis_33/circle_on_original_exact2.json) · [Описание](stone_project/artifacts/09122026/circle_analysis_33/README.md) · [Промт](Commands/Circle%20Radius%20on%20Image.md).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna2](stone_project/artifacts/09122026/invanna2/) — исходник.
+
+[\Jenja\stone_project\artifacts\09122026\circle_analysis_33](stone_project/artifacts/09122026/circle_analysis_33/) — наложения, данные, скрипт и история.
+
+**Поиск:** ванна, ДВП, окружность, радиус, центр, исправление овала, 306,5.
+
+<!-- entry -->
+
+## PARAD-021 — Окружность поверх старой схемы ванны
+
+**Дата:** 13.11.2026. **Связь:** PARAD-016/020, сравнение двух измерений одной ванны.
+
+![Окружность на старом исходнике](stone_project/artifacts/09122026/circle_analysis_33/circle_old_original.png)
+
+**Запрос:** по промту наложить окружность, центр и радиус на invanna/photo_2026-11-06_20-20-39.jpg, без заливки.
+
+**Результат:** по 243 точкам левой дуги подобрана одна окружность. Центр O=(240,549;260,204) px от верхнего левого угла; R134,369 px, RMS0,190 px. Перевод по вертикальному размеру 630 мм / 269 px даёт R≈314,7 мм. Это оценка по схеме, а не точный радиус производителя: масштабы размерных надписей не согласованы. Старый вырез 1605 × 630 мм; наружный габарит 1730 × 810 мм.
+
+**Проверки:** математическая окружность, диаметры равны; пиксели вне аннотаций совпадают с исходником. PNG просмотрен. Исходный JPG, DXF и УП не изменены; пользовательская приёмка ожидается.
+
+**Материалы:** [PNG](stone_project/artifacts/09122026/circle_analysis_33/circle_old_original.png) · [SVG](stone_project/artifacts/09122026/circle_analysis_33/circle_old_original.svg) · [Данные](stone_project/artifacts/09122026/circle_analysis_33/circle_old_original.json) · [Промт](Commands/Circle%20Radius%20on%20Image.md).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna](stone_project/artifacts/09122026/invanna/) — старый исходник.
+
+[\Jenja\stone_project\artifacts\09122026\circle_analysis_33](stone_project/artifacts/09122026/circle_analysis_33/) — наложение, скрипт, данные и описание.
+
+**Поиск:** ванна, ДВП, радиус 314,7, окружность, старые измерения, 630, 1605.
+
+<!-- entry -->
+
+## PARAD-022 — Левая дуга реальной ванны и исходный рисунок
+
+**Дата исследования:** 13.11.2026. **Регистрация:** 14.11.2026. **Связь:** PARAD-016/021.
+
+**Вход:** invanna/test1/photo_2026-11-13_20-58-53.jpg. Parad подтвердила вырезанную деталь, ширину630 мм и серую обводку реальной ванны. Запрошено предварительное исследование при допущении отсутствия горизонтального наклона.
+
+**Результат:** условная аффинная реконструкция с равным местным масштабом X/Y и удалением бокового наклона. По 12 уточнённым точкам маркера R≈314 мм; исходный рисунок R≈315 мм. Центры совмещены для сравнения формы. Разница около1 мм не доказана из-за неопределённости перспективы и ручного считывания. Это не основание менять контур или УП. Первый черновой подбор около311 мм отклонён после проверки точек; актуален v2.
+
+**Проверки:** увеличенный просмотр точек маркера и наложения. Измеренные630 мм использованы для масштаба. Полное исправление перспективы и положение рамки при обводке не установлены. Исходники, DXF и NC не изменены. Пользовательская приёмка формы ожидается.
+
+**Материалы:** [Левая сторона](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/left_comparison.png) · [Описание](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/README.md) · [Параметры](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/analysis_v2.json).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\invanna\test1](stone_project/artifacts/09122026/invanna/test1/) — фотографии изготовленной детали.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — реконструкция, наложения и данные.
+
+**Поиск:** ванна, ДВП, серая линия, маркер, левая дуга, перспектива, 630 мм.
+
+<!-- entry -->
+
+## PARAD-023 — Расстояния от центра левой дуги до сторон рамки
+
+**Дата:** 14.11.2026. **Связь:** PARAD-022. По запросу Parad к центру O проведены четыре перпендикуляра от внешних сторон прямоугольника1730×810 мм.
+
+**Результат:** слева ≈370 мм, справа ≈1360 мм, сверху и снизу ≈405 мм. Центр взят из подбора серого маркера в условной реконструкции по630 мм. Правая сторона вне фотографии показана пунктиром и рассчитана по длине1730 мм. Значения приблизительные; это не натурная проверка координат. Проверены суммы расстояний1730/810 и подписи на изображении. DXF/NC не менялись.
+
+**Материалы:** [Фото с размерами](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/center_to_outer_sides.png) · [Числа](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/center_to_outer_sides.json).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — изображение, данные и скрипт.
+
+[\Jenja\stone_project\artifacts\09122026\invanna\test1](stone_project/artifacts/09122026/invanna/test1/) — исходные фотографии.
+
+**Поиск:** ванна, центр, расстояния до сторон, 370, 1360, 405.
+
+<!-- entry -->
+
+## PARAD-024 — Касательное сопряжение левого торца R315
+
+**Дата:** 14.11.2026. **Связь:** PARAD-022/023. Parad указала на различие верхнего и нижнего стыков и попросила R315 без разрывов на обоих сопряжениях.
+
+**Результат:** R315 и Y центра405 мм зафиксированы по ширине630 мм. По серому маркеру подобран только X≈371,8 мм. Верхняя точка(371,8;90), нижняя(371,8;720); положение и направление касательной непрерывны. RMS точек маркера1,16 мм. Синяя опора — круговая модель центрального выреза1605×630, центр(377,5;405). Условный сдвиг центров около5,7 мм не объявляется физическим расхождением из-за неопределённой перспективы.
+
+**Изменение:** прежний свободный R≈314 и его центр сохранены как история; для текущего сопряжения используется R315. Старый DXF содержит другую, суперэллиптическую модель и не изменялся; CUT/AIR также сохранены.
+
+**Материалы:** [Построение R315](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/tangent_r315.png) · [Данные](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/tangent_r315.json) · [Описание](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/README.md).
+
+**Материалы — папки от \Jenja\:**
+
+[\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — наложение, расчёт и скрипт.
+
+[\Jenja\stone_project\artifacts\09122026\invanna\test1](stone_project/artifacts/09122026/invanna/test1/) — исходное фото.
+
+**Поиск:** ванна, R315, касание, стык, 630 мм, серый маркер.
+
+<!-- entry -->
+
+## PARAD-025 — R315 и четыре расстояния до внешних сторон
+
+**Дата:** 14.11.2026. **Связь:** PARAD-023/024. По просьбе Parad убрана синяя окружность; оставлена коричневая R315 и восстановлены четыре перпендикуляра от обновлённого центра O.
+
+**Результат:** слева≈372 мм, справа≈1358 мм, сверху/снизу405 мм. Проверены суммы1730/810 и изображение. Правая граница расчётная, вне фото; координаты условны из-за перспективы. DXF/NC не изменены.
+
+**Материалы:** [Схема](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/center_to_outer_sides_r315.png) · [Данные](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/center_to_outer_sides_r315.json).
+
+**Материалы — папки от \Jenja\:** [\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — схемы и скрипты; [\Jenja\stone_project\artifacts\09122026\invanna\test1](stone_project/artifacts/09122026/invanna/test1/) — исходное фото.
+
+<!-- entry -->
+
+## PARAD-026 — Проверка файлов резки против модели R315
+
+**Дата:** 14.11.2026. **Связь:** PARAD-016/025. Запрос Parad: проверить радиус и привязку центра в сохранённых файлах резки, ничего в них не менять; нарисовать сравнение.
+
+**Результат:** оба DXF содержат одинаковую суперэллиптическую модель, полуоси326,664/315 мм, модельный центр C=(389,164;405). Нынешняя условная модель по маркеру: окружность R315, O=(371,831;405). Центры разных моделей различаются по X на17,333 мм; крайние левые точки на5,669 мм. Радиальное отклонение старой дуги относительно новой окружности достигает10,959 мм внутрь. Это не доказанное расхождение с реальной ванной: новая привязка зависит от условной реконструкции фото.
+
+**Проверки:** номинальные DXF совпали с сохранённой геометрией; ось CUT на левой дуге соответствует внутреннему смещению2 мм с максимальным вычислительным отклонением0,000676 мм на проверенных вершинах/серединах сегментов. Хеши DXF, CUT и AIR_XY неизменны. Физическая точность обработки этим не подтверждается.
+
+**Материалы:** [Сравнительная схема](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/cut_vs_r315.png) · [Подробности](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/README.md) · [Хеши](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/cut_vs_r315_file_hashes.json).
+
+**Материалы — папки от \Jenja\:** [\Jenja\stone_project\artifacts\09122026\outvanna\photo_analysis_test1](stone_project/artifacts/09122026/outvanna/photo_analysis_test1/) — схема и исследование; [\Jenja\stone_project\artifacts\09122026\outvanna\cnc\nc](stone_project/artifacts/09122026/outvanna/cnc/nc/) — проверенные неизменённые программы.
+
+<!-- entry -->
+
+## PARAD-027 — Симметричная рамка ванны из ДВП, R315
+
+**Дата выполнения** 15.11.2026. Папка outvanna2 создана 14.11.2026. Продолжение работы PARAD-016 по промту PARAD-017.
+
+![Рамка ванны с полукруглыми торцами](stone_project/artifacts/09122026/outvanna2/vanna2_preview.png)
+
+**Постановка и решение.** Подготовить одну рамку 1730 × 810 мм с вырезом 1605 × 630 мм по размерам производителя. Две дуги R315 касаются прямых по 975 мм. Центры по горизонтали 377,5 и 1352,5 мм от левой стороны, по вертикали 405 мм от верха и низа. Поля по бокам 62,5 мм, сверху и снизу 90 мм. Нижние уступы по 8 × 25 мм.
+
+**Раскрой и проверка.** ДВП 5 мм, фреза Ø4, S16000, F800 по XY, F100 по Z, выдержка G04 P5000 после M3. Входы Ø8 в отходе, два уровня до Z0 стола, по одной перемычке 5 × 1 мм на контур. Чтение DXF и NC подтвердило радиусы, привязки, порядок резания и совпадение XY холостой и режущей программ. Время подачи с паузой около 22 мин 55 с. Геометрия согласована. Испытание на станке и примерка предстоят.
+
+**Материалы.** [Описание и согласованный рисунок (PDF)](stone_project/artifacts/09122026/outvanna2/project_overview.pdf) · [Размерный DXF](stone_project/artifacts/09122026/outvanna2/vanna2_dimensioned_mm.dxf) · [Файлы и порядок запуска](stone_project/artifacts/09122026/outvanna2/README.md) · [Промт «Ванна и ДВП»](Commands/Bath%20Frame%20DVP.md).
+
+[\Jenja\stone_project\artifacts\09122026\invanna2](stone_project/artifacts/09122026/invanna2/) — исходные схемы. [\Jenja\stone_project\artifacts\09122026\outvanna2](stone_project/artifacts/09122026/outvanna2/) — результат, номинальный и размерный DXF, PDF и наложение.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\nc](stone_project/artifacts/09122026/outvanna2/cnc/nc/) — CUT и AIR_XY. [\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\geometry](stone_project/artifacts/09122026/outvanna2/cnc/geometry/) — раскладка и XYZ.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\test_checks](stone_project/artifacts/09122026/outvanna2/cnc/test_checks/) — станочные тесты. [\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\data](stone_project/artifacts/09122026/outvanna2/cnc/data/) — разметка и протоколы.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2\cnc\scripts](stone_project/artifacts/09122026/outvanna2/cnc/scripts/) — построение и проверка. [\Jenja\Commands](Commands/) — промт.
+
+**Поиск.** Ванна, рамка, ДВП, R315, равные поля, симметричный вырез.
+
+<!-- entry -->
+
+## PARAD-028 — Рамка ванны с выносом внутрь на 11 мм, R304
+
+**Дата выполнения** 15.11.2026. По запросу Parad на основе [PARAD-027](stone_project/artifacts/09122026/outvanna2/README.md).
+
+![Рамка с вырезом 1583 × 608 мм](stone_project/artifacts/09122026/outvanna2-11/frame11_preview.png)
+
+**Изменение.** Расширить рамку внутрь на 11 мм по всему овалу. Из выреза 1605 × 630 мм получен вырез 1583 × 608 мм. Торцы R304 имеют прежние центры, прямые по 975 мм. Поля по 73,5 и 101 мм. Наружный габарит 1730 × 810 мм, нижние уступы по 8 × 25 мм.
+
+**Раскрой.** ДВП 5 мм, фреза Ø4, ось на дугах R302. S16000, F800 по XY, F100 по Z. После M3 пауза 5 с. Рез до Z0 стола, по одной перемычке 5 × 1 мм на каждом контуре. Внутреннее входное отверстие Ø8 от края листа X159, Y919,5 мм. Время подачи с паузой около 22 мин 44 с.
+
+**Проверка.** При сравнении записанных DXF подтверждён равномерный вынос 11 мм на обеих дугах и прямых. Проверены центры, кромки, УП и совпадение XY холостого и рабочего проходов. Испытание на станке и примерка предстоят.
+
+**Материалы.** [PDF и построение](stone_project/artifacts/09122026/outvanna2-11/project_overview.pdf) · [Размерный DXF](stone_project/artifacts/09122026/outvanna2-11/frame11_dimensioned_mm.dxf) · [Контур R12](stone_project/artifacts/09122026/outvanna2-11/frame11_contours_R12_mm.dxf) · [Файлы и разметка](stone_project/artifacts/09122026/outvanna2-11/README.md) · [Промт «Ванна и ДВП»](Commands/Bath%20Frame%20DVP.md).
+
+[\Jenja\stone_project\artifacts\09122026\invanna2-11](stone_project/artifacts/09122026/invanna2-11/) — копия исходной схемы. [\Jenja\stone_project\artifacts\09122026\outvanna2-11](stone_project/artifacts/09122026/outvanna2-11/) — результат, номинальный и размерный DXF, PDF и наложение.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\nc](stone_project/artifacts/09122026/outvanna2-11/cnc/nc/) — CUT и AIR_XY. [\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\geometry](stone_project/artifacts/09122026/outvanna2-11/cnc/geometry/) — раскладка и XYZ.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\test_checks](stone_project/artifacts/09122026/outvanna2-11/cnc/test_checks/) — станочные тесты. [\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\data](stone_project/artifacts/09122026/outvanna2-11/cnc/data/) — разметка и протоколы.
+
+[\Jenja\stone_project\artifacts\09122026\outvanna2-11\cnc\scripts](stone_project/artifacts/09122026/outvanna2-11/cnc/scripts/) — построение и проверка. [\Jenja\Commands](Commands/) — промт.
+
+**Поиск.** Ванна, рамка, ДВП, вынос внутрь 11 мм, R304.
